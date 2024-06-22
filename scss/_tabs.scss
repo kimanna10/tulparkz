@@ -1,0 +1,92 @@
+.tabs{
+    display: flex;
+    gap: 30px;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: fit-content;
+        padding: 16px;
+        border-radius: 12px;
+        background-color: $white-color;
+        box-shadow: 0px 2px 10px 0px rgba(#E2E3E7, 0.45);
+        gap: 10px;
+        margin-bottom: 18px;
+
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        background-color: $text-primary-color;
+    }
+
+    &__label-icon {
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+    }
+
+}
+
+
+/* Стили для табов */
+.tab-label {
+    cursor: pointer;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    @include text-regular;
+
+    position: relative;
+
+    &:hover {
+        background-color: $secondary-color-2;
+        color: $white-color;
+
+        .tabs__icon,
+        .tabs__label-icon {
+            background-color: $white50-color;
+        }
+        .tab-choice{
+            color: $white-color;
+        }
+    }
+}
+
+
+
+.tab-input,
+.tab-auto-input {
+    display: none;
+}
+
+/* Стили для активного таба */
+.tab-input:checked+.tab-label,
+.tab-auto-input:checked+.tab-label {
+    background-color: $secondary-color-2;
+    color: $white-color;
+
+    .tabs__icon,
+    .tabs__label-icon {
+        background-color: $white50-color;
+    }
+    .tab-choice{
+        color: $white-color;
+    }
+}
+
+/* Стили для содержимого табов */
+.tab-content,
+.tab-auto-content {
+    display: none;
+    flex-grow: 1;
+}
+
+.tab-content.active,
+.tab-auto-content.active {
+    display: block;
+}

@@ -1,0 +1,36 @@
+@import 'colors';
+@import 'reset';
+@import '../assets/icons/scss/icons';
+@import '../assets/fonts/scss/fonts';
+@import 'mixin';
+@import 'components';
+@import 'header';
+@import 'footer';
+
+
+
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $text-primary-color;
+    font-size: 16px;
+    background-color: $white300-color;
+}
+
+.logo-block{
+    @include flexbox(flex,row,center, start);
+    gap: 12px;
+}
+.logo-icon{
+    width: 80px;
+}
+.logo-text{
+    width: 145px;
+}
+
+
+@import 'adapt';

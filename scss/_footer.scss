@@ -1,0 +1,109 @@
+@import 'colors';
+
+@import 'mixin';
+@import 'components';
+
+
+.footer{
+    background-color: $white300-color;
+
+    &__bottom{
+        color: #8587B4;
+        @include flexbox(flex, row, center , space-between);
+        padding: 25px 0;
+        position: relative
+    }
+    &__copyright{
+        @include caption-2-regular;
+        
+    }
+
+    &__bottom-logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__bottom-logo-img{
+        width: 47px;
+    }
+    &__bottom-link-block{
+        @include flexbox(flex, row, center);
+        gap: 32px;
+    }
+    &__bottom-link{
+        @include subhead-regular;
+        color: #8587B4;
+        border-bottom: 1px solid #8587B4;
+
+        &:hover{
+            color: #8587B4;
+            border-color: $white-color;
+        }
+    }
+
+    &__content{
+        padding-bottom: 60px;
+        border-bottom: 2px solid #E1E6EC;
+        @include flexbox (flex, row, end, space-between);
+    }
+    &__info-block{
+        width: 416px;
+        
+    }
+
+    &__info-text{
+        @include subhead-regular;
+        color: #8587B4;
+        padding-top: 24px;
+    }
+    &__nav{
+        @include flexbox(flex, row, center);
+        padding-right: 105px;
+        gap: 80px;
+    }
+
+    &__nav-block{
+        @include flexbox(flex, column, start);
+       
+    }
+    &__nav-link{
+        @include subhead-regular;
+        padding: 16px 0;
+        color: $text-primary-color;
+        &:hover{
+            color: $secondary-color-2;
+        }
+    }
+
+
+     /* Для экранов шириной от 768px до 1023px -----------------------*/
+     @media (max-width: 991px) {
+        .logo-block{
+            justify-content: center;
+        }
+       &__content{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+
+       }
+       &__nav{
+        padding-right: 0;
+       }
+       &__nav-block{
+        align-items: center;
+       }
+       &__bottom{
+        flex-direction: column-reverse;
+        gap: 50px;
+       }
+       &__bottom-logo{
+        top: 40%;
+       }
+    }
+
+
+
+
+}

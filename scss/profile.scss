@@ -1,0 +1,437 @@
+@import 'colors';
+@import 'mixin';
+@import 'tabs';
+
+
+.main {
+    padding-top: 64px;
+    padding-bottom: 256px;
+}
+
+.profile {
+    @include flexbox(flex, column, stretch);
+    gap: 24px;
+
+    &__title {
+        @include title-4-bold;
+        padding-bottom: 16px
+    }
+
+    &__block {
+        @include white-block;
+
+    }
+
+    &__user {
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        padding-bottom: 24px;
+    }
+
+    &__user-img-block {
+        width: 65px;
+        height: 65px;
+    }
+
+    &__user-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    &__user-name {
+        @include title-4-bold;
+    }
+
+    &__form-input {
+        @include flexbox(flex, row, center, start);
+        gap: 20px;
+    }
+
+    &__form {
+        @include flexbox(flex, column, stretch, center);
+        gap: 24px;
+    }
+
+    &__login-input-block {
+        width: 100%;
+        position: relative;
+    }
+
+    &__buttons-block {
+        @include flexbox(flex, row, center, end);
+    }
+
+    &__buttons {
+        @include flexbox(flex, row, center, space-between);
+        gap: 15px;
+        width: 45%;
+    }
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    i {
+        background-color: $text-thertiary-color;
+    }
+
+}
+
+.city,
+.language,
+.notif {
+
+    &__block {
+        @include white-block;
+    }
+
+    &__title {
+        @include title-4-bold;
+        padding-bottom: 32px;
+    }
+
+    &__list {
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    &__form {
+        @include flexbox(flex, column, end);
+        gap: 24px;
+    }
+
+    &__item {
+        background-color: $white100-color;
+        border-radius: 12px;
+        @include headline-regular;
+        padding: 14px 15px;
+
+        @include flexbox(flex, row, center, space-between);
+        width: calc((100% / 2) - 4px);
+        position: relative;
+    }
+
+    &__button {
+        @include flexbox(flex, row, center, end);
+        width: 20%;
+    }
+}
+
+
+
+.notif {
+    &__option-list {
+        @include flexbox(flex, column, center);
+        gap: 2px;
+        width: 100%;
+    }
+
+    &__item {
+        width: 100%;
+    }
+}
+
+.ad {
+    &__block {
+        @include white-block;
+    }
+
+    &__list {
+        @include flexbox(flex, row, center, start);
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+
+    &__item {
+        background-color: $white300-color;
+        border-radius: 12px;
+        padding: 10px 20px;
+
+        @include flexbox(flex, column, stretch);
+        gap: 16px;
+
+        width: calc((100% / 2) - 11px);
+
+    }
+
+    &__operationss-btn {
+        @include flexbox;
+        gap: 15px;
+    }
+
+    &__info {
+        @include flexbox(flex, column, start, start);
+        gap: 8px;
+    }
+
+    &__price {
+        @include subhead-bold;
+        padding-bottom: 2px
+    }
+
+    &__model {
+        @include caption-1-medium;
+    }
+
+    &__tags {
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+    }
+
+    &__tag-item {
+        display: inline-block;
+        border-radius: 6px;
+        background-color: #E5EBFF;
+        padding: 2px 8px;
+        @include caption-1-medium;
+    }
+
+    &__img-block {
+        width: 160px;
+        height: 91px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    &__info-block {
+        @include flexbox(flex, row, center, start);
+        gap: 10px;
+    }
+
+    &__status {
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+        border-radius: 6px;
+
+        padding: 2px 10px 2px 6px;
+        @include caption-1-regular;
+
+
+
+        &--moderation {
+            color: $orange300-color;
+            background-color: rgba($yellow100-color, 0.34);
+
+            .ad__status-icon {
+                background-color: $orange300-color;
+
+            }
+        }
+
+
+        &--accepted {
+            color: $green500-color;
+            background-color: rgba($green100-color, 0.34);
+
+            .ad__status-icon {
+                background-color: $green500-color;
+
+            }
+        }
+
+    }
+
+    &__status-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .button{
+        padding: 7px 0;
+    }
+}
+
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slick-slide {
+    margin: 0;
+    width: 160px;
+    height: 91px;
+}
+
+.slider .slick-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slick-slide.slick-active {
+    opacity: 1;
+}
+
+
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 6px 0;
+}
+
+
+.slick-dots li {
+    margin: 0 3px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    button {
+        font-size: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgba($text-primary-color, 0.4);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+}
+
+ .slick-dots .slick-active button {
+    background-color: $secondary-color-2;
+}
+
+
+.slick-list {
+    border-radius: 8px;
+}
+
+.tab-content{
+    &__empty{
+        @include white-block;
+        padding: 36px;
+    }
+    &__title{
+        @include title-4-bold;
+        padding-bottom: 18px
+    }
+    &__desc{
+        @include subhead-medium;
+    }
+    &__empty-content{
+        @include flexbox(flex, row, start, space-between);
+    }
+    &__empty-top{
+        padding-bottom: 46px;
+        max-width: 70%;
+    }
+    &__empty-img-block{
+        width: 220px;
+        height: 220px;
+        @include flexbox(flex, row, end);
+        
+    }
+    &__empty-img{
+        width: 100%;
+        height: 100%;
+    }
+    &__empty-buttons{
+        @include flexbox(flex, column, start);
+        gap: 23px;
+        width: 50%;
+    }
+    &__empty-btn-icon{
+        width: 24px;
+        height: 24px;
+        background-color: $white-color;
+    }
+}
+
+
+
+.header{
+    .logo-block{
+        gap: 12px;
+    }
+    .logo-icon{
+        width: 80px;
+    }
+    .logo-text{
+        width: 145px;
+    }
+    .nav__item {
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .header__nav, .header__right {
+        display: flex;
+    }
+
+   
+}
+
+
+
+/* Для экранов шириной от 1200px до 1439px -----------------------*/
+@media (max-width: 1439px) and (min-width: 768px) {
+    .ad__item{
+        width: 100%;
+    }
+}
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .profile__form-input{
+    flex-direction: column;
+  }
+  .city__list{
+    flex-direction: column;
+  }
+  .city__item{
+    width: 100%;
+  }
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+    .profile__form-input{
+        flex-direction: column;
+      }
+      .city__list{
+        flex-direction: column;
+      }
+      .city__item{
+        width: 100%;
+      }
+      .tabs{
+        flex-direction: column;
+      }
+      .tabs__block{
+        width: 100%;
+      }
+}
+
+
+

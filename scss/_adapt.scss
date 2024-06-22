@@ -1,0 +1,61 @@
+
+
+@media (min-width: 1200px) {
+
+    html{
+        font-size: 16px;
+    }
+    .container {
+        max-width: calc(100% - 150px);
+    }
+}
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1201px) and (min-width: 1024px) {
+  
+    html{
+        font-size: 15px;
+    }
+    .container {
+        max-width: calc(100% - 100px);
+    }
+
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+
+    html{
+        font-size: 14px;
+    }
+    .container {
+        max-width: calc(100% - 20px);
+    }
+}
+
+
+/* Для экранов шириной от 480px до 767px -----------------------*/
+@media (max-width: 767px) and (min-width: 480px) {
+
+    html{
+        font-size: 13px;
+    }
+}
+
+/* Для экранов шириной от 320px до 479px -----------------------*/
+@media (max-width: 479px) and (min-width: 320px) {
+
+    html{
+        font-size: 13px;
+    }
+    
+}
+
+/* Для экранов шириной до 319px -----------------------*/
+@media (max-width: 319px) {
+
+    html{
+        font-size: 13px;
+    }
+}
+

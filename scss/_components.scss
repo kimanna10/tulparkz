@@ -1,0 +1,404 @@
+@import 'colors';
+@import 'mixin';
+
+.button {
+    width: 100%;
+    padding: 13px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out;
+
+    @include flexbox;
+    @include headline-regular;
+
+
+    &__btn {
+        &--blue {
+            background-color: $secondary-color-2;
+            color: $white-color;
+
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white-color;
+            }
+        }
+
+        &--white {
+            background-color: $white-color;
+            color: $text-primary-color;
+            border: 1px solid $grey-color;
+
+
+            &:hover {
+                background-color: $white100-color;
+                color: $text-primary-color;
+            }
+        }
+
+        &--grey {
+            background-color: $text-thertiary-color;
+            color: $white-color;
+
+
+
+            &:hover {
+                background-color: $grey-color;
+                color: $white-color;
+            }
+        }
+    }
+
+    &__icon {
+        padding: 13px 32px 13px 13px;
+        @include flexbox(flex, row, center, space-between);
+        gap: 4px;
+        @include headline-regular;
+    }
+
+
+
+}
+
+
+
+.textfield {
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid transparent;
+
+    &::placeholder {
+        color: $text-thertiary-color;
+    }
+
+    &:focus {
+        border: 1px solid $secondary-color-2;
+    }
+
+    &__white {
+        background-color: $white-color;
+
+        &--error {
+            border: 1px solid $red700-color;
+        }
+    }
+
+
+    &__grey {
+        background-color: $white300-color;
+
+        &--error {
+            border: 1px solid $red700-color;
+        }
+    }
+
+
+
+    &__label {
+        @include subhead-regular;
+        margin-bottom: 6px;
+    }
+
+}
+
+.input-block {
+    @include flexbox(flex, column, start);
+}
+
+.checkbox-group {
+    @include flexbox(flex, row, center, start);
+    gap: 8px;
+
+    &__check {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $grey-color;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+
+        &:checked {
+            background-color: $secondary-color-2;
+            border-color: $secondary-color-2;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                width: 20px;
+                height: 20px;
+                mask: url('/assets/icons/ci_circle-check.svg') no-repeat center;
+                background-color: $white-color;
+                mask-size: cover;
+
+            }
+        }
+    }
+
+    &__label {
+        @include subhead-regular;
+        color: $text-secondary-color;
+    }
+}
+
+
+
+
+.snackbar {
+    border-radius: 10px;
+    padding: 10px 12px;
+    @include flexbox(flex, row, center, space-between);
+
+    &__left {
+        @include flexbox(flex, row, center, start);
+        gap: 10px;
+    }
+
+    &__right {
+        @include flexbox(flex, row, center, end);
+    }
+
+    &--error {
+        background-color: #FBE2E2;
+
+        .icon-close {
+            background-color: $red700-color;
+        }
+
+    }
+
+    &--info {
+        background-color: #EEF5FC;
+
+    }
+
+    &--success {
+        background-color: #D3F5D6;
+
+    }
+
+    &--warning {
+        background-color: #FFE073
+    }
+}
+
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: $white-color;
+    color: $text-primary-color;
+    min-width: 210px;
+    border: 1px solid $blue100a-color;
+    box-shadow: 0px 15px 34px 0px rgba(#9BA3F2, 0.2);
+
+    z-index: 1;
+    border-radius: 12px;
+    top: 50px;
+    right: 0;
+    left: auto;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    padding: 12px 26px;
+    text-decoration: none;
+    display: block;
+    @include subhead-medium;
+    color: $text-primary-color;
+}
+
+
+.dropdown-menu a:hover {
+    background-color: $white100-color;
+    color: $text-primary-color;
+}
+
+
+
+
+
+
+.notification {
+    position: absolute;
+    background-color: $red700-color;
+    color: $white-color;
+    @include text-regular;
+    padding: 0 6px;
+    border-radius: 5px;
+    right: 55px;
+}
+
+.tab-choice{
+    position: absolute;
+    color: $text-thertiary-color;
+    @include text-regular;
+    right: 55px;
+}
+
+
+.radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+    margin-left: -15px;
+}
+
+.radio-custom {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: $white50-color;
+    border: 1px solid $grey-color;
+    border-radius: 50%;
+}
+
+
+.radio:checked~.radio-custom {
+    background-color: $secondary-color-2;
+    border: 1px solid $secondary-color-2;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio:checked~.radio-custom:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-custom:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $white-color;
+}
+
+
+
+
+.toggle-switch {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        width: 53px;
+        height: 28px;
+        background-color: $grey-color;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    label {
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 24px;
+            height: 24px;
+            background-color: $white-color;
+            border-radius: 50%;
+            transition: left 0.3s;
+        }
+    }
+}
+
+
+
+
+.toggle-switch input[type="checkbox"]:checked+label {
+    background-color: $secondary-color-2;
+
+}
+
+
+
+.toggle-switch input[type="checkbox"]:checked+label:before {
+    left: calc(100% - 27px);
+
+}
+
+.toggle-switch input[type="checkbox"]:disabled + label {
+    background-color: $text-thertiary-color; /* Цвет фона отключенного переключателя */
+    cursor: not-allowed; /* Меняем курсор на неразрешающий */
+}
+
+.toggle-switch input[type="checkbox"]:disabled + label:before {
+    background-color: $grey-color; /* Цвет точки (handle) отключенного переключателя */
+}
+
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+
+    &__title{
+        @include title-3-bold;
+        border-bottom: 1px solid rgba( #72A8E6,  0.12);
+        padding-bottom: 10px
+    }
+    &__desc{
+        @include headline-regular;
+        padding-top: 10px;
+    }
+}
+
+.modal-content {
+    background-color: $white-color;
+    margin: 15% auto;
+    padding: 30px;
+
+    width: 60%;
+    max-width: 450px;
+    border-radius: 12px;
+    position: relative;
+}
+
+
+.modal-buttons {
+    @include flexbox(flex, row, center, end);
+    margin-top: 20px;
+ 
+}
+
+.modal-buttons .button {
+    margin-left: 10px;
+    width: 110px;
+    padding: 6px 20px;
+}

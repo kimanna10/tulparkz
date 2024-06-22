@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Избранные</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/favorites.css">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header__wrapper">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__block">
+                        <div class="header__block-item">
+                            <a class="header__social">
+                                <div class="header__social-icon icon-mail-1"></div>
+                                <div class="header__social-text">info@q4tulpar.kz</div>
+                            </a>
+                            <a class="header__social">
+                                <div class="header__social-icon icon-instagram"></div>
+                                <div class="header__social-text">Наш Instagram</div>
+                            </a>
+                            <a class="header__social">
+                                <div class="header__social-icon icon-youtube"></div>
+                                <div class="header__social-text">Наш канал</div>
+                            </a>
+                        </div>
+                        <div class="header__block-item">
+                            <a class="header__social">
+                                <div class="header__social-icon icon-location-1"></div>
+                                <div class="header__social-text">Алматы, Казахстан</div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__block">
+                        <div class="logo-block">
+                            <img src="assets/img/logo-icon.png" alt="" class="logo-icon">
+                            <img src="assets/img/logo-text.png" alt="" class="logo-text">
+                        </div>
+                        <div class="header__nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-search-magnifying-glass"></i>Каталог авто
+                                        </a>
+                                    </li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Авто от Tulpar</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Продать</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="header__right">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link nav__link--active">
+                                            <i class="nav__icon icon-bookmark-outline"></i>Избранные
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="login.html" class="nav__link">
+                                            <i class="nav__icon icon-user-circle"></i>Войти
+                                        </a>
+                                    </li>
+
+                                    
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                         <div class="burger-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
+                        <div class="mobile-nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-search-magnifying-glass"></i>Каталог авто
+                                        </a>
+                                    </li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Авто от Tulpar</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Продать</a></li>
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link nav__link--active">
+                                            <i class="nav__icon icon-bookmark-outline"></i>Избранные
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="login.html" class="nav__link">
+                                            <i class="nav__icon icon-user-circle"></i>Войти
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="main">
+        <div class="container">
+            <div class="main__fav-title">Избранные</div>
+            <div class="main__wrapper">
+
+
+                <div class="main__tabs">
+                    <div class="tabs">
+                        <div class="tabs__block">
+                            <input type="radio" id="tab1" name="tabs" class="tab-input" checked>
+                            <label for="tab1" class="tab-label">Избранные</label>
+
+                            <input type="radio" id="tab2" name="tabs" class="tab-input">
+                            <label for="tab2" class="tab-label">Поиски</label>
+                        </div>
+
+
+                        <div class="tab-content active" id="content1">
+                            <!-- Если пустой -->
+                            <div class="tabs__empty-block">
+                            <div class="tabs__empty-info">
+                                <div class="tabs__empty-title">Сохраняй авто в избранные</div>
+                                <div class="tabs__empty-desc">
+                                    Более миллиона автомобилей ждут тебя.
+                                    Чтобы сохранить понравившийся автомобиль в избранные - войдите в свой аккаунт или пройдите регистрацию
+                                </div>
+                            </div>
+                            <div class="tabs__img-block">
+                                <img src="assets/img/fav-empty.png"  class="tabs__img" alt="">
+                            </div>
+                          </div>
+
+                            <!-- Если заполненый -->
+                            <!-- <div class="tabs__fav-block">
+                                <div class="tabs__fav-top">
+                                    <div class="tabs__fav-quantity">Ваши избранные (4)</div>
+                                    <a href="" class="tabs__fav-reset">Очистить</a>
+                                </div>
+                                <div class="tabs__fav-content">
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="tab-content" id="content2">
+                            <div class="tabs__fav-block">
+                                <div class="tabs__fav-top">
+                                    <div class="tabs__fav-quantity">Вы ранее просматривали (4)</div>
+                                    <a href="" class="tabs__fav-reset">Очистить</a>
+                                </div>
+                                <div class="tabs__fav-content">
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__fav-item">
+                                        <div class="tabs__fav-img-block">
+                                            <img src="assets/img/car-img.png" alt="" class="tabs__fav-img">
+                                            <a class="tabs__like-block">
+                                                <div class="tabs__like-icon icon-bookmark-solid"></div>
+                                            </a>
+                                        </div>
+                                        <div class="tabs__fav-info">
+                                            <div class="tabs__fav-price">14 580 000 ₸</div>
+                                            <div class="tabs__fav-model">Audi A7</div>
+                                            <div class="tabs__fav-tags">
+                                                <div class="tag-item">2016</div>
+                                                <div class="tag-item">129 000 км</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="footer__info-block">
+                        <div class="logo-block">
+                            <img src="assets/img/logo-icon.png" alt="" class="logo-icon">
+                            <img src="assets/img/logo-text.png" alt="" class="logo-text">
+                        </div>
+
+                        <div class="footer__info-text">
+                            Наш автомаркет — это место, где каждый автомобиль проходит тщательную проверку перед
+                            продажей.
+                            Вы можете быть уверены в каждой покупке, ведь мы заботимся о вашей безопасности и комфорте.
+                        </div>
+                    </div>
+                    <div class="footer__nav">
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">Каталог авто</a>
+                            <a href="" class="footer__nav-link">Авто от Tulpar</a>
+                        </div>
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">О нас</a>
+                            <a href="" class="footer__nav-link">Контакты</a>
+                        </div>
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">Продать</a>
+                            <a href="" class="footer__nav-link">Мои авто</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        &copy
+                        <script>document.write(new Date().getFullYear());</script>
+                        Q4 Tulpar. Все права защищены.
+                    </div>
+
+                    <div class="footer__bottom-logo">
+                        <img src="assets/img/footer-logo.png" alt="footer-logo" class="footer__bottom-logo-img">
+                    </div>
+                    <div class="footer__bottom-link-block">
+                        <a href="#" class="footer__bottom-link">Пользовательское соглашение</a>
+                        <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/tabs.js"></script>
+        <script src="js/menu.js"></script>
+    </footer>
+</body>
+
+</html>

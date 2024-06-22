@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Сообщения</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/messages.css">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header__wrapper">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__block">
+                        <div class="header__block-item">
+                            <a class="header__social">
+                                <div class="header__social-icon icon-mail-1"></div>
+                                <div class="header__social-text">info@q4tulpar.kz</div>
+                            </a>
+                            <a class="header__social">
+                                <div class="header__social-icon icon-instagram"></div>
+                                <div class="header__social-text">Наш Instagram</div>
+                            </a>
+                            <a class="header__social">
+                                <div class="header__social-icon icon-youtube"></div>
+                                <div class="header__social-text">Наш канал</div>
+                            </a>
+                        </div>
+                        <div class="header__block-item">
+                            <a class="header__social">
+                                <div class="header__social-icon icon-location-1"></div>
+                                <div class="header__social-text">Алматы, Казахстан</div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__block">
+                        <div class="logo-block">
+                            <img src="assets/img/logo-icon.png" alt="" class="logo-icon">
+                            <img src="assets/img/logo-text.png" alt="" class="logo-text">
+                        </div>
+                        <div class="header__nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-search-magnifying-glass"></i>Каталог авто
+                                        </a>
+                                    </li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Авто от Tulpar</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Продать</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="header__right">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-bookmark-outline"></i>Избранные
+                                        </a>
+                                    </li>
+
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav__link nav__link--active" id="dropdownToggle">
+                                            <img src="assets/img/car-img.png" class="nav__user-img">Никита Фролов
+                                        </a>
+                                        <ul class="dropdown-menu" id="dropdownMenu">
+                                            <li><a class="dropdown-item" href="profile.html"><i
+                                                        class="nav__icon icon-user"></i>Профиль</a></li>
+                                            <li><a class="dropdown-item" href="messages.html"><i
+                                                        class="nav__icon icon-mail"></i>Сообщения</a></li>
+                                            <li><a class="dropdown-item" href="login.html"><i
+                                                        class="nav__icon icon-log-out"></i>Выйти</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="burger-menu">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                    
+                                            <div class="mobile-nav">
+                                                <nav class="nav">
+                                                    <ul class="nav__list">
+                                                        <li class="nav__item">
+                                                            <a href="#" class="nav__link">
+                                                                <i class="nav__icon icon-search-magnifying-glass"></i>Каталог авто
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav__item"><a href="#" class="nav__link">Авто от Tulpar</a></li>
+                                                        <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                                        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                                        <li class="nav__item"><a href="#" class="nav__link">Продать</a></li>
+                                                        <li class="nav__item">
+                                                            <a href="#" class="nav__link">
+                                                                <i class="nav__icon icon-bookmark-outline"></i>Избранные
+                                                            </a>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </nav>
+                                            </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="main">
+        <div class="container">
+            <div class="main__wrapper">
+
+                <div class="main__tabs-block">
+                    <div class="tabs">
+
+                        <div class="tabs__left">
+                            <div class="tabs__block">
+                                <input type="radio" id="tab1" name="tabs" class="tab-input" checked>
+                                <label for="tab1" class="tab-label">
+                                    <div class="tab-label-block">
+                                        <i class="tabs__label-icon icon-headphones"></i>
+                                        Чат с поддержкой
+                                    </div>
+                                    <i class="tabs__icon icon-caret-right"></i>
+                                    <div class="notification">2</div>
+                                </label>
+
+                                <input type="radio" id="tab2" name="tabs" class="tab-input">
+                                <label for="tab2" class="tab-label">
+                                    <div class="tab-label-block">
+                                        <i class="tabs__label-icon icon-credit"></i>
+                                        Автокредит
+                                    </div>
+                                    <i class="tabs__icon icon-caret-right"></i>
+                                    <!-- Плашка Уведомления -->
+                                    <!-- <div class="notification">2</div> -->
+
+                                </label>
+
+                                <input type="radio" id="tab3" name="tabs" class="tab-input">
+                                <label for="tab3" class="tab-label">
+                                    <div class="tab-label-block">
+                                        <i class="tabs__label-icon icon-shield"></i>
+                                        TulparAutoCheck.kz
+                                    </div>
+                                    <i class="tabs__icon icon-caret-right"></i>
+                                    <!-- Плашка Уведомления -->
+                                    <!-- <div class="notification">2</div> -->
+                                </label>
+
+                                <input type="radio" id="tab4" name="tabs" class="tab-input">
+                                <label for="tab4" class="tab-label">
+                                    <div class="tab-label-block">
+                                        <i class="tabs__label-icon icon-chat"></i>
+                                        Ответ на отзыв
+                                    </div>
+                                    <i class="tabs__icon icon-caret-right"></i>
+                                    <!-- Плашка Уведомления -->
+                                    <!-- <div class="notification">2</div> -->
+                                </label>
+                            </div>
+
+                            <a href="index.html" class="button button__btn--white"><i
+                                    class="tabs__label-icon icon-caret-left"></i>На главную</a>
+                        </div>
+
+
+
+                        <div class="tab-content active" id="content1">
+                            <div class="tab-content__block">
+
+                                <!-- Если пусто -->
+                                <!-- <div class="tab-empty">
+                                    <div class="tab-empty__icon icon-mail"></div>
+                                    <div class="tab-empty__info">
+                                        <div class="tab-empty__title">Пусто</div>
+                                        <div class="tab-empty__text">У вас пока нет сообщений</div>
+                                    </div>
+                                </div> -->
+
+
+                                <div class="tab-content__chat chat">
+                                    <div class="chat__chat-block">
+                                        <div class="chat__item">
+                                            <div class="chat__date">Сегодня</div>
+                                            <div class="chat__user">
+                                                <div class="chat__message chat__message--user">Здравствуйте. Не могу
+                                                    подать объявление - выходит ошибка</div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                            <div class="chat__support">
+                                                <div class="chat__message chat__message--support">Добрый день. Пришлите,
+                                                    пожалуйста, текст ошибки. С уважением, служба поддержки Q4 Tulpar
+                                                </div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__item">
+                                            <div class="chat__date">Сегодня</div>
+                                            <div class="chat__user">
+                                                <div class="chat__message chat__message--user">Здравствуйте. Не могу
+                                                    подать объявление - выходит ошибка</div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                            <div class="chat__support">
+                                                <div class="chat__message chat__message--support">Добрый день. Пришлите,
+                                                    пожалуйста, текст ошибки. С уважением, служба поддержки Q4 Tulpar
+                                                </div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__chat-form">
+                                        <form action="" class="chat__form">
+                                            <div class="chat__form-input">
+                                                <input type="text" name="" id="" class="textfield"
+                                                    placeholder="Введите сообщение">
+
+                                                    <div class="file-input-container">
+                                                        <input type="file" id="fileInput" class="file-input">
+                                                        <label for="fileInput" class="file-input-label">
+                                                            <i class="file-input-icon icon-paperclip"></i>
+                
+                                                        </label>
+                                                    </div>
+                                                    <div class="vertical-line"
+                                                    ></div>
+                                        
+                                                <div class="chat__submit">
+                                                    <input type="submit" class="chat__submit-icon icon-plane" value="">
+                                                </div>
+
+
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="content2">
+                            <div class="tab-content__block">
+                                <div class="tab-content__credit credit">
+
+                                    <div class="tabs">
+
+                                        <div class="tabs__left">
+                                            <div class="tabs__block">
+                                                <input type="radio" id="tab-auto1" name="tabs-auto"
+                                                    class="tab-auto-input" checked>
+                                                <label for="tab-auto1" class="tab-label">
+                                                    <div class="tab-label-block">
+                                                        <div class="credit__tab-item">
+                                                            <div class="credit__tab-img-block">
+                                                                <img src="assets/img/car-img.png"
+                                                                    class="credit__tab-img" alt="">
+                                                            </div>
+                                                            <div class="credit__tab-info">
+                                                                <div class="credit__tab-model">Audi A7</div>
+                                                                <div class="credit__tab-price">237 000 ₸ х 12 мес</div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <i class="tabs__icon icon-caret-right"></i>
+                                                    <div class="notification">2</div>
+                                                </label>
+
+                                                <input type="radio" id="tab-auto2" name="tabs-auto"
+                                                    class="tab-auto-input">
+                                                <label for="tab-auto2" class="tab-label">
+                                                    <div class="tab-label-block">
+                                                        <div class="credit__tab-item">
+                                                            <div class="credit__tab-img-block">
+                                                                <img src="assets/img/car-img.png"
+                                                                    class="credit__tab-img" alt="">
+                                                            </div>
+                                                            <div class="credit__tab-info">
+                                                                <div class="credit__tab-model">Audi A7</div>
+                                                                <div class="credit__tab-price">237 000 ₸ х 12 мес</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <i class="tabs__icon icon-caret-right"></i>
+                                                    <!-- Плашка Уведомления -->
+                                                    <!-- <div class="notification">2</div> -->
+
+                                                </label>
+
+                                                <input type="radio" id="tab-auto3" name="tabs-auto"
+                                                    class="tab-auto-input">
+                                                <label for="tab-auto3" class="tab-label">
+                                                    <div class="tab-label-block">
+                                                        <div class="credit__tab-item">
+                                                            <div class="credit__tab-img-block">
+                                                                <img src="assets/img/car-img.png"
+                                                                    class="credit__tab-img" alt="">
+                                                            </div>
+                                                            <div class="credit__tab-info">
+                                                                <div class="credit__tab-model">Audi A7</div>
+                                                                <div class="credit__tab-price">237 000 ₸ х 12 мес</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <i class="tabs__icon icon-caret-right"></i>
+                                                    <!-- Плашка Уведомления -->
+                                                    <!-- <div class="notification">2</div> -->
+
+                                                </label>
+
+
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+                                        <div class="tab-auto-content active" id="content-auto1">
+                                            <div class="tab-auto-content__block">
+
+                                                <!-- Если пусто -->
+                                                <!-- <div class="tab-empty">
+                                    <div class="tab-empty__icon icon-mail"></div>
+                                    <div class="tab-empty__info">
+                                        <div class="tab-empty__title">Пусто</div>
+                                        <div class="tab-empty__text">У вас пока нет сообщений</div>
+                                    </div>
+                                </div> -->
+
+
+                                                <div class="tab-content__chat chat">
+                                                    <div class="chat__chat-block">
+                                                        <div class="chat__item">
+                                                            <div class="chat__date">Сегодня</div>
+                                                            <div class="chat__user">
+                                                                <div class="chat__message chat__message--user">
+                                                                    Здравствуйте. Не могу подать объявление - выходит
+                                                                    ошибка</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                            <div class="chat__support">
+                                                                <div class="chat__message chat__message--support">Добрый
+                                                                    день. Пришлите, пожалуйста, текст ошибки. С
+                                                                    уважением, служба поддержки Q4 Tulpar</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="chat__item">
+                                                            <div class="chat__date">Сегодня</div>
+                                                            <div class="chat__user">
+                                                                <div class="chat__message chat__message--user">
+                                                                    Здравствуйте. Не могу подать объявление - выходит
+                                                                    ошибка</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                            <div class="chat__support">
+                                                                <div class="chat__message chat__message--support">Добрый
+                                                                    день. Пришлите, пожалуйста, текст ошибки. С
+                                                                    уважением, служба поддержки Q4 Tulpar</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chat__chat-form">
+                                                        <form action="" class="chat__form">
+                                                            <div class="chat__form-input">
+                                                                <input type="text" name="" id="" class="textfield"
+                                                                    placeholder="Введите сообщение">
+
+                                                                    <div class="file-input-container">
+                                                                        <input type="file" id="fileInput" class="file-input">
+                                                                        <label for="fileInput" class="file-input-label">
+                                                                            <i class="file-input-icon icon-paperclip"></i>
+                                
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="vertical-line"
+                                                                    ></div>
+                                                        
+                                                                <div class="chat__submit">
+                                                                    <input type="submit" class="chat__submit-icon icon-plane" value="">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="tab-auto-content" id="content-auto2">
+                                            <div class="tab-auto-content__block">
+
+                                                <!-- Если пусто -->
+                                                <div class="tab-empty">
+                                                    <div class="tab-empty__icon icon-mail"></div>
+                                                    <div class="tab-empty__info">
+                                                        <div class="tab-empty__title">Пусто</div>
+                                                        <div class="tab-empty__text">У вас пока нет сообщений</div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- <div class="tab-content__chat chat">
+                                    <div class="chat__chat-block">
+                                        <div class="chat__item">
+                                            <div class="chat__date">Сегодня</div>
+                                            <div class="chat__user">
+                                                <div class="chat__message chat__message--user">Здравствуйте. Не могу подать объявление - выходит ошибка</div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                            <div class="chat__support">
+                                                <div class="chat__message chat__message--support">Добрый день. Пришлите, пожалуйста, текст ошибки. С уважением, служба поддержки Q4 Tulpar</div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__item">
+                                            <div class="chat__date">Сегодня</div>
+                                            <div class="chat__user">
+                                                <div class="chat__message chat__message--user">Здравствуйте. Не могу подать объявление - выходит ошибка</div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                            <div class="chat__support">
+                                                <div class="chat__message chat__message--support">Добрый день. Пришлите, пожалуйста, текст ошибки. С уважением, служба поддержки Q4 Tulpar</div>
+                                                <div class="chat__time">09:30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__chat-form">
+                                        <form action="" class="chat__form">
+                                            <div class="chat__form-input">
+                                                <input type="text" name="" id="" class="textfield" placeholder="Введите сообщение">
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                </div> -->
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="tab-auto-content" id="content-auto3">
+                                            <div class="tab-auto-content__block">
+
+                                                <!-- Если пусто -->
+                                                <!-- <div class="tab-empty">
+                                    <div class="tab-empty__icon icon-mail"></div>
+                                    <div class="tab-empty__info">
+                                        <div class="tab-empty__title">Пусто</div>
+                                        <div class="tab-empty__text">У вас пока нет сообщений</div>
+                                    </div>
+                                </div> -->
+
+
+                                                <div class="tab-content__chat chat">
+                                                    <div class="chat__chat-block">
+                                                        <div class="chat__item">
+                                                            <div class="chat__date">Сегодня</div>
+                                                            <div class="chat__user">
+                                                                <div class="chat__message chat__message--user">
+                                                                    Здравствуйте. Не могу подать объявление - выходит
+                                                                    ошибка</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                            <div class="chat__support">
+                                                                <div class="chat__message chat__message--support">Добрый
+                                                                    день. Пришлите, пожалуйста, текст ошибки. С
+                                                                    уважением, служба поддержки Q4 Tulpar</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="chat__item">
+                                                            <div class="chat__date">Сегодня</div>
+                                                            <div class="chat__user">
+                                                                <div class="chat__message chat__message--user">
+                                                                    Здравствуйте. Не могу подать объявление - выходит
+                                                                    ошибка</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                            <div class="chat__support">
+                                                                <div class="chat__message chat__message--support">Добрый
+                                                                    день. Пришлите, пожалуйста, текст ошибки. С
+                                                                    уважением, служба поддержки Q4 Tulpar</div>
+                                                                <div class="chat__time">09:30</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chat__chat-form">
+                                                        <form action="" class="chat__form">
+                                                            <div class="chat__form-input">
+                                                                <input type="text" name="" id="" class="textfield"
+                                                                    placeholder="Введите сообщение">
+
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-content " id="content3">
+                            <div class="tab-content__block">
+
+
+                                <div class="tab-content__autocheck autocheck">
+                                    <div class="autocheck__item">
+                                        <div class="autocheck__title">Audi A7</div>
+                                        <div class="autocheck__content">
+                                            <div class="autocheck__info">
+                                                <div class="autocheck__info-item">№1758650</div>
+                                                <div class="autocheck__info-item upper">ViN: KFKLN414BF799719</div>
+                                                <div class="autocheck__info-item">Отчет от 30.03.2024</div>
+                                            </div>
+                                            <div class="autocheck__img-block">
+                                                <img src="assets/img/car-img.png" class="autocheck__img" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="autocheck__item">
+                                        <div class="autocheck__title">Audi A7</div>
+                                        <div class="autocheck__content">
+                                            <div class="autocheck__info">
+                                                <div class="autocheck__info-item">№1758650</div>
+                                                <div class="autocheck__info-item upper">ViN: KFKLN414BF799719</div>
+                                                <div class="autocheck__info-item">Отчет от 30.03.2024</div>
+
+                                                <div class="autocheck__review">
+                                                    <div class="autocheck__review-icon icon-download"></div>
+                                                    <div class="autocheck__review-text">Отчет формируется
+                                                        <span class="autocheck__review-span">(это займет около 2
+                                                            минут)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="autocheck__img-block">
+                                                <img src="assets/img/car-img.png" class="autocheck__img" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="content4">
+                            <div class="tab-content__block">
+
+                                <!-- Если пусто -->
+                                <!-- <div class="tab-empty">
+                                    <div class="tab-empty__icon icon-mail"></div>
+                                    <div class="tab-empty__info">
+                                        <div class="tab-empty__title">Пусто</div>
+                                        <div class="tab-empty__text">У вас пока нет ответов</div>
+                                    </div>
+                                </div> -->
+
+                                <div class="tab-content__comment comment-block">
+                                    <div class="comment-block__comment">
+                                        <div class="comment-block__date">Сегодня</div>
+                                        <div class="comment-block__content">
+                                            <div class="comment-block__item">
+                                                <div class="comment-block__answer">
+                                                    <div class="comment-block__answer-user">Алексей Скворцов</div>
+
+                                                    <div class="comment-block__comment-block">
+                                                        <div class="comment-block__img-block">
+                                                            <img src="assets/img/car-img.png" class="comment-block__img"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="comment-block__comment-item">
+                                                            <div class="comment-block__comment-info">
+                                                                <div class="comment-block__model">Audi A7</div>
+                                                                <div class="comment-block__comment-icon icon-user">
+                                                                </div>
+                                                                <div class="comment-block__comment-user">Никита Ф.</div>
+                                                            </div>
+                                                            <div class="comment-block__comment-text">Настоящая немецкая
+                                                                классика
+                                                                в максимальной комплектации. Легендарная рядная шестерка
+                                                                M54 с
+                                                                двумя ваносами. Выбирал ...</div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="comment-block__answer-text">Согласен полностью, при
+                                                        своевременном обслуживании и использовании качественных деталей
+                                                        служит
+                                                        (и еще долго прослужит) верой и правдой. Эмоции при вождении
+                                                        описывать
+                                                        не буду — это надо прочувствовать! Люблю бесконечно!
+                                                    </div>
+                                                </div>
+                                                <a class="comment-block__answer-link">
+                                                    <div class="comment-block__more">
+                                                        <div class="tabs__label-icon icon-note-edit"></div>
+                                                        <div>Перейти к обсуждению</div>
+                                                    </div>
+                                                    <i class="tabs__icon icon-caret-right"></i>
+                                                </a>
+                                            </div>
+                                            <div class="comment-block__time">09:30</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-block__comment">
+                                        <div class="comment-block__date">Сегодня</div>
+                                        <div class="comment-block__content">
+                                            <div class="comment-block__item">
+                                                <div class="comment-block__answer">
+                                                    <div class="comment-block__answer-user">Алексей Скворцов</div>
+
+                                                    <div class="comment-block__comment-block">
+                                                        <div class="comment-block__img-block">
+                                                            <img src="assets/img/car-img.png" class="comment-block__img"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="comment-block__comment-item">
+                                                            <div class="comment-block__comment-info">
+                                                                <div class="comment-block__model">Audi A7</div>
+                                                                <div class="comment-block__comment-icon icon-user">
+                                                                </div>
+                                                                <div class="comment-block__comment-user">Никита Ф.</div>
+                                                            </div>
+                                                            <div class="comment-block__comment-text">Настоящая немецкая
+                                                                классика
+                                                                в максимальной комплектации. Легендарная рядная шестерка
+                                                                M54 с
+                                                                двумя ваносами. Выбирал ...</div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="comment-block__answer-text">Согласен полностью, при
+                                                        своевременном обслуживании и использовании качественных деталей
+                                                        служит
+                                                        (и еще долго прослужит) верой и правдой. Эмоции при вождении
+                                                        описывать
+                                                        не буду — это надо прочувствовать! Люблю бесконечно!
+                                                    </div>
+                                                </div>
+                                                <a class="comment-block__answer-link">
+                                                    <div class="comment-block__more">
+                                                        <div class="tabs__label-icon icon-note-edit"></div>
+                                                        <div>Перейти к обсуждению</div>
+                                                    </div>
+                                                    <i class="tabs__icon icon-caret-right"></i>
+                                                </a>
+                                            </div>
+                                            <div class="comment-block__time">09:30</div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="footer__info-block">
+                        <div class="logo-block">
+                            <img src="assets/img/logo-icon.png" alt="" class="logo-icon">
+                            <img src="assets/img/logo-text.png" alt="" class="logo-text">
+                        </div>
+
+                        <div class="footer__info-text">
+                            Наш автомаркет — это место, где каждый автомобиль проходит тщательную проверку перед
+                            продажей.
+                            Вы можете быть уверены в каждой покупке, ведь мы заботимся о вашей безопасности и комфорте.
+                        </div>
+                    </div>
+                    <div class="footer__nav">
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">Каталог авто</a>
+                            <a href="" class="footer__nav-link">Авто от Tulpar</a>
+                        </div>
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">О нас</a>
+                            <a href="" class="footer__nav-link">Контакты</a>
+                        </div>
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">Продать</a>
+                            <a href="" class="footer__nav-link">Мои авто</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        &copy
+                        <script>document.write(new Date().getFullYear());</script>
+                        Q4 Tulpar. Все права защищены.
+                    </div>
+
+                    <div class="footer__bottom-logo">
+                        <img src="assets/img/footer-logo.png" alt="footer-logo" class="footer__bottom-logo-img">
+                    </div>
+                    <div class="footer__bottom-link-block">
+                        <a href="#" class="footer__bottom-link">Пользовательское соглашение</a>
+                        <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/dropdown.js"></script>
+    </footer>
+    <script src="js/tabs.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+@import 'colors';
+@import 'mixin';
+@import 'tabs';
+
+
+.main {
+    padding-top: 64px;
+    padding-bottom: 256px;
+}
+
+.comment-block {
+    background-color: $white-color;
+    border-radius: 12px;
+    padding: 16px;
+    @include flexbox(flex, column, stretch);
+    gap: 30px;
+
+    &__comment {
+        @include flexbox(flex, column, stretch);
+        gap: 24px;
+    }
+
+    &__item {
+        max-width: 750px;
+        padding-bottom: 6px;
+    }
+
+    &__date {
+        @include text-regular;
+        color: $text-thertiary-color;
+        text-align: center;
+    }
+
+    &__time {
+        @include subhead-medium;
+        color: $text-thertiary-color;
+    }
+
+    &__answer {
+        border-radius: 24px 24px 0 0;
+        background-color: $white300-color;
+        padding: 10px 17px 20px;
+        @include flexbox(flex, column, start, start);
+        gap: 10px;
+
+        margin-bottom: 1px
+    }
+
+    &__answer-user {
+        @include caption-1-medium;
+        color: $primary-color;
+    }
+
+    &__answer-text {
+        @include text-regular;
+        color: $text-primary-color;
+    }
+
+    &__more {
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+        @include caption-1-medium;
+        color: $text-primary-color;
+    }
+
+    &__answer-link {
+        border-bottom-right-radius: 24px;
+        background-color: $white300-color;
+        padding: 14px 16px;
+        @include flexbox(flex, row, center, space-between);
+    }
+
+    &__comment-block {
+        background-color: rgba($blue100a-color, 0.12);
+        border-radius: 8px;
+        padding: 10px 12px;
+        @include flexbox(flex, row, center, start);
+        gap: 6px;
+        width: 100%;
+    }
+
+    &__img-block {
+        width: 47px;
+        height: 27px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    &__model {
+        @include subhead-bold;
+    }
+
+    &__comment-info {
+        color: $text-primary-color;
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+        padding-bottom: 2px;
+    }
+
+    &__comment-user {
+        @include caption-1-medium;
+    }
+
+    &__comment-text {
+        color: $text-secondary-color;
+        @include caption-2-regular;
+        width: 400px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+
+    &__comment-icon {
+        width: 14px;
+        height: 14px;
+        background-color: $text-primary-color;
+    }
+}
+
+.autocheck {
+
+    @include flexbox(flex, column, stretch);
+    gap: 24px;
+
+
+    &__item {
+        border-radius: 12px;
+        padding: 16px 24px;
+        color: $text-primary-color;
+        background-color: $white-color;
+        box-shadow: 0px 2px 10px 0px rgba(#E2E3E7, 0.45);
+    }
+
+    &__title {
+        @include title-2-bold;
+        padding-bottom: 10px
+    }
+
+    &__info-item {
+        @include text-regular;
+
+    }
+
+    &__content {
+        @include flexbox(flex, row, start, space-between);
+    }
+
+    &__img-block {
+        width: 190px;
+        height: 110px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    &__info {
+        @include flexbox(flex, column, start, start);
+        gap: 6px;
+    }
+
+    &__review {
+        background-color: $blue100a-color;
+        border-radius: 12px;
+        color: $text-primary-color;
+        @include flexbox(flex, row, center, start);
+        gap: 10px;
+        padding: 10px 16px;
+
+    }
+
+    &__review-icon {
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+    }
+
+    &__review-text {
+        @include text-medium;
+    }
+
+    &__review-span {
+        @include text-regular;
+    }
+}
+
+.chat {
+    border-radius: 12px;
+    color: $text-primary-color;
+    background-color: $white-color;
+    box-shadow: 0px 2px 10px 0px rgba(#E2E3E7, 0.45);
+
+    &__chat-block {
+        padding: 16px 16px 52px 16px;
+        @include flexbox(flex, column, stretch);
+        gap: 30px;
+    }
+
+    &__item {
+        @include flexbox(flex, column, stretch);
+        gap: 24px;
+    }
+
+    &__date {
+        @include text-regular;
+        color: $text-thertiary-color;
+        text-align: center;
+    }
+
+    &__time {
+        @include subhead-medium;
+        color: $text-thertiary-color;
+    }
+
+    &__user {
+        @include flexbox(flex, column, end, end);
+        gap: 6px;
+    }
+
+    &__support {
+        @include flexbox(flex, column, start, start);
+        gap: 6px;
+    }
+
+    &__message {
+        padding: 20px 16px;
+        @include text-regular;
+
+        &--user {
+            background: linear-gradient(180deg, #157BEE 0%, #316BE6 100%);
+            border-radius: 24px 24px 0 24px;
+            color: $white-color;
+            width: auto;
+            max-width: 70%;
+        }
+
+        &--support {
+            border-radius: 24px 24px 24px 0;
+            background-color: $white300-color;
+            color: $text-primary-color;
+            width: auto;
+            max-width: 70%;
+        }
+    }
+
+    &__form {
+        background-color: $white300-color;
+        padding: 12px 15px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+
+    }
+
+    .file-input-label{
+        padding: 14px 15px;
+        border-radius: 0;
+    }
+    .textfield{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &__form-input{
+        @include flexbox;
+        position: relative;
+    }
+
+    &__submit{
+        padding: 13.2px 15px;
+        background-color: $white-color;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+       
+    }
+    &__submit-icon{
+        background-color: $primary-color;
+    }
+
+    .vertical-line{
+        width: 2px;
+        height: 24px;
+
+        position: absolute;
+        right: 55px;
+        background-color: $grey-color;
+        border-radius: 8px;
+    }
+
+        
+
+
+    
+
+}
+
+.file-input-icon{
+    background-color: $text-thertiary-color;
+}
+
+
+
+
+.credit{
+   
+    &__tab-item{
+        @include flexbox(flex, row, center, start);
+        gap: 6px;
+    }
+    &__tab-img-block{
+        width: 62px;
+        height: 36px;
+    }
+    &__tab-img{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    &__tab-model{
+        @include subhead-bold;
+        padding-bottom: 2px;
+    }
+    &__tab-price{
+        @include caption-1-medium;
+    }
+    .tab-label{
+        padding: 10px 16px;
+    }
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+
+.tab-empty {
+    @include flexbox(flex, column, center, center);
+    text-align: center;
+    gap: 24px;
+    padding: 97px 0;
+    box-shadow: 0px 2px 10px 0px rgba(#E2E3E7, 0.45);
+    border-radius: 12px;
+    background-color: $white-color;
+
+    margin: auto;
+
+    &__icon {
+        width: 61px;
+        height: 61px;
+        background-color: $grey-color;
+    }
+
+    &__title {
+        @include title-4-bold;
+        padding-bottom: 12px
+    }
+
+    &__text {
+        @include subhead-medium;
+    }
+}
+
+@media (max-width: 1023px) {
+     .header__right {
+        display: flex;
+        .nav__list{
+            flex-direction: row;
+        }
+    
+    }
+    
+
+}
+
+
+/* Для экранов шириной от 1200px до 1439px -----------------------*/
+@media (max-width: 1439px) and (min-width: 768px) {
+   .credit{
+    .tabs{
+        flex-direction: column;
+        &__block{
+            width: 100%;
+            margin: 0;
+        }
+       
+    }
+   }
+}
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1199px) and (min-width: 1024px) {
+
+        .tabs{
+
+            &__block{
+                width: 310px;
+            }
+           
+        }
+       
+
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+    .tabs{
+        flex-direction: column;
+        &__block{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+.file-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: $white-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.file-input-label:hover {
+    background-color: #e1e1e1;
+}
+
+.file-input-label .icon-upload {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+

@@ -1,0 +1,280 @@
+@charset "UTF-8";
+.main {
+  padding-top: 116px;
+  padding-bottom: 256px;
+}
+.main__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main__tabs {
+  width: calc(100% - 100px);
+}
+.main__fav-title {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 26px;
+}
+.tabs__block {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+.tabs__empty-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 36px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+.tabs__empty-info, .tabs__img-block {
+  width: 50%;
+}
+.tabs__empty-title {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  padding-bottom: 18px;
+}
+.tabs__empty-desc {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+}
+.tabs__img-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 336px;
+  height: 336px;
+}
+.tabs__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tabs__fav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  gap: 24px;
+  padding-top: 35px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.tabs__fav-item {
+  width: calc((100% - 72px) / 4);
+  background-color: #FFFFFF;
+  border-radius: 18px;
+}
+.tabs__fav-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.tabs__fav-quantity {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.tabs__fav-reset {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #9CA0AF;
+}
+.tabs__fav-reset:hover {
+  color: #9CA0AF;
+}
+.tabs__fav-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  padding: 12px 18px 26px 18px;
+}
+.tabs__fav-price {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+.tabs__fav-img {
+  width: 100%;
+  height: 180px;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tabs__fav-model {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.tabs__fav-tags {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.tabs__fav-img-block {
+  position: relative;
+}
+.tabs__like-block {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+}
+.tabs__like-icon {
+  background-color: #316BE6;
+  width: 32px;
+  height: 32px;
+}
+
+.tag-item {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background-color: #E5EBFF;
+  display: inline-block;
+}
+
+.tab-label {
+  display: inline-block;
+  padding: 8px 0;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #4B5263;
+  width: 50%;
+  text-align: center;
+}
+
+.tab-label:hover {
+  background: #F9FAFC;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked + .tab-label {
+  background: #316BE6;
+  color: #FFFFFF;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 44px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Для экранов шириной от 1440px до 1561px -----------------------*/
+@media (max-width: 1561px) and (min-width: 1440px) {
+  .tabs__fav-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+/* Для экранов шириной от 1200px до 1439px -----------------------*/
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .tabs__fav-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .tabs__fav-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+  .tabs__fav-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .tabs__img-block {
+    width: 250px;
+    height: 250px;
+  }
+}

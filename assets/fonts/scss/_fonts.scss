@@ -17,3 +17,22 @@
     font-weight: 700;
     font-style: normal;
 }
+
+
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../assets/fonts/bebasneueregular.woff2') format('woff2'),
+    url('../assets/fonts/bebasneueregular.woff') format('woff'),
+    url('../assets/fonts/bebasneueregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../assets/fonts/bebasneuebold.woff2') format('woff2'),
+     url('../assets/fonts/bebasneuebold.woff') format('woff'),
+      url('../assets/fonts/bebasneuebold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

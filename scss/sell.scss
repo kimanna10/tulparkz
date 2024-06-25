@@ -1,0 +1,382 @@
+@import 'colors';
+@import 'mixin';
+
+.main {
+    padding-top: 67px;
+    padding-bottom: 256px;
+
+    &__wrapper {
+        @include flexbox(flex, row, center, center);
+    }
+
+    &__block {
+        width: calc(100% - 200px);
+
+    }
+}
+
+
+.sell {
+
+
+    &__block {
+        background-color: $white-color;
+        display: flex;
+        padding: 2px;
+        border-radius: 10px;
+        width: 400px;
+        margin: 0 auto;
+
+        box-shadow: 0px 15px 34px 0px rgba(#9BA3F2, 0.2);
+    }
+
+    &__empty-block {
+        @include flexbox(flex, row, start, space-between);
+        padding: 36px;
+        background-color: $white-color;
+        border-radius: 18px;
+
+        &--center {
+            align-items: center;
+        }
+
+    }
+
+
+    &__empty-info {
+        width: 50%;
+    }
+
+
+    &__img-block {
+        width: 50%;
+    }
+    &__ad-block{
+        width: 100%;
+        padding-top: 30px;
+    }
+
+
+
+    &__mark-block {
+        width: 100%;
+        padding-top: 48px
+    }
+
+    &__empty-title {
+        @include title-1-bold;
+        padding-bottom: 18px
+    }
+
+    &__empty-desc {
+        @include subhead-medium;
+    }
+
+    &__img-block {
+        @include flexbox;
+
+        width: 336px;
+        height: 336px;
+        margin-right: 78px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__buttons-block {
+        width: 100%;
+        padding-top: 54px;
+        @include flexbox(flex, column, start, start);
+        gap: 16px;
+        &--mark{
+            padding-top: 24px
+        }
+    }
+
+
+
+
+
+
+}
+
+
+
+.ad {
+
+   
+
+    &__block {
+        @include white-block;
+    }
+
+    &__item {
+        background-color: $white300-color;
+        border-radius: 12px;
+        padding: 10px 20px;
+
+        @include flexbox(flex, column, stretch);
+        gap: 16px;
+
+        width: 100%;
+
+    }
+
+    &__operationss-btn {
+        @include flexbox;
+        gap: 15px;
+    }
+
+    &__info {
+        @include flexbox(flex, column, start, start);
+        gap: 8px;
+    }
+
+    &__price {
+        @include subhead-bold;
+        padding-bottom: 2px
+    }
+
+    &__model {
+        @include caption-1-medium;
+    }
+
+    &__tags {
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+    }
+
+    &__tag-item {
+        display: inline-block;
+        border-radius: 6px;
+        background-color: #E5EBFF;
+        padding: 2px 8px;
+        @include caption-1-medium;
+    }
+
+    &__img-block {
+        width: 180px;
+        height: 110px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    &__info-block {
+        @include flexbox(flex, row, center, start);
+        gap: 10px;
+        &--start{
+            align-items: start
+        }
+    }
+
+    &__status {
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+        border-radius: 6px;
+
+        padding: 2px 10px 2px 6px;
+        @include caption-1-regular;
+
+
+
+        &--moderation {
+            color: $orange300-color;
+            background-color: rgba($yellow100-color, 0.34);
+
+            .ad__status-icon {
+                background-color: $orange300-color;
+
+            }
+        }
+
+
+        &--accepted {
+            color: $green500-color;
+            background-color: rgba($green100-color, 0.34);
+
+            .ad__status-icon {
+                background-color: $green500-color;
+
+            }
+        }
+
+    }
+
+    &__status-icon {
+        width: 12px;
+        height: 12px;
+    }
+    .button{
+        padding: 7px 0;
+    }
+    &__mark{
+        @include subhead-bold;
+        &--red{
+            color: $red700-color;
+        }
+    }
+
+
+}
+
+
+
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slick-slide {
+    margin: 0;
+    width: 180px;
+    height: 110px;
+}
+
+.slider .slick-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slick-slide.slick-active {
+    opacity: 1;
+}
+
+
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 6px 0;
+}
+
+
+.slick-dots li {
+    margin: 0 3px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    button {
+        font-size: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgba($text-primary-color, 0.4);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+}
+
+.slick-dots .slick-active button {
+    background-color: $secondary-color-2;
+}
+
+
+.slick-list {
+    border-radius: 8px;
+}
+
+// @media (max-width: 1439px){
+//     &__empty-info{
+//         width: 100%;
+//     }
+
+//     &__buttons-block,
+//     &__mark-block{
+//         width: 100%;
+//     }
+// }
+/* Для экранов шириной от 1200px до 1439px -----------------------*/
+@media (max-width: 1439px) and (min-width: 1200px) {
+
+    .sell{
+        &__img-block{
+            width: 300px;
+            height: 300px; 
+            margin: 0;
+        }
+        &__empty-block{
+            &--center{
+                flex-direction: column-reverse;
+                align-items: start;
+            }
+        }
+      
+     
+    }
+
+
+}
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1199px) and (min-width: 1024px) {
+    .sell{
+        &__img-block{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        &__empty-block{
+            align-items: center;
+            justify-content: start;
+        }
+    }
+
+
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+    .sell{
+    &__img-block {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+    }
+
+    &__empty-block{
+        flex-direction: column-reverse;
+    }
+    &__empty-info{
+        width: 100%;
+    }
+    &__buttons-block{
+        padding-top: 30px;
+    }
+}
+}
+
+@media (max-width: 1200px) {
+    .header__right {
+       display: flex;
+       .nav__list{
+           flex-direction: row;
+       }
+   
+   }
+}

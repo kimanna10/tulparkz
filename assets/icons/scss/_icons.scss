@@ -57,6 +57,10 @@ $download: '/assets/icons/download.svg';
 $plane: '/assets/icons/plane.svg';
 $paperclip: '/assets/icons/paperclip.svg';
 
+$verified: '/assets/icons/verified.svg';
+$guarantee: '/assets/icons/guarantee.svg';
+$dot: '/assets/icons/dot.svg';
+
 
 
 @mixin icon($name, $path) {
@@ -133,5 +137,7 @@ $paperclip: '/assets/icons/paperclip.svg';
 @include icon(paperclip, $paperclip);
 
 
-
+@include icon(guarantee, $guarantee);
+@include icon(verified, $verified);
+@include icon(dot, $dot);
 

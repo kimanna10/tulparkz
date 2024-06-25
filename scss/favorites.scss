@@ -1,18 +1,19 @@
 @import 'colors';
-
 @import 'mixin';
 
-.main{
+.main {
     padding-top: 116px;
     padding-bottom: 256px;
-    &__wrapper{
+
+    &__wrapper {
         @include flexbox(flex, row, center, center);
     }
-    &__tabs{
-        width: calc(100% - 100px);
+
+    &__tabs {
+        width: calc(100% - 200px);
     }
 
-    &__fav-title{
+    &__fav-title {
         @include title-1-bold;
     }
 }
@@ -20,9 +21,10 @@
 
 .tabs {
     width: 100%;
-    
+
     margin-top: 26px;
-    &__block{
+
+    &__block {
         background-color: $white-color;
         display: flex;
         padding: 2px;
@@ -31,90 +33,108 @@
         margin: 0 auto;
     }
 
-    &__empty-block{
+    &__empty-block {
         @include flexbox(flex, row, start, space-between);
         padding: 36px;
         background-color: $white-color;
-        border-radius: 8px;
-   
+        border-radius: 18px;
+
     }
-    &__empty-info, &__img-block{
+
+    &__empty-info,
+    &__img-block {
         width: 50%;
-      
+
     }
-    &__empty-title{
+
+    &__empty-title {
         @include title-1-bold;
         padding-bottom: 18px
     }
-    &__empty-desc{
+
+    &__empty-desc {
         @include subhead-medium;
     }
-    &__img-block{
+
+    &__img-block {
         @include flexbox;
 
         width: 336px;
         height: 336px;
+        margin-right: 78px;
     }
-    &__img{
+
+    &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
 
-    &__fav-content{
+    &__fav-content {
         @include flexbox(flex, row, center, stretch);
         gap: 24px;
         padding-top: 35px;
         flex-wrap: wrap;
     }
-    &__fav-item{
-        width: calc((100% - 72px ) / 4);
+
+    &__fav-item {
+        width: calc((100% - 72px) / 4);
         background-color: $white-color;
         border-radius: 18px;
-        
+
     }
-    &__fav-top{
+
+    &__fav-top {
         @include flexbox(flex, row, center, space-between);
     }
-    &__fav-quantity{
+
+    &__fav-quantity {
         @include title-2-medium;
     }
-    &__fav-reset{
+
+    &__fav-reset {
         @include title-4-medium;
         color: $text-thertiary-color;
-        &:hover{
+
+        &:hover {
             color: $text-thertiary-color;
         }
     }
 
-    &__fav-info{
+    &__fav-info {
         @include flexbox(flex, column, start);
         gap: 4px;
         padding: 12px 18px 26px 18px;
 
     }
-    &__fav-price{
+
+    &__fav-price {
         @include title-1-bold;
     }
-    &__fav-img{
+
+    &__fav-img {
         width: 100%;
         height: 180px;
         border-top-right-radius: 18px;
         border-top-left-radius: 18px;
         object-fit: cover;
     }
-    &__fav-model{
+
+    &__fav-model {
         @include title-3-medium;
     }
-    &__fav-tags{
+
+    &__fav-tags {
         @include caption-1-medium;
         padding-top: 10px;
     }
-    &__fav-img-block{
+
+    &__fav-img-block {
         position: relative;
     }
-    &__like-block{
+
+    &__like-block {
         position: absolute;
         top: 15px;
         left: 15px;
@@ -124,21 +144,17 @@
         width: 32px;
         height: 32px;
     }
-    &__like-icon{
+
+    &__like-icon {
         background-color: $secondary-color-2;
         width: 32px;
         height: 32px;
-        
+
     }
 
 
 }
-.tag-item{
-    padding: 2px 8px;
-    border-radius: 6px;
-    background-color: #E5EBFF;
-    display: inline-block;
-}
+
 
 
 .tab-label {
@@ -152,7 +168,7 @@
     color: $text-secondary-color;
     width: 50%;
     text-align: center;
-    
+
 }
 
 .tab-label:hover {
@@ -163,7 +179,7 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked + .tab-label {
+input[type="radio"]:checked+.tab-label {
     background: $secondary-color-2;
     color: $white-color;
 }
@@ -173,14 +189,14 @@ input[type="radio"]:checked + .tab-label {
     margin-top: 44px;
 }
 
- .tab-content.active {
+.tab-content.active {
     display: block;
-  }
+}
 
 
-  /* Для экранов шириной от 1440px до 1561px -----------------------*/
+/* Для экранов шириной от 1440px до 1561px -----------------------*/
 @media (max-width: 1561px) and (min-width: 1440px) {
-    .tabs__fav-item{
+    .tabs__fav-item {
         width: calc((100% - 48px) /3);
     }
 
@@ -189,32 +205,55 @@ input[type="radio"]:checked + .tab-label {
 /* Для экранов шириной от 1200px до 1439px -----------------------*/
 @media (max-width: 1439px) and (min-width: 1200px) {
 
-    .tabs__fav-item{
+    .tabs{
+        &__fav-item {
         width: calc((100% - 48px) /3);
+        }
+        &__img-block{
+            width: 300px;
+            height: 300px;
+        }
     }
 
 
 }
+
+// @media (max-width: 1200px) {
+//     .header__right {
+//         display: none;
+//     }
+// }
+
 
 
 
 /* Для экранов шириной от 1024px до 1199px -----------------------*/
 @media (max-width: 1199px) and (min-width: 1024px) {
-    .tabs__fav-item{
+    .tabs{
+        &__fav-item {
         width: calc((100% - 24px) /2);
+        }
+
+        &__img-block{
+            width: 250px;
+            height: 250px;
+            margin: 0;
+        }
     }
+
 
 }
 
 /* Для экранов шириной от 768px до 1023px -----------------------*/
 @media (max-width: 1023px) and (min-width: 768px) {
-    .tabs__fav-item{
+    .tabs{
+        &__fav-item {
         width: calc((100% - 24px) /2);
     }
-    .tabs__img-block{
-        width: 250px;
-        height: 250px;
+    &__img-block {
+        width: 200px;
+        height: 200px;
+        margin: 0;
     }
 }
-
-
+}

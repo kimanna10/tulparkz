@@ -1,0 +1,526 @@
+@import 'colors';
+@import 'mixin';
+
+
+
+
+.banner{
+   
+    padding: 40px 0;  
+    &__title{
+        @include title-gradient;
+        padding-bottom: 12px;
+    } 
+    &__slider-block{
+        padding-top: 28px;
+    }
+ 
+    &__slider-item-img{
+        position: relative;
+    }
+    &__slider-item-top{
+        padding-bottom: 18px;
+    }
+
+    &__slider-item-tags{
+        position: absolute;
+        bottom: 14px;
+        left: 100px;
+        transform: skewX(10deg) translateX(-50%);
+
+        @include flexbox(flex, row, center, start);
+        gap: 10px;
+    }
+    &__fav-tags{
+        @include caption-1-medium;
+        padding-top: 10px;
+    }
+    &__slider-item-price{
+        @include title-1-bold;
+    }
+    &__slider-item-model{
+        @include title-3-medium;
+    }
+  
+    &__more-icon{
+        background-color: $text-primary-color;
+    }
+    &__offer-button{
+        padding: 10px 14px;
+    }
+    &__offer-button-block{
+        background-color: $white300-color;
+        padding-left: 26px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &__line{
+        height: 2px;
+        background-color: #D9DAF5;
+        width: 100%;
+    }
+    &__offer{
+        position: relative;
+        padding: 22px 0;
+    }
+    
+}
+
+.action{
+    padding-top: 95px;
+    padding-bottom: 256px; 
+
+    background-image: url('../assets/img/bg-action.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &__block{
+        max-width: 888px;
+        margin: 0 auto;
+    }
+
+    
+    &__title{
+        @include title-gradient;
+    }
+
+    &__form{
+        color: $white-color;
+    }
+    &__subtitle{
+        @include title-3-bold;
+        width: 100%;
+        border-bottom: 1px solid rgba( #F3F5F7, 0.12);
+        padding: 15px 0;
+       
+    
+    }
+    &__form-block{
+        border-radius: 12px;
+        background-color: $secondary-color-2;
+        box-shadow: -15px 12px 60px 0px rgba(#3447ED, 0.25);
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include flexbox(flex, column, center);   
+}
+&__inputs{
+    padding-top: 18px;
+ 
+}
+&__input-row{
+    @include flexbox;
+    gap: 34px;
+
+    padding-bottom: 24px;
+}
+&__input-block{
+    width: 300px;
+    position: relative;
+}
+
+&__period-block{
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+&__price-total{
+    @include title-1-bold;
+}
+&__button-more-icon{
+    background-color: $grey-color;
+}
+&__button-more{
+    width: 300px;
+    padding: 30px 0;
+    @include headline-regular;
+}
+&__icon{
+    background-color: $text-thertiary-color;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    right: 11px;
+}
+&__button-submit{
+    .button{
+    @include title-4-bold;
+    }
+}
+}
+
+
+
+.tabs {
+    width: 100%;
+    
+    margin-top: 26px;
+
+
+    &__fav-content{
+        @include flexbox(flex, row, center, stretch);
+        gap: 24px;
+        padding-top: 100px;
+        flex-wrap: wrap;
+    }
+    &__fav-item{
+        width: calc((100% - 72px ) / 4);
+        background-color: $white-color;
+        border-radius: 18px;
+
+    
+        
+    }
+ 
+
+    &__fav-info{
+        @include flexbox(flex, column, start);
+        gap: 4px;
+        padding: 12px 18px 26px 18px;
+
+        color: $text-primary-color;
+        &:hover{
+            color: $text-primary-color;
+        }
+    }
+    &__fav-price{
+        @include title-1-bold;
+    }
+    &__fav-img{
+        width: 100%;
+        height: 180px;
+        border-top-right-radius: 18px;
+        border-top-left-radius: 18px;
+        object-fit: cover;
+    }
+    &__fav-model{
+        @include title-3-medium;
+    }
+    &__fav-tags{
+        @include caption-1-medium;
+        padding-top: 10px;
+    }
+    &__fav-img-block{
+        position: relative;
+    }
+    &__like-block{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: rgba($white-color, 0.4);
+        border-radius: 6px;
+
+        width: 32px;
+        height: 32px;
+    }
+    &__like-icon{
+        background-color: transparent;
+        width: 32px;
+        height: 32px;
+
+        &--favorite{
+            background-color: $secondary-color-2;
+
+        }
+        &--default{
+            background-color: $text-primary-color;
+        }
+        
+    }
+
+
+}
+
+
+.content{
+
+    &__radio-list {
+        @include flexbox(flex, row, center, start);
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    &__radio-item{
+        @include headline-regular;
+        @include flexbox(flex, row, center, start);
+        position: relative;
+
+    }
+    &__radio-label{
+        padding-left: 28px;
+    }
+    .radio-custom{
+        right: auto;
+        left: 0;
+    }
+
+    &__filter-top{
+        padding-bottom: 24px;
+    }
+
+    &__filter-section{
+        background-color: $white-color;
+        padding: 40px 0 90px;
+    }
+
+    &__filter-inputs{
+        @include flexbox(flex, row, center, space-between);
+        gap: 24px;
+    }
+    &__input-block{
+        position: relative;
+    }
+    &__icon-search{
+        background-color: $text-primary-color;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 15px;
+    }
+    .textfield{
+        padding-left: 45px;
+    }
+    .car-brand-img{
+        width: 24px;
+        height: 24px;
+    }
+    &__search-dropdown-item{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+
+
+
+   
+    &__icon-close{
+        background-color: $text-primary-color;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 15px;
+        display: none;
+        cursor: pointer;
+    }
+
+  
+    &__dropdown{
+        list-style: none;
+      
+        &--year{
+            min-width: 100px;
+        }
+        &--model,
+        &--search{
+            min-width: 200px;
+        }
+    }
+
+    &__toggle{
+        color: $text-primary-color;
+            @include headline-regular;
+        
+            background-color: $white300-color;
+            border-radius: 12px;
+        
+            @include flexbox(flex, row, center, space-between);
+        
+            &:hover {
+                color: $text-primary-color;
+            }
+        &--year{
+            padding: 13px 16px;
+        }
+        &--model{
+            padding: 13px 16px 13px 45px;
+        }
+      
+
+
+    }
+
+    .dropdown-menu{
+        padding: 0;
+    }
+    .dropdown-item{
+        @include headline-regular;
+        &:active{
+            background-color: $white50-color;
+            color: $text-primary-color;
+        }
+        cursor: pointer;
+        border-bottom: 1px solid $grey-color;
+      
+
+    }
+  
+    &__caret-icon{
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+    }
+
+    .dropdown-menu{
+        min-width: 100%;
+        max-height: 300px;
+        overflow-y: scroll;
+        top: 60px;
+    }
+    &__year-dropdown-item,
+    &__search-dropdown-item {
+        padding: 14px 0;
+        padding-left: 20px;
+    }
+    &__model-dropdown-item {
+        padding: 14px 0;
+        padding-left: 45px;
+    }
+ 
+
+
+    &__price-block{
+        min-width: 290px;
+    }
+    &__result-button{
+        min-width: 150px;
+    }
+
+    &__range-display{
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        background-color: $white300-color;
+        padding: 13px 16px;
+        @include headline-regular;
+        @include flexbox(flex, row, center, space-between);
+    }
+
+    &__search{
+        position: relative;
+        width: 100%;
+    }
+    &__model{
+        width: 100%;
+    }
+    &__year{
+        width: 100%;
+    }
+    &__price{
+        width: 100%;
+    }
+    &__result{
+        width: 100%;
+    }
+
+}
+
+.rotate-180{
+    transform: rotate(180deg);
+}
+
+.price-view{
+    @include flexbox;
+    gap: 5px;
+}
+
+
+
+.price-input {
+    width: 100%;
+    display: flex;
+    margin: 30px 0 35px;
+  }
+
+  .image-skew {
+    position: relative;
+    z-index: 12;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 380px;
+    height: 190px;
+    transform: skewX(-5deg);
+    transition: all 0.15s;
+  
+    img {
+      position: absolute;
+      left: 50%;
+      width: 105%;
+      height: 100%;
+      object-fit: cover;
+      transform: skewX(5deg) translateX(-50%);
+    }
+
+
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1199px) {
+    .content{
+        &__filter-inputs{
+            flex-direction: column;
+        }
+    }
+  
+}
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1199px) and (min-width: 1023px) {
+    .content{
+        &__filter-inputs{
+            flex-direction: column;
+        }
+    }
+  
+}
+
+
+/* Для экранов шириной от 1440px до 1561px -----------------------*/
+@media (max-width: 1561px) and (min-width: 1440px) {
+    .tabs{
+        &__fav-item {
+        width: calc((100% - 48px) /3);
+    }
+} 
+
+}
+/* Для экранов шириной от 1200px до 1439px -----------------------*/
+@media (max-width: 1439px) and (min-width: 1200px) {
+
+    .tabs{
+        &__fav-item {
+        width: calc((100% - 48px) /3);
+        }
+    }
+
+
+}
+
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1199px) and (min-width: 1024px) {
+    .tabs{
+        &__fav-item {
+        width: calc((100% - 24px) /2);
+        }
+    }
+
+
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+    .tabs{
+        &__fav-item {
+        width: calc((100% - 24px) /2);
+    }
+
+}
+}
+@media (max-width: 1200px) {
+    .header__right {
+       display: flex;
+       .nav__list{
+           flex-direction: row;
+       }
+   
+   }
+}

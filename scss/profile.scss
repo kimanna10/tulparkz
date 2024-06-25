@@ -116,12 +116,18 @@
         @include flexbox(flex, row, center, space-between);
         width: calc((100% / 2) - 4px);
         position: relative;
+
+        &.selected{
+            background-color: $white300-color;
+        }
     }
 
     &__button {
         @include flexbox(flex, row, center, end);
         width: 20%;
     }
+
+
 }
 
 

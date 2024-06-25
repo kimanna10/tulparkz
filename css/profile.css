@@ -329,6 +329,11 @@
   width: calc(50% - 4px);
   position: relative;
 }
+.city__item.selected,
+.language__item.selected,
+.notif__item.selected {
+  background-color: #F3F5F7;
+}
 .city__button,
 .language__button,
 .notif__button {

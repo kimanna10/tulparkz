@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Продажа</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="css/sell.css">
+
+
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header__wrapper">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__block">
+                        <div class="header__block-item">
+                            <a class="header__social">
+                                <div class="header__social-icon icon-mail-1"></div>
+                                <div class="header__social-text">info@q4tulpar.kz</div>
+                            </a>
+                            <a class="header__social">
+                                <div class="header__social-icon icon-instagram"></div>
+                                <div class="header__social-text">Наш Instagram</div>
+                            </a>
+                            <a class="header__social">
+                                <div class="header__social-icon icon-youtube"></div>
+                                <div class="header__social-text">Наш канал</div>
+                            </a>
+                        </div>
+                        <div class="header__block-item">
+                            <a class="header__social">
+                                <div class="header__social-icon icon-location-1"></div>
+                                <div class="header__social-text">Алматы, Казахстан</div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__block">
+                        <div class="logo-block">
+                            <img src="assets/img/logo-icon.png" alt="" class="logo-icon">
+                            <img src="assets/img/logo-text.png" alt="" class="logo-text">
+                        </div>
+                        <div class="header__nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-search-magnifying-glass"></i>Каталог авто
+                                        </a>
+                                    </li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Авто от Tulpar</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link nav__link--active">Продать</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="header__right">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-bookmark-outline"></i>Избранные
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav__link" id="dropdownToggle" href="profile.html">
+                                            <img src="assets/img/car-img.png" class="nav__user-img">Никита Фролов
+                                        </a>
+                                        <ul class="dropdown-menu" id="dropdownMenu">
+                                            <li><a class="dropdown-item" href="profile.html"><i
+                                                        class="nav__icon icon-user"></i>Профиль</a></li>
+                                            <li><a class="dropdown-item" href="messages.html"><i
+                                                        class="nav__icon icon-mail"></i>Сообщения</a></li>
+                                            <li><a class="dropdown-item" href="login.html"><i
+                                                        class="nav__icon icon-log-out"></i>Выйти</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="burger-menu">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+
+                        <div class="mobile-nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <i class="nav__icon icon-search-magnifying-glass"></i>Каталог авто
+                                        </a>
+                                    </li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Авто от Tulpar</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    <li class="nav__item"><a href="#" class="nav__link nav__link--active">Продать</a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__block sell">
+                    
+                    <!-- Если не зарегистировался или не вошел в систему -->
+                    <div class="sell__empty-block">
+                        <div class="sell__empty-info">
+                            <div class="sell__empty-title">Разместите ваше авто на продажу</div>
+                            <div class="sell__empty-desc">
+                                Объявление смогут увидеть более 3 млн человек. Чтобы разместить свой автомобиль - войдите в свой аккаунт
+                                или пройдите регистрацию
+                            </div>
+
+                            <div class="sell__buttons-block">
+                                <a href="login.html" class="button button__btn--blue">Войти</a>
+                                <a href="register.html" class="button button__btn--white">Зарегистрироваться</a>
+                            </div>
+                        </div>
+                        <div class="sell__img-block">
+                            <img src="assets/img/sell-img.png" class="sell__img" alt="">
+                        </div>
+                    </div>
+
+
+
+                    <!-- Если надо создать объявление -->
+                    <!-- <div class="sell__empty-block">
+                        <div class="sell__empty-info">
+                            <div class="sell__empty-title">Разместите ваше авто на продажу</div>
+                            <div class="sell__empty-desc">
+                                Объявление смогут увидеть более 3 млн человек.
+                            </div>
+
+                            <div class="sell__buttons-block">
+                                <a href="#" class="button button__btn--blue">Создать объявление</a>                            </div>
+                        </div>
+                        <div class="sell__img-block">
+                            <img src="assets/img/sell-img.png" class="sell__img" alt="">
+                        </div>
+                    </div> -->
+
+
+
+                    <!-- Если надо создать объявление -->
+                    <!-- <div class="sell__empty-block sell__empty-block--center">
+                        <div class="sell__empty-info">
+                            <div class="sell__empty-title">Объявление успешно передано на модерацию!</div>
+                            <div class="sell__empty-desc">
+                                Спасибо, что выбрали нас! Наши специалисты свяжутся с вами в ближайшее время
+                            </div>
+
+                            <div class="sell__ad-block ad">
+                                <div class="ad__item">
+                                    <div class="ad__info-block">
+    
+    
+    
+    
+    
+                                        <div class="ad__img-block">
+                                            <div class="slider">
+                                                <div><img src="assets/img/car-img.png" alt="Car Image">
+                                                </div>
+                                                <div><img src="assets/img/car-img-1.png" alt="Car Image">
+                                                </div>
+                                                <div><img src="assets/img/car-img-2.png" alt="Car Image">
+                                                </div>
+                                            </div>
+                                        </div>
+    
+    
+                                        <div class="ad__info">
+                                            <div class="ad__characteristic">
+                                                <div class="ad__price">7 534 900 ₸</div>
+                                                <div class="ad__model">Audi S5</div>
+                                            </div>
+    
+                                            <div class="ad__tags">
+                                                <div class="ad__tag-item">2012</div>
+                                                <div class="ad__tag-item">142 000 км</div>
+                                            </div>
+                                            <div class="ad__status ad__status--accepted">
+                                                <div class="ad__status-icon icon-clock"></div>
+                                                <div class="ad__status-text">На модерации</div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                            <div class="sell__buttons-block">
+                                <a href="profile.html" class="button button__btn--blue">Перейти в профиль</a>
+                                <a href="index.html" class="button button__btn--white">На главную</a>
+                            </div>
+                        </div>
+                      
+                    </div> -->
+
+
+
+                    <!-- Если объявление черновик-->
+                    <!-- <div class="sell__empty-block sell__empty-block--center">
+                        <div class="sell__empty-info">
+                            <div class="sell__empty-title">Разместите ваше авто на продажу</div>
+                            <div class="sell__empty-desc">
+                                Объявление смогут увидеть более 3 млн человек.
+                            </div>
+
+
+                            <div class="sell__mark-block ad">
+                                <div class="ad__item">
+                                    <div class="ad__info-block ad__info-block--start">
+    
+                                        <div class="ad__img-block">
+                                            <div class="slider">
+                                                <div><img src="assets/img/car-img.png" alt="Car Image">
+                                                </div>
+                                                <div><img src="assets/img/car-img-1.png" alt="Car Image">
+                                                </div>
+                                                <div><img src="assets/img/car-img-2.png" alt="Car Image">
+                                                </div>
+                                            </div>
+                                        </div>
+    
+    
+                                        <div class="ad__info">
+                                            <div class="ad__characteristic">
+                                                <div class="ad__mark">Audi S5</div>
+                                                <div class="ad__mark ad__mark--red">Черновик</div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+
+                                    <div class="ad__operationss-btn">
+                                        <a href="" class="button button__btn--white">Редактирование</a>
+                                        <a href="" class="button button__btn--white">Просмотр</a>
+                                    </div>
+                                    <div class="ad__statistic-btn">
+                                        <a href="" class="button button__btn--white">Выставить на продажу</a>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                            <div class="sell__buttons-block  sell__buttons-block--mark">
+                                <a href="profile.html" class="button button__btn--blue">Создать новое объявление</a>
+                            </div>
+                        </div>
+                      
+                    </div> -->
+
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="footer__info-block">
+                        <div class="logo-block">
+                            <img src="assets/img/logo-icon.png" alt="" class="logo-icon">
+                            <img src="assets/img/logo-text.png" alt="" class="logo-text">
+                        </div>
+
+                        <div class="footer__info-text">
+                            Наш автомаркет — это место, где каждый автомобиль проходит тщательную проверку перед
+                            продажей.
+                            Вы можете быть уверены в каждой покупке, ведь мы заботимся о вашей безопасности и комфорте.
+                        </div>
+                    </div>
+                    <div class="footer__nav">
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">Каталог авто</a>
+                            <a href="" class="footer__nav-link">Авто от Tulpar</a>
+                        </div>
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">О нас</a>
+                            <a href="" class="footer__nav-link">Контакты</a>
+                        </div>
+                        <div class="footer__nav-block">
+                            <a href="" class="footer__nav-link">Продать</a>
+                            <a href="" class="footer__nav-link">Мои авто</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        &copy
+                        <script>document.write(new Date().getFullYear());</script>
+                        Q4 Tulpar. Все права защищены.
+                    </div>
+
+                    <div class="footer__bottom-logo">
+                        <img src="assets/img/footer-logo.png" alt="footer-logo" class="footer__bottom-logo-img">
+                    </div>
+                    <div class="footer__bottom-link-block">
+                        <a href="#" class="footer__bottom-link">Пользовательское соглашение</a>
+                        <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script src="js/slider.js"></script>
+
+</body>
+
+</html>

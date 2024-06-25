@@ -662,7 +662,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
   .header__right {
     display: -webkit-box;
     display: -ms-flexbox;

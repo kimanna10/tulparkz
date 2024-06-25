@@ -1,0 +1,1164 @@
+@import 'colors';
+@import 'mixin';
+
+.main {
+    padding-top: 67px;
+    padding-bottom: 256px;
+
+
+}
+
+.link-close {
+    background-color: $text-primary-color;
+}
+
+.sell-ad {
+    @include flexbox(flex, row, start, start);
+    gap: 50px;
+
+    &__list {
+        width: 250px;
+        @include flexbox(flex, column, start, start);
+        gap: 48px;
+
+        padding-top: 28px;
+    }
+
+    &__form-block {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 30px;
+        width: 100%;
+
+        @include flexbox(flex, column, start, start);
+        gap: 38px;
+    
+    }
+
+    &__list-item {
+        @include flexbox(flex, row, center, start);
+        gap: 17px;
+
+    }
+
+    &__list-mark {
+        width: 20px;
+        height: 20px;
+
+        &--dot {
+            background-color: $text-primary-color;
+        }
+
+        &--check {
+            background-color: $green500-color;
+        }
+    }
+
+    &__list-text {
+        @include title-4-medium;
+
+        &--active {
+            @include title-3-bold;
+        }
+    }
+}
+
+.form-ad {
+    width: 100%;
+    &__title {
+        @include title-2-bold;
+    }
+
+    &__input-block {
+        padding-top: 24px;
+        @include flexbox(flex, column, start, start);
+        gap: 24px;
+    }
+
+  
+    &__block,
+    &__photo {
+        width: 100%;
+    }
+
+    &__mark,
+    &__model{
+        width: 100%;
+    }
+ 
+
+    &__characteristic,
+    &__modif,
+    &__status{
+        
+        width: 100%;
+        @include flexbox(flex, column, start, start);
+        gap: 24px;
+    }
+
+    &__submit{
+        padding-top: 38px;
+        text-align: center;
+    }
+    &__condition{
+        @include headline-regular;
+        padding-top: 14px;
+    }
+    &__submit-link{
+        color: $secondary-color-2;
+        border-bottom: 1px solid $secondary-color-2;
+
+        &:hover{
+            color: $secondary-color-2;
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+}
+
+.header {
+    &__title {
+        @include title-2-medium;
+    }
+}
+
+.content {
+
+    &__input-block {
+        position: relative;
+    }
+
+    &__icon-search {
+        background-color: $text-primary-color;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 15px;
+    }
+
+    .textfield {
+        padding-left: 45px;
+    }
+
+    .car-brand-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__search-dropdown-item {
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+
+    &__icon-block {
+        @include flexbox(flex, row, center, end);
+        gap: 12px;
+    }
+
+
+
+
+    &__icon-close {
+        background-color: $text-primary-color;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 15px;
+        display: none;
+        cursor: pointer;
+    }
+
+
+    &__dropdown {
+        list-style: none;
+
+        &--model,
+        &--search {
+            width: 350px;
+        }
+    }
+
+    &__toggle {
+        color: $text-primary-color;
+        @include headline-regular;
+
+        background-color: $white300-color;
+        border-radius: 12px;
+
+        @include flexbox(flex, row, center, space-between);
+
+        &:hover {
+            color: $text-primary-color;
+        }
+
+        &--year {
+            padding: 13px 16px;
+        }
+
+        &--model {
+            padding: 13px 16px 13px 45px;
+        }
+        &--city{
+
+            padding: 13px 15px;
+        background-color: $white-color;
+        border-radius: 12px;
+        }
+
+
+
+    }
+
+
+
+    &__caret-icon {
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+    }
+
+    .dropdown-menu {
+        min-width: 350px;
+        max-height: 300px;
+        overflow-y: scroll;
+        top: 60px;
+        left: 0;
+        right: auto;
+
+
+
+
+
+
+    }
+
+    &__search-dropdown-item {
+        padding: 14px 0;
+        padding-left: 20px;
+    }
+
+    &__model-dropdown-item {
+        padding: 14px 0;
+        padding-left: 45px;
+    }
+
+    &__photo{
+       background-color: $white300-color;
+       padding: 15px;
+       @include flexbox(flex, column, stretch, start);
+       gap: 24px;
+
+       border-radius: 12px;
+    }
+    &__photo-title{
+        @include headline-regular;
+    }
+    &__photo-rules{
+        @include flexbox(flex, row, start, start);
+        gap: 24px;
+
+    }
+    &__photo-rules-text{
+        @include subhead-regular;
+    }
+    &__photo-rules-right,
+    &__photo-rules-wrong{
+        width: calc((100% / 2 ) - 10px);
+        @include flexbox(flex, column, stretch, start);
+        gap: 6px;
+    }
+    &__photo-rules-icon{
+        width: 20px;
+        height: 20px;
+        
+        &--warning{
+            background-color: $green500-color;
+        }
+        &--close{
+            background-color: $red700-color;
+        }
+    }
+
+    &__photo-rules-item{
+        background-color: $white-color;
+        border-radius: 6px;
+        padding: 10px;
+        @include flexbox(flex, row, center, start);
+
+        gap: 6px;
+    }
+
+    &__photo-inputs{
+        width: calc((100% / 2) - 10px);
+    }
+    &__photo-gallery{
+        @include flexbox(flex, row, start, start);
+        flex-wrap: wrap;
+        gap: 12px;
+
+    }
+    &__photo-gallery-item{
+        padding: 6px;
+        background-color: $white-color;
+        border-radius: 12px;
+        width: 120px;
+    }
+    &__photo-gallery-text{
+        @include caption-2-regular;
+        padding-top:  4px;
+    }
+
+    &__photo-gallery-img-block{
+        background-color: rgba(#3F92E0, 0.12);
+        border-radius: 7px;
+        width: 100%;
+        height: 70px;
+    }
+    &__photo-gallery-img{
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+
+    &__photo-button-block{
+        padding-top: 16px;
+    }
+&__photo-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+}
+&__photo-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+&__photo-input-icon {
+    width: 32px;
+    height: 32px;
+    background-color: $white-color;
+    margin-right: 4px;
+}
+
+
+    &__year-drop,
+    &__gen-drop,
+    &__carcase-drop,
+    &__helm-drop,
+    &__engine-drop,
+    &__trans-drop,
+    &__drive-drop,
+    &__modification-drop,
+    &__color-drop,
+    &__option-drop {
+        background-color: $white300-color;
+        padding: 15px;
+    }
+
+
+    &__year-list,
+    &__gen-list,
+    &__helm-list,
+    &__engine-list,
+    &__carcase-list,
+    &__trans-list,
+    &__drive-list,
+    &__modification-list,
+    &__color-list,
+    &__city-list{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        flex-wrap: wrap;
+
+
+    }
+    &__city-list{
+        background-color: $white-color;
+        padding: 15px;
+        gap: 24px;
+    }
+
+    &__option-list{
+        @include flexbox(flex, column, start, start);
+        gap: 24px;
+    }
+
+    &__option-block{
+        @include flexbox (flex, column, start, start);
+        gap: 16px;
+    }
+
+    &__option-items{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        flex-wrap: wrap
+    }
+    &__option-title{
+        @include headline-medium;
+    }
+    &__option-text{
+        @include caption-1-regular;
+        padding-right: 6px;
+    }
+
+    &__option-dropdown-item{
+        padding: 6px 12px;
+        background-color: $white-color;
+        border-radius: 8px;
+        display:inline-block;
+    }
+
+
+
+
+    &__year-dropdown-item {
+        @include headline-regular;
+        padding: 5px 16px;
+        background-color: $white-color;
+        border-radius: 12px;
+        display: inline-block;
+        width: auto;
+        cursor: pointer;
+
+        position: relative;
+
+        &:active {
+            background-color: $secondary-color-2;
+            color: $white-color;
+        }
+    }
+
+    &__gen-dropdown-item {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 12px;
+        cursor: pointer;
+
+        position: relative;
+
+        &:hover {
+            background-color: $secondary-color-2;
+            color: $white-color;
+
+            .content__gen-icon {
+                background-color: $white-color;
+            }
+
+        }
+    }
+
+    &__helm-dropdown-item,
+    &__engine-dropdown-item,
+    &__trans-dropdown-item {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 22px 16px;
+        width: calc((100% / 4) - 24px);
+        cursor: pointer;
+
+        position: relative;
+
+        @include flexbox(flex, row, center, start);
+
+        &:hover {
+            background-color: $secondary-color-2;
+            color: $white-color;
+
+
+        }
+    }
+   
+
+    &__city-radio{
+        right: 0;
+    }
+    &__city-dropdown-item{
+        @include flexbox(flex, row, center, start);
+        position: relative;
+        width: calc((100% / 2) - 12px);
+
+        .radio{
+            margin-left: 0;
+        }
+    }
+
+    &__color-dropdown-item {
+        background-color: $white-color;
+        border-radius: 6px;
+        width: 100px;
+        cursor: pointer;
+
+
+
+        &:hover {
+            background-color: $secondary-color-2;
+            color: $white-color;
+            outline: 2px solid $secondary-color-2;
+
+
+        }
+    }
+
+   
+
+    &__modification-dropdown-item {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 22px 16px;
+        min-width: calc((100% / 3) - 24px);
+        cursor: pointer;
+
+        @include flexbox(flex, row, center, start);
+        position: relative;
+
+    
+
+        &:hover {
+            background-color: $secondary-color-2;
+            color: $white-color;
+        }
+    }
+
+    &__drive-dropdown-item {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 15px 27px;
+        width: 100px;
+        cursor: pointer;
+        outline: 1px solid transparent;
+
+        @include flexbox(flex, column, center, start);
+        gap: 6px;
+        position: relative;
+
+        .radio{
+            margin-left: 0;
+        }
+
+
+        &:hover {
+            outline: 1px solid $secondary-color-2;
+
+
+
+        }
+    }
+
+    &__drive-text {
+        text-align: center;
+        @include caption-1-medium;
+    }
+
+    &__modification-other {
+        @include flexbox(flex, row, center, start);
+        width: 100%;
+        gap: 12px;
+        padding-top: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    &__modification-other-item {
+        min-width: calc((100% / 2 ) - 6px);
+
+        .textfield {
+            padding-left: 15px;
+        }
+    }
+
+    &__modification-other-info {
+        padding-top: 6px;
+    }
+
+    &__modification-other-label {
+        @include text-medium;
+        padding-bottom: 6px;
+    }
+
+
+    &__carcase-dropdown-item {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 14px 16px;
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+        cursor: pointer;
+
+        width: 40%;
+        position: relative;
+
+
+        &:hover {
+            background-color: $secondary-color-2;
+            color: $white-color;
+
+
+        }
+    }
+    .color-result{
+        @include flexbox(flex,row, center, end);
+        gap: 5px;
+        }
+
+    &__carcase-img-block {
+        width: 78px;
+        height: 36px;
+    }
+    &__color-switch{
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 13px 15px;
+        @include flexbox(flex,row, center, space-between);
+        margin-bottom: 10px;
+    }
+
+    &__color-block {
+        width: 100%;
+        height: 80px;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+
+        &--white {
+            background-color: $white-color;
+        }
+        &--silver {
+            background-color: #DCDEDB;
+        }
+        &--grey {
+            background-color: #A9A9A9;
+        }
+        &--black {
+            background-color: #000000;
+        }
+        &--yellow {
+            background-color: #FFFF00;
+        }
+        &--gold {
+            background-color: #FFD700;
+        }
+        &--orange {
+            background-color: #FFA500;
+        }
+        &--bronze {
+            background-color: #CD7F32;
+        }
+        &--brown {
+            background-color: #654321;
+        }
+        &--burg {
+            background-color: #6E001D;
+        }
+        &--beige {
+            background-color: #F5F5DC;
+        }
+        &--pink {
+            background-color: #FFC0CB;
+        }
+   
+        &--red {
+            background-color: #FF0000;
+        }
+        &--sky {
+            background-color: #00BFFF;
+        }
+        &--blue {
+            background-color: #4169E1;
+        }
+        &--purple {
+            background-color: #9300D2;
+        }
+        &--magenta {
+            background-color: #810081;
+        }
+        &--green {
+            background-color: #02E38A;
+        }
+        &--combo {
+            background-image: url('../assets/img/combo-color.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+
+    &__color-text {
+        @include caption-1-regular;
+        text-align: center;
+        padding: 4px;
+
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__year-dropdown-menu,
+    &__gen-dropdown-menu,
+    &__carcase-dropdown-menu,
+    &__helm-dropdown-menu,
+    &__engine-dropdown-menu,
+    &__trans-dropdown-menu,
+    &__drive-dropdown-menu,
+    &__modification-dropdown-menu,
+    &__color-dropdown-menu,
+    &__city-dropdown-menu ,
+    &__option-dropdown-menu{
+        overflow: hidden;
+        border-radius: 12px;
+        margin-top: 4px;
+        display: none;
+    }
+
+    &__mileage, 
+    &__price{
+        background-color: $white300-color;
+        border-radius: 12px;
+        padding: 15px;
+        @include flexbox(flex, column, stretch, start);
+        gap: 24px;
+        width: 100%;
+
+      
+        .textfield{
+            padding-left: 15px;
+        }
+    }
+
+    
+    
+    &__price-input-block{
+        position: relative;
+    }
+
+    &__price-icon{
+        background-color: $grey-color;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+    }
+    &__mileage-label,
+    &__price-label{
+        @include text-medium;
+    }
+    &__mileage-option,
+    &__price-option{
+        @include text-regular;
+    }
+    &__mileage-switch-block,
+    &__price-switch-block{
+        border-radius: 12px;
+        background-color: $white-color;
+
+    }
+    &__mileage-switch,
+    &__price-switch{
+        @include flexbox(flex,row, center, space-between);
+        padding: 15px;
+        border-bottom: 2px solid $white300-color;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &__gen-img-block {
+        width: 100%;
+        height: 170px;
+    }
+
+    &__drive-img-block {
+        width: 45px;
+        height: 55px;
+    }
+
+    &__drive-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__gen-img {
+        object-fit: cover;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__carcase-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__gen-info {
+        padding-top: 12px;
+        @include flexbox(flex, column, start, start);
+        gap: 8px;
+    }
+
+    &__gen-icon {
+        background-color: $text-primary-color;
+    }
+
+    &__gen-info-bottom,
+    &__gen-info-top {
+        @include flexbox(flex, row, center, start);
+        gap: 7px;
+    }
+
+    &__gen-type {
+        @include headline-regular;
+    }
+
+    &__gen-style {
+        padding: 2px 8px;
+        background-color: $blue100a-color;
+        @include caption-1-regular;
+        border-radius: 6px
+    }
+
+    &__gen-year {
+        @include text-regular;
+    }
+
+
+
+    &__price-block {
+        min-width: 290px;
+    }
+
+    &__result-button {
+        min-width: 150px;
+    }
+
+    &__range-display {
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        background-color: $white300-color;
+        padding: 13px 16px;
+        @include headline-regular;
+        @include flexbox(flex, row, center, space-between);
+    }
+
+    &__search {
+        position: relative;
+        width: 100%;
+    }
+
+    &__model {
+        width: 100%;
+    }
+
+    &__year {
+        width: 100%;
+    }
+
+    &__price {
+        width: 100%;
+    }
+
+    &__result {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+    }
+
+    .dropdown-item {
+        @include headline-regular;
+
+        &:active {
+            background-color: $white50-color;
+            color: $text-primary-color;
+        }
+
+        cursor: pointer;
+        border-bottom: 1px solid $grey-color;
+
+
+    }
+
+
+    &__gas-item {
+        background-color: $white300-color;
+        border-radius: 12px;
+        @include headline-regular;
+        padding: 13px 16px;
+
+        @include flexbox(flex, row, center, space-between);
+        width: 100%;
+        position: relative;
+
+        &.selected {
+            background-color: $white300-color;
+        }
+    }
+
+    &__gap-toggle {
+        @include flexbox(flex, row, center, end);
+        gap: 12px;
+    }
+
+    &__mark-block,
+    &__model-block{
+        padding-top: 24px;
+    }
+    &__mark-title,
+    &__model-title{
+        @include subhead-medium;
+    }
+    &__mark-list,
+    &__model-list{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        padding:12px 0;
+    }
+    &__mark-item,
+    &__model-item{
+        background-color: $white300-color;
+        border-radius: 17px;
+
+        padding: 15px 30px;
+        position: relative;
+
+        width: 120px;
+
+        @include flexbox(flex, column, center, center);
+        gap: 6px;
+        .radio{
+            margin-left: 0;
+        }
+    }
+    &__model-item{
+        padding: 13px 28px;
+        width: 120px;
+    }
+
+    &__mark-text,
+    &__maodel-text{
+        @include caption-1-medium;
+    }
+
+    &__mark-img{
+        width: 34px;
+        height: 34px;
+    }
+
+
+
+
+}
+
+.choose {
+    background-color: $secondary-color-2;
+    color: $white-color;
+
+    .content__gen-icon {
+        background-color: $white-color;
+    }
+
+}
+
+.choose-bordered {
+    outline: 2px solid $secondary-color-2;
+}
+
+
+.choose-color {
+    background-color: $secondary-color-2;
+    color: $white-color;
+    outline: 2px solid $secondary-color-2;
+
+}
+
+
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.show-all {
+    display: inline-block;
+    color: $secondary-color-2;
+    border-bottom: 1px solid $secondary-color-2;
+    cursor: pointer;
+
+    &:hover {
+        color: $secondary-color-2;
+        border-color: transparent;
+    }
+
+    &--hide{
+        padding-top: 10px;
+    }
+}
+
+
+.modal-show{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); 
+    z-index: 9999;
+
+    &__view{
+        @include flexbox(flex, row, start, start);
+
+        flex-wrap: wrap;
+
+        gap: 24px;
+
+        padding-top: 24px;
+    }
+    &__right-col,
+    &__left-col{
+        width: calc((100% / 2 ) - 12px);
+        @include flexbox(flex, column, start, start);
+        gap: 16px;
+    }
+    &__block{
+        width: 100%;
+    }
+
+    &__letter{
+        @include text-regular;
+        text-transform: uppercase;
+        color: $text-thertiary-color;
+    }
+    &__list{
+        @include flexbox(flex, column, stretch, start);
+    }
+    &__item{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+        border-bottom: 1px solid $grey-color;
+
+        padding: 14px 16px;
+        position: relative;
+
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    &__item-img{
+        width: 24px;
+        height: 24px;
+    }
+    &__text{
+        @include headline-regular;
+    }
+}
+
+.modal-content{
+    background-color: $white-color;
+    width: 80%;
+    max-width: 822px;
+    height: 80%;
+    margin: auto;
+    padding: 36px 24px;
+    border-radius: 18px;
+
+    position: relative;
+    .textfield{
+        padding-left: 45px;
+    }
+
+    overflow-y: scroll;
+
+ 
+
+}
+
+.close-modal{
+    background-color: $text-primary-color;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 1920px) {
+    .sell-ad{
+        &__list{
+            width: 400px;
+        }
+    }
+}
+
+
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1199px) and (min-width: 768px){
+    .header__nav, .header__right {
+        display: flex;
+    }
+
+    .content{
+        &__modification-dropdown-item,
+        &__trans-dropdown-item,
+        &__engine-dropdown-item,
+        &__helm-dropdown-item,
+        &__carcase-dropdown-item{
+        padding: 13px 20px;
+        width: auto;
+        }
+        &__photo-rules{
+            flex-direction: column;
+            gap: 6px;
+        }
+        &__photo-inputs{
+            width: 100%;
+        }
+        &__photo-input-icon {
+            width: 20px;
+            height: 20px;
+        }
+        &__photo-rules-right,
+        &__photo-rules-wrong{
+            width: 100%;
+        }
+        &__city-list{
+            flex-direction: column;
+            gap: 6px;
+        }
+        &__city-dropdown-item{
+            width: 100%;
+            padding: 6px 0;
+        }
+        &__gen-img-block {
+            width: 200px;
+            height: 120px;
+        }
+    }
+
+    .sell-ad{
+        &__list{
+            gap: 25px;
+        }
+    }
+
+}
+

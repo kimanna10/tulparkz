@@ -68,6 +68,8 @@
         &:last-child {
             margin-right: 0;
         }
+
+      
     }
 
     &__icon{
@@ -139,28 +141,14 @@
 
 }
 
-@media (max-width: 1199px) {
-   
 
-}
 
 /* Для экранов шириной от 1024px до 1199px -----------------------*/
 @media (max-width: 1199px) and (min-width: 1024px) {
     .header{
-        .logo-block{
-            gap: 5px;
-        }
-        .logo-icon{
-            width: 40px;
-        }
-        .logo-text{
-            width: 80px;
-        }
+        margin:0;
         .nav__item {
-            margin-right: 10px;
-            &:last-child{
-                margin-right: 0;
-            }
+            margin: 0;
         }
     }
 
@@ -202,8 +190,8 @@
   
 }
 
-@media (max-width: 1023px) {
-    .header__nav, .header__right {
+@media (max-width: 1200px) {
+    .header__nav {
         display: none;
     }
     .burger-menu {
@@ -217,6 +205,7 @@
     .nav__item{
         margin: 0;
     }
+ 
 }
 
 .mobile-nav.open {
@@ -243,6 +232,17 @@
 
 .burger-menu.open .line3 {
     transform: rotate(45deg) translate(-5px, -5px);
+}
+
+
+@media (max-width: 1200px) {
+    .header__right {
+       display: flex;
+       .nav__list{
+           flex-direction: row;
+       }
+   
+   }
 }
 
 

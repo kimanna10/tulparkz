@@ -78,7 +78,11 @@
 
     &:focus {
         border: 1px solid $secondary-color-2;
+        caret-color: $secondary-color-2;
     }
+  
+
+
 
     &__white {
         background-color: $white-color;
@@ -95,6 +99,10 @@
         &--error {
             border: 1px solid $red700-color;
         }
+    }
+    &__info{
+        @include subhead-regular;
+        color: $text-thertiary-color;
     }
 
 
@@ -207,6 +215,7 @@
     left: auto;
     padding: 15px 0;
     margin: 0;
+
 }
 
 .dropdown-menu a {
@@ -254,6 +263,8 @@
     width: 100%;
     height: 100%;
     margin-left: -15px;
+
+    top: 0;
 }
 
 .radio-custom {
@@ -266,6 +277,7 @@
     background-color: $white50-color;
     border: 1px solid $grey-color;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -274,19 +286,17 @@
     border: 1px solid $secondary-color-2;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .radio-custom:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .radio:checked~.radio-custom:after {
     display: block;
 }
 
-/* Style the indicator (dot/circle) */
+
 .radio-custom:after {
     top: 5px;
     left: 5px;
@@ -329,6 +339,8 @@
             transition: left 0.3s;
         }
     }
+
+    display: flex;
 }
 
 
@@ -401,4 +413,175 @@
     margin-left: 10px;
     width: 110px;
     padding: 6px 20px;
+}
+
+
+
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-container h2 {
+    margin-bottom: 20px;
+}
+
+.radio-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 6px 40px;
+    outline: 2px solid $secondary-color-2;
+    cursor: pointer;
+    
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    background-color: $white-color;
+    color: $text-primary-color;
+    @include caption-1-regular;
+
+
+    &.selected {
+        outline: 2px solid #0B44D7;
+        border-color: $secondary-color-2;
+    }
+  
+
+   
+}
+
+.radio-block input[type="radio"] {
+    display: none;
+}
+
+.radio-block .radio-title {
+    flex-grow: 1;
+}
+
+.radio-block .checkmark {
+    width: 14px;
+    height: 14px;
+ 
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-block .checkmark i {
+    background-color: $text-primary-color;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.radio-block:hover,
+.radio-block:checked{
+    outline: 2px solid #0B44D7;
+    border-color: $secondary-color-2;
+}
+
+
+
+.radio-block input[type="radio"]:checked + .radio-title + .checkmark {
+    display: flex;
+
+}
+
+
+
+.radio-block input[type="radio"]:checked + .radio-title + .checkmark i {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.slider-range {
+  height: 4px;
+  position: relative;
+  background: #BAC1FF;
+
+}
+.slider-range .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  background: $secondary-color-2;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: $secondary-color-2;
+  border: 2px solid $white-color;
+  pointer-events: auto;
+  appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: $secondary-color-2;
+  border: 2px solid $white-color;
+  pointer-events: auto;
+  appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.tag-item{
+    padding: 2px 8px;
+    border-radius: 6px;
+    background-color: #E5EBFF;
+    display: inline-block;
+}
+
+.tags{
+    &__icon{
+        background-color: $white-color;
+        width: 12px;
+        height: 12px;
+    }
+    &__item{
+        @include caption-2-regular;
+        border-radius: 4px;
+        padding: 4px 8px;
+        color: $white-color;
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+        &--verified{
+            background-color: $secondary-color-2;
+        }
+        &--guarantee{
+            background-color: $green500-color;
+        }
+    }
 }

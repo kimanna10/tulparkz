@@ -19,7 +19,7 @@
           justify-content: center;
 }
 .main__tabs {
-  width: calc(100% - 100px);
+  width: calc(100% - 200px);
 }
 .main__fav-title {
   font-size: 2rem;
@@ -57,7 +57,7 @@
           justify-content: space-between;
   padding: 36px;
   background-color: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 18px;
 }
 .tabs__empty-info, .tabs__img-block {
   width: 50%;
@@ -89,6 +89,7 @@
           justify-content: center;
   width: 336px;
   height: 336px;
+  margin-right: 78px;
 }
 .tabs__img {
   width: 100%;
@@ -208,13 +209,6 @@
   height: 32px;
 }
 
-.tag-item {
-  padding: 2px 8px;
-  border-radius: 6px;
-  background-color: #E5EBFF;
-  display: inline-block;
-}
-
 .tab-label {
   display: inline-block;
   padding: 8px 0;
@@ -261,11 +255,20 @@ input[type=radio]:checked + .tab-label {
   .tabs__fav-item {
     width: calc((100% - 48px) / 3);
   }
+  .tabs__img-block {
+    width: 300px;
+    height: 300px;
+  }
 }
 /* Для экранов шириной от 1024px до 1199px -----------------------*/
 @media (max-width: 1199px) and (min-width: 1024px) {
   .tabs__fav-item {
     width: calc((100% - 24px) / 2);
+  }
+  .tabs__img-block {
+    width: 250px;
+    height: 250px;
+    margin: 0;
   }
 }
 /* Для экранов шириной от 768px до 1023px -----------------------*/
@@ -274,7 +277,8 @@ input[type=radio]:checked + .tab-label {
     width: calc((100% - 24px) / 2);
   }
   .tabs__img-block {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    margin: 0;
   }
 }

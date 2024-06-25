@@ -176,9 +176,7 @@
     &--error {
         background-color: #FBE2E2;
 
-        .icon-close {
-            background-color: $red700-color;
-        }
+       
 
     }
 
@@ -194,6 +192,27 @@
 
     &--warning {
         background-color: #FFE073
+    }
+    &__icon{
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+        &--close {
+            background-color: $red700-color;
+        }
+        &--check {
+            background-color: $green500-color;
+        }
+        &--info {
+            background-color: $primary-color;
+            transform: rotate(180);
+        }
+        &--warning {
+            background-color: #FF7B01;
+        }
+    }
+    &__status{
+        @include subhead-bold;
     }
 }
 

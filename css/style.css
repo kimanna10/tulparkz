@@ -1050,9 +1050,6 @@ h6 {
 .snackbar--error {
   background-color: #FBE2E2;
 }
-.snackbar--error .icon-close {
-  background-color: #E00F0F;
-}
 .snackbar--info {
   background-color: #EEF5FC;
 }
@@ -1061,6 +1058,30 @@ h6 {
 }
 .snackbar--warning {
   background-color: #FFE073;
+}
+.snackbar__icon {
+  width: 24px;
+  height: 24px;
+  background-color: #070C2B;
+}
+.snackbar__icon--close {
+  background-color: #E00F0F;
+}
+.snackbar__icon--check {
+  background-color: #0BBA1D;
+}
+.snackbar__icon--info {
+  background-color: #1169CC;
+  -webkit-transform: rotate(180);
+          transform: rotate(180);
+}
+.snackbar__icon--warning {
+  background-color: #FF7B01;
+}
+.snackbar__status {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 700;
 }
 
 .dropdown-menu {
@@ -1711,9 +1732,6 @@ input[type=range]::-moz-range-thumb {
 .snackbar--error {
   background-color: #FBE2E2;
 }
-.snackbar--error .icon-close {
-  background-color: #E00F0F;
-}
 .snackbar--info {
   background-color: #EEF5FC;
 }
@@ -1722,6 +1740,30 @@ input[type=range]::-moz-range-thumb {
 }
 .snackbar--warning {
   background-color: #FFE073;
+}
+.snackbar__icon {
+  width: 24px;
+  height: 24px;
+  background-color: #070C2B;
+}
+.snackbar__icon--close {
+  background-color: #E00F0F;
+}
+.snackbar__icon--check {
+  background-color: #0BBA1D;
+}
+.snackbar__icon--info {
+  background-color: #1169CC;
+  -webkit-transform: rotate(180);
+          transform: rotate(180);
+}
+.snackbar__icon--warning {
+  background-color: #FF7B01;
+}
+.snackbar__status {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 700;
 }
 
 .dropdown-menu {
@@ -2653,9 +2695,6 @@ input[type=range]::-moz-range-thumb {
 .snackbar--error {
   background-color: #FBE2E2;
 }
-.snackbar--error .icon-close {
-  background-color: #E00F0F;
-}
 .snackbar--info {
   background-color: #EEF5FC;
 }
@@ -2664,6 +2703,30 @@ input[type=range]::-moz-range-thumb {
 }
 .snackbar--warning {
   background-color: #FFE073;
+}
+.snackbar__icon {
+  width: 24px;
+  height: 24px;
+  background-color: #070C2B;
+}
+.snackbar__icon--close {
+  background-color: #E00F0F;
+}
+.snackbar__icon--check {
+  background-color: #0BBA1D;
+}
+.snackbar__icon--info {
+  background-color: #1169CC;
+  -webkit-transform: rotate(180);
+          transform: rotate(180);
+}
+.snackbar__icon--warning {
+  background-color: #FF7B01;
+}
+.snackbar__status {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 700;
 }
 
 .dropdown-menu {

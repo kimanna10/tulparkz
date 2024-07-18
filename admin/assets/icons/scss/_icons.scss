@@ -1,0 +1,161 @@
+$archive: '/admin/assets/icons/archive_icon.svg';
+$bookmark-outline: '/admin/assets/icons/basil_bookmark-outline.svg';
+$clock-outline: '/admin/assets/icons/basil_clock-outline.svg';
+$carbon_phone: '/admin/assets/icons/carbon_phone-filled.svg';
+$add-plus-circle: '/admin/assets/icons/ci_add-plus-circle.svg';
+$bell: '/admin/assets/icons/ci_bell.svg';
+$calendar-days: '/admin/assets/icons/ci_calendar-days1.svg';
+$caret-down: '/admin/assets/icons/ci_caret-down-sm.svg';
+$caret-left: '/admin/assets/icons/ci_caret-left-sm.svg';
+$caret-right: '/admin/assets/icons/ci_caret-right-sm.svg';
+$caret-up: '/admin/assets/icons/ci_caret-up-sm.svg';
+$circle-check: '/admin/assets/icons/ci_circle-check.svg';
+$circle-check1: '/admin/assets/icons/ci_circle-check1.svg';
+$circle-warning: '/admin/assets/icons/ci_circle-warning.svg';
+$clock: '/admin/assets/icons/ci_clock.svg';
+$close-circle: '/admin/assets/icons/ci_close-circle.svg';
+$close: '/admin/assets/icons/ci_close-sm.svg';
+$compass: '/admin/assets/icons/ci_compass.svg';
+$edit-pencil: '/admin/assets/icons/ci_edit-pencil-02.svg';
+$hide: '/admin/assets/icons/ci_hide.svg';
+$log-out: '/admin/assets/icons/ci_log-out1.svg';
+$mail: '/admin/assets/icons/ci_mail1.svg';
+$note-edit: '/admin/assets/icons/ci_note-edit.svg';
+$phone: '/admin/assets/icons/ci_phone.svg';
+$plus: '/admin/assets/icons/ci_plus-sm.svg';
+$search-magnifying-glass: '/admin/assets/icons/ci_search-magnifying-glass.svg';
+$share-ios-export: '/admin/assets/icons/ci_share-ios-export.svg';
+$show: '/admin/assets/icons/ci_show.svg';
+$slider: '/admin/assets/icons/ci_slider-03.svg';
+$sort-ascending: '/admin/assets/icons/ci_sort-ascending.svg';
+$trash-full: '/admin/assets/icons/ci_trash-full1.svg';
+$user: '/admin/assets/icons/ci_user-02.svg';
+$user-circle: '/admin/assets/icons/ci_user-circle1.svg';
+$top-speed: '/admin/assets/icons/fluent_top-speed-20-filled.svg';
+$gravity-ui-delete: '/admin/assets/icons/gravity-ui_delete.svg';
+$round-360: '/admin/assets/icons/ic_round-360.svg';
+$add-photo: '/admin/assets/icons/material-symbols_add-a-photo-outline.svg';
+$location: '/admin/assets/icons/octicon_location-16.svg';
+$fingerprint: '/admin/assets/icons/ph_fingerprint.svg';
+$solar-transmission: '/admin/assets/icons/solar_transmission-bold.svg';
+$tenge: '/admin/assets/icons/tenge.svg';
+$info: '/admin/assets/icons/ci_info.svg';
+
+$mail-1: '/admin/assets/icons/mail.svg';
+$youtube: '/admin/assets/icons/youtube.svg';
+$instagram: '/admin/assets/icons/instagram.svg';
+$location-1: '/admin/assets/icons/location.svg';
+$bookmark-solid: '/admin/assets/icons/bookmark-solid.svg';
+
+
+$chat: '/admin/assets/icons/chat.svg';
+$shield: '/admin/assets/icons/shield.svg';
+$headphones: '/admin/assets/icons/headphones.svg';
+$credit: '/admin/assets/icons/credit.svg';
+
+$download: '/admin/assets/icons/download.svg';
+$plane: '/admin/assets/icons/plane.svg';
+$paperclip: '/admin/assets/icons/paperclip.svg';
+
+$verified: '/admin/assets/icons/verified.svg';
+$guarantee: '/admin/assets/icons/guarantee.svg';
+$dot: '/admin/assets/icons/dot.svg';
+
+$money: '/admin/assets/icons/money.svg';
+$exchange: '/admin/assets/icons/exchange.svg';
+
+$announcement: '/admin/assets/icons/announcement.svg';
+$check-double: '/admin/assets/icons/check-double.svg';
+$desktop: '/admin/assets/icons/desktop.svg';
+
+$car: '/admin/assets/icons/car.svg';
+$drive: '/admin/assets/icons/speed.svg';
+
+@mixin icon($name, $path) {
+    .icon-#{$name} {
+        background-size: cover;
+        mask: url('#{$path}') no-repeat center;
+        mask-size: cover;
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+
+    }
+}
+
+
+@include icon(archive, $archive);
+@include icon(bookmark-outline, $bookmark-outline);
+@include icon(clock-outline, $clock-outline);
+@include icon(carbon-phone, $carbon-phone);
+@include icon(add-plus-circle, $add-plus-circle);
+@include icon(bell, $bell);
+@include icon(calendar-days, $calendar-days);
+@include icon(caret-down, $caret-down);
+@include icon(caret-left, $caret-left);
+@include icon(caret-right, $caret-right);
+@include icon(caret-up, $caret-up);
+@include icon(circle-check, $circle-check);
+@include icon(circle-check1, $circle-check1);
+@include icon(circle-warning, $circle-warning);
+@include icon(clock, $clock);
+@include icon(close-circle, $close-circle);
+@include icon(close, $close);
+@include icon(compass, $compass);
+@include icon(edit-pencil, $edit-pencil);
+@include icon(hide, $hide);
+@include icon(log-out, $log-out);
+@include icon(mail, $mail);
+@include icon(note-edit, $note-edit);
+@include icon(phone, $phone);
+@include icon(plus, $plus);
+@include icon(search-magnifying-glass, $search-magnifying-glass);
+@include icon(share-ios-export, $share-ios-export);
+@include icon(show, $show);
+@include icon(slider, $slider);
+@include icon(sort-ascending, $sort-ascending);
+@include icon(trash-full, $trash-full);
+@include icon(user, $user);
+@include icon(user-circle, $user-circle);
+@include icon(top-speed, $top-speed);
+@include icon(gravity-ui-delete, $gravity-ui-delete);
+@include icon(round-360, $round-360);
+@include icon(add-photo, $add-photo);
+@include icon(location, $location);
+@include icon(fingerprint, $fingerprint);
+@include icon(solar-transmission, $solar-transmission);
+@include icon(tenge, $tenge);
+@include icon(info, $info);
+
+@include icon(mail-1, $mail-1);
+@include icon(youtube, $youtube);
+@include icon(instagram, $instagram);
+@include icon(location-1, $location-1);
+@include icon(bookmark-solid, $bookmark-solid);
+
+
+@include icon(chat, $chat);
+@include icon(credit, $credit);
+@include icon(headphones, $headphones);
+@include icon(shield, $shield);
+@include icon(download, $download);
+
+@include icon(plane, $plane);
+@include icon(paperclip, $paperclip);
+
+
+@include icon(guarantee, $guarantee);
+@include icon(verified, $verified);
+@include icon(dot, $dot);
+
+@include icon(money, $money);
+@include icon(exchange, $exchange);
+
+
+@include icon(announcement, $announcement);
+@include icon(desktop, $desktop);
+@include icon(check-double, $check-double);
+
+@include icon(car, $car);
+@include icon(drive, $drive);

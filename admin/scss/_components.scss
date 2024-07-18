@@ -1,0 +1,1233 @@
+@import 'colors';
+@import 'mixin';
+
+// BUTTONS ----------------------------------------------------
+.button {
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.15s ease-out;
+    @include flexbox;
+    &:focus{
+        outline: none;
+    }
+   
+
+    &__primary {
+        background-color: $primary-color;
+        color: $white-color;
+        @include headline-regular;
+
+        &:hover {
+            background-color: $blue100a-color;
+            color: $primary-color;
+            .button__icon{
+                &--primary{
+                    background-color: $primary-color;
+                }
+            }
+        }
+        &:disabled {
+            background-color: $text-thertiary-color;
+            color: $white-color;
+            pointer-events: none;
+            .button__icon{
+                &--primary{
+                    background-color: $white-color;
+                }
+            }
+        }
+       
+       
+    }
+
+    &__secondary {
+        border: 1px solid $primary-color;
+        background-color: $white-color;
+        color: $primary-color;
+        @include headline-regular;
+
+        &:hover {
+            background-color: rgba($blue100-color, .05);
+            color: $primary-color;
+            border: 1px solid transparent;
+        }
+
+        &:disabled {
+            border: 1px solid $text-thertiary-color;
+            background-color: $white-color;
+            color: $text-thertiary-color;
+            pointer-events: none;
+            .button__icon{
+                &--secondary{
+                    background-color: $text-thertiary-color;
+                }
+            }
+        }
+
+      
+    }
+    &--mini {
+        padding: 10px 0;
+        gap: 4px;
+        @include subhead-regular;
+    }
+   
+
+
+    &__icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        &--primary{
+            background-color: $white-color
+        }
+        &--secondary{
+            background-color: $primary-color;
+        }
+       
+        &--trash{
+            width: 28px;
+            height: 28px;
+            margin-right: 0;
+            background-color: $red700-color;
+        }
+       
+        
+    }
+
+
+
+
+}
+
+// LINK ----------------------------------------------------
+.link {
+    cursor: pointer;
+    transition: background-color 0.15s ease-out;
+    &__text{
+        border-bottom: 1px solid $primary-color;
+        color: $primary-color;
+    
+        &:hover {
+            border-bottom-color: $blue100-color;
+            color: $blue100-color;
+        }
+    }
+
+    &__button{
+        display: inline-flex;
+        border-radius: 12px;
+        padding: 10px;
+        &--blue{
+            background-color: $blue100a-color;
+            &:hover{
+                background-color: rgba($primary-color, .3);
+            }
+            
+            
+        }
+        &--green{
+            background-color: rgba($green500-color, .15);
+            &:hover{
+                background-color: $green400a-color;
+            }
+        }
+        &--yellow{
+            background-color: rgba($yellow100-color, .2);
+            &:hover{
+                background-color: rgba($yellow100-color, .5);
+            }
+        }
+        &--red{
+            background-color: $red500a-color;
+            &:hover{
+                background-color: rgba($red700-color, .3);
+            }
+        }
+
+        &:disabled{
+            background-color: $white300-color;
+            .link__icon{
+                background-color: $grey-color;
+            }
+            pointer-events: none;
+        }
+
+        &:focus{
+            outline: none;
+        }
+       
+    }
+
+    &__icon{
+        width: 28px;
+        height: 28px;
+        &--blue{
+            background-color: $primary-color;
+        }
+        &--green{
+            background-color: $green500-color;
+        }
+        &--yellow{
+            background-color: $orange300-color;
+        }
+        &--red{
+            background-color: $red700-color;
+        }
+        
+    }
+
+   
+    
+
+}
+
+.textfield {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid transparent;
+    @include title-4-regular;
+
+    &::placeholder {
+        color: $text-primary-color;
+        @include headline-regular;
+    }
+
+    &:focus {
+        border: 1px solid $secondary-color-2;
+        caret-color: $secondary-color-2;
+    }
+
+    &__white {
+        background-color: $white-color;
+
+        &--error {
+            border: 1px solid $red700-color;
+        }
+    }
+
+
+    &__grey {
+        background-color: $white300-color;
+
+        &--error {
+            border: 1px solid $red700-color;
+        }
+    }
+
+    &__info {
+        @include subhead-regular;
+        color: $text-thertiary-color;
+    }
+
+
+    &__label {
+        @include subhead-regular;
+        margin-bottom: 6px;
+
+        &--error {
+            margin-top: 6px;
+            margin-bottom: 0;
+            color: $red700-color;
+        }
+    }
+
+}
+
+.input-block {
+    @include flexbox(flex, column, start);
+}
+
+.status{
+    border-radius: 18px;
+    padding: 7px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    @include text-medium;
+
+    &__progress{
+        background-color: $blue100a-color;
+        color: $primary-color;
+    }
+    &__new{
+        background-color: rgba($yellow100-color, .35);
+        color: $orange300-color;
+    }
+    &__archive{
+        background-color: $red500a-color;
+        color: $red700-color;
+    }
+    &__done{
+        background-color: rgba($green500-color, .2);
+        color: $green500-color;
+    }
+
+    &__icon{
+        width: 18px;
+        height: 18px;
+        &--progress{
+            background-color: $primary-color;
+        }
+        &--new{
+            background-color: $orange300-color;
+        }
+        &--archive{
+            background-color: $red700-color;
+        }
+        &--done{
+            background-color: $green500-color;
+        }
+    }
+}
+
+.meeting{
+    border-radius: 18px;
+    padding: 5px 15px;
+    display: inline-flex;
+    align-items: center;
+    @include text-medium;
+
+    &__offline{
+        background-color: $blue100a-color;
+        color: $primary-color;
+    }
+    &__test-drive{
+        background-color: $blue100a-color;
+        color: $primary-color;
+    }
+    &__none{
+        background-color: $white300-color;
+        color: $text-thertiary-color;
+    }
+
+
+
+}
+
+.radio-item {
+    background-color: $white-color;
+    border-radius: 12px;
+    @include subhead-medium;
+    padding: 15px 16px;
+
+    @include flexbox(flex, row, center, space-between);
+    width: 100%;
+    position: relative;
+
+    &:hover{
+        background-color: $blue50-color;
+    }
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        margin-left: -15px;
+        top: 0;
+    }
+
+
+&__custom {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: $white50-color;
+    border: 1px solid $grey-color;
+    border-radius: 50%;
+    cursor: pointer;
+}
+&__label{
+    @include flexbox(flex, row, center, start);
+    gap: 8px;
+    &--process{
+        color: $primary-color;
+    }
+    &--done{
+        color: $green500-color;
+    }
+    &--new{
+        color: $orange300-color;
+    }
+    &--archive{
+        color: $red700-color;
+    }
+
+
+    &--offline{
+        color: $text-primary-color
+    }
+    &--test-drive{
+        color: $text-primary-color
+    }
+    &--none{
+        color: $text-primary-color
+    }
+}
+&__icon{
+    width: 18px;
+    height: 18px;
+    &--progress{
+        background-color: $primary-color;
+    }
+    &--new{
+        background-color: $orange300-color;
+    }
+    &--archive{
+        background-color: $red700-color;
+    }
+    &--done{
+        background-color: $green500-color;
+    }
+}
+
+
+
+
+}
+
+.radio-item__input:checked~.radio-item__custom {
+    background-color: $secondary-color-2;
+    border: 1px solid $secondary-color-2;
+}
+
+.radio-item__custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-item__input:checked~.radio-item__custom:after {
+    display: block;
+}
+
+.radio-item__custom:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $white-color;
+}
+
+
+
+
+
+.checkbox-group {
+    @include flexbox(flex, row-reverse, center, space-between);
+    border-radius: 12px;
+    width: 100%;
+    background-color: $white-color;
+    &:disabled{
+        pointer-events: none;
+        background-color: $white-color;
+    }
+    &:hover {
+        background-color: $blue50-color;
+    }
+    &:focus{
+        outline: none;
+    }
+    &__check {
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border: 1px solid $grey-color;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        background-color: $white50-color;
+
+        margin: 13px 15px 13px 0;
+
+        &:checked {
+            background-color: $secondary-color-2;
+            border-color: $secondary-color-2;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -3px;
+                width: 26px;
+                height: 27px;
+                mask: url('/assets/icons/ci_circle-check.svg') no-repeat center;
+                background-color: $white-color;
+                mask-size: cover;
+
+            }
+        }
+
+    }
+
+    &__label {
+        @include subhead-regular;
+        color: $text-primary-color;
+        display: flex;
+        width: 100%;
+        padding: 13px 0 13px 15px;
+    }
+
+}
+.checkbox-group:disabled .checkbox-group__label{
+    pointer-events: none;
+    color: $text-thertiary-color;
+}
+.checkbox-group:disabled .checkbox-group__check{
+    pointer-events: none;
+    background-color: $white100-color;
+}
+
+.checkbox-group:disabled .checkbox-group__check:checked{
+    pointer-events: none;
+    background-color: $blue100-color;
+    border-color: $blue100-color;
+}
+
+
+
+.snackbar {
+    border-radius: 10px;
+    padding: 10px 12px;
+    @include flexbox(flex, row, center, space-between);
+
+    &__left {
+        @include flexbox(flex, row, center, start);
+        gap: 10px;
+    }
+
+    &__right {
+        @include flexbox(flex, row, center, end);
+        cursor: pointer;
+    }
+    &--error {
+        background-color: #FBE2E2;
+    }
+    &--info {
+        background-color: #EEF5FC;
+    }
+
+    &--success {
+        background-color: #D3F5D6;
+
+    }
+    &--warning {
+        background-color: #FFE073
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+
+        &--close {
+            background-color: $red700-color;
+        }
+
+        &--check {
+            background-color: $green500-color;
+        }
+
+        &--info {
+            background-color: $primary-color;
+            transform: rotate(180);
+        }
+
+        &--warning {
+            background-color: #FF7B01;
+        }
+    }
+
+    &__status {
+        @include subhead-bold;
+    }
+}
+
+.dropdown{
+    list-style: none;
+
+
+    &__toggle {
+        color: $text-primary-color;
+        @include headline-regular;
+
+        background-color: $white300-color;
+        border-radius: 12px;
+
+        padding: 14px 15px;
+        @include flexbox(flex, row, center, space-between);
+        width: 100%;
+
+        &:hover {
+            color: $text-primary-color;
+        }
+
+        &--status{
+            padding: 11px 15px;
+        }
+
+    }
+    &__drop-text{
+        @include headline-regular;
+    }
+    &__status-text{
+        padding: 5px 0;
+
+    }
+        &__menu {
+            overflow: hidden;
+            border-radius: 12px;
+            margin-top: 5px;
+            display: none;
+            border: 1px solid $blue100a-color;
+            box-shadow: 0px 15px 34px 0px rgba(#9BA3F2, 0.2);
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+        &__icon-block {
+            @include flexbox(flex, row, center, end);
+            gap: 12px;
+        }
+
+        &__caret-icon {
+            width: 24px;
+            height: 24px;
+            background-color: $text-primary-color;
+        }
+        &__drop{
+            background-color: $white-color;
+            padding: 15px;
+
+            &--meeting{
+                background-color: $white300-color;
+            }
+            
+        }
+        &__drop-list{
+            @include flexbox(flex, row, center, start);
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        &__column{
+            width: 100%;
+            &--meeting{
+                @include flexbox(flex, column, center, start);
+                gap: 4px;
+            }
+        }
+
+        
+}
+
+.input-drop{
+    &__search{
+        position: relative;
+        width: 100%;
+    }
+    &__input-block {
+        position: relative;
+    }
+    &__icon-search {
+        background-color: #070C2B;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 15px;
+    }
+    &__icon-dropdown{
+        background-color: #070C2B;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 15px;
+        display: block;
+        cursor: pointer;
+    }
+    .field-search{
+        padding-left: 45px;
+
+    }
+    .dropdown-menu {
+        min-width: 100%;
+        max-height: 300px;
+        overflow-y: scroll;
+        top: 60px;
+        z-index: 1;
+        border-radius: 12px;
+        box-shadow: 0px 15px 34px 0px  rgba( #9BA3F2 , .2);
+        padding: 0;
+    }
+    .dropdown-menu.show {
+        display: block;
+    }
+    .dropdown-item{
+        @include headline-regular;
+        &:active{
+            background-color: $white50-color;
+            color: $text-primary-color;
+        }
+        cursor: pointer;
+        border-bottom: 1px solid $grey-color;
+        padding: 14px 16px;
+        &:last-child{
+            border-bottom:none;
+        }
+    
+    }
+    .field-search-choose{
+        position: absolute;
+        left: 40px;
+    }
+    .car-brand-img {
+        width: 24px;
+        height: 24px;
+    }
+    &__search-dropdown-item{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+}
+
+
+.choose-tag{
+    position: relative;
+    display: inline-block;
+    padding: 6px 28px 6px 16px;
+    border-radius: 8px;
+
+    &--progress{
+        background-color: $blue100a-color;
+        color: $primary-color;
+    }
+    &--new{
+        background-color: rgba($yellow100-color, .35);
+        color: $orange300-color;
+    }
+    &--archive{
+        background-color: $red500a-color;
+        color: $red700-color;
+    }
+    &--done{
+        background-color: rgba($green500-color, .2);
+        color: $green500-color;
+    }
+    &__text{
+        @include subhead-medium;
+    }
+
+    
+    &__icon{
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        &--progress{
+            background-color: $primary-color;
+        }
+        &--new{
+            background-color: $orange300-color;
+        }
+        &--archive{
+            background-color: $red700-color;
+        }
+        &--done{
+            background-color: $green500-color;
+        }
+    }
+}
+.border-b{
+    border-bottom: none !important;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+
+.range-display{
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background-color: $white300-color;
+    padding: 13px 16px;
+    @include headline-regular;
+    @include flexbox(flex, row, center, space-between);
+}
+
+.price-view{
+    @include flexbox;
+    gap: 3px;
+}
+
+.price-input {
+    width: 100%;
+    display: flex;
+    margin: 30px 0 35px;
+}
+
+.custom-calendar {
+    @include flexbox(flex, column, center, start);
+    width: 100%;
+    padding: 5px;
+}
+.calendar-button{
+    background-color: $white-color;
+    &:focus{
+        outline: none;
+    }
+}
+.calendar-month{
+    @include subhead-bold;
+}
+.calendar-arrow{
+    background-color: $text-primary-color;
+    width: 30px;
+    height: 30px;
+}
+
+.calendar-body{
+    @include subhead-regular;
+}
+
+.calendar-header {
+    @include flexbox(flex,row, center, space-between);
+    width: 100%;
+}
+
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+.days {
+    margin: 20px 0;
+}
+.weekdays{
+    margin: 6px 0;
+}
+.week-day{
+    &:first-child{
+        color: $red700-color;
+    }
+    &:last-child{
+        color: $red700-color;
+    }
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    &:hover {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+
+    &.selected-start::before,
+    &.selected-end::before,
+    &.in-range::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -3px;
+        right: -3px;
+        background-color: $blue100-color;
+        z-index: -1;
+    }
+
+    &.selected-start::before {
+        left: 50%;
+        z-index: auto;
+    }
+
+    &.selected-end::before {
+        right: 50%;
+        z-index: auto;
+    }
+}
+
+
+
+
+.day.selected-start .day-container,
+.day.selected-end .day-container{
+    background-color: $primary-color;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.day.in-range {
+    background-color: #cce5ff;
+    border-radius: 0;
+    z-index: 1;
+}
+
+.day.selected-only{
+    background-color: $primary-color;
+    color: white;
+}
+
+
+.current-day {
+    font-weight: bold;
+    color: red;
+}
+
+
+
+
+
+
+
+
+.notification {
+    position: absolute;
+    background-color: $red700-color;
+    color: $white-color;
+    @include text-regular;
+    padding: 0 6px;
+    border-radius: 5px;
+    right: 55px;
+}
+
+.tab-choice {
+    position: absolute;
+    color: $text-thertiary-color;
+    @include text-regular;
+    right: 55px;
+}
+
+
+
+
+
+
+
+.toggle-switch {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        width: 53px;
+        height: 28px;
+        background-color: $grey-color;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    label {
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 24px;
+            height: 24px;
+            background-color: $white-color;
+            border-radius: 50%;
+            transition: left 0.3s;
+        }
+    }
+
+    display: flex;
+}
+
+
+
+
+.toggle-switch input[type="checkbox"]:checked+label {
+    background-color: $secondary-color-2;
+
+}
+
+
+
+.toggle-switch input[type="checkbox"]:checked+label:before {
+    left: calc(100% - 27px);
+
+}
+
+.toggle-switch input[type="checkbox"]:disabled+label {
+    background-color: $text-thertiary-color;
+    /* Цвет фона отключенного переключателя */
+    cursor: not-allowed;
+    /* Меняем курсор на неразрешающий */
+}
+
+.toggle-switch input[type="checkbox"]:disabled+label:before {
+    background-color: $grey-color;
+    
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    &__title {
+        @include title-3-bold;
+        border-bottom: 1px solid rgba(#72A8E6, 0.12);
+        padding-bottom: 10px
+    }
+
+    &__desc {
+        @include headline-regular;
+        padding-top: 10px;
+    }
+}
+
+.modal-content {
+    background-color: $white-color;
+    margin: 15% auto;
+    padding: 30px;
+
+    width: 60%;
+    max-width: 450px;
+    border-radius: 12px;
+    position: relative;
+}
+
+
+.modal-buttons {
+    @include flexbox(flex, row, center, end);
+    margin-top: 20px;
+
+}
+
+.modal-buttons .button {
+    margin-left: 10px;
+    width: 110px;
+    padding: 6px 20px;
+}
+
+
+
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.radio-container h2 {
+    margin-bottom: 20px;
+}
+
+.radio-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 6px 40px;
+    outline: 2px solid $secondary-color-2;
+    cursor: pointer;
+
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    background-color: $white-color;
+    color: $text-primary-color;
+    @include caption-1-regular;
+
+
+    &.selected {
+        outline: 2px solid #0B44D7;
+        border-color: $secondary-color-2;
+    }
+
+
+
+}
+
+.radio-block input[type="radio"] {
+    display: none;
+}
+
+.radio-block .radio-title {
+    flex-grow: 1;
+}
+
+.radio-block .checkmark {
+    width: 14px;
+    height: 14px;
+
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-block .checkmark i {
+    background-color: $text-primary-color;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.radio-block:hover,
+.radio-block:checked {
+    outline: 2px solid #0B44D7;
+    border-color: $secondary-color-2;
+}
+
+
+
+.radio-block input[type="radio"]:checked+.radio-title+.checkmark {
+    display: flex;
+
+}
+
+
+
+.radio-block input[type="radio"]:checked+.radio-title+.checkmark i {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.slider-range {
+    height: 4px;
+    position: relative;
+    background: #BAC1FF;
+
+}
+
+.slider-range .progress {
+    height: 100%;
+    left: 25%;
+    right: 25%;
+    position: absolute;
+    background: $secondary-color-2;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: $secondary-color-2;
+    border: 2px solid $white-color;
+    pointer-events: auto;
+    appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 17px;
+    width: 17px;
+    border: none;
+    border-radius: 50%;
+    background: $secondary-color-2;
+    border: 2px solid $white-color;
+    pointer-events: auto;
+    appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.tag-item {
+    padding: 2px 8px;
+    border-radius: 6px;
+    background-color: #E5EBFF;
+    display: inline-block;
+}
+
+.tags {
+    &__icon {
+        background-color: $white-color;
+        width: 12px;
+        height: 12px;
+
+        &--default {
+            background-color: $text-primary-color;
+
+        }
+    }
+
+    &__item {
+        @include caption-2-regular;
+        border-radius: 4px;
+        padding: 4px 8px;
+        color: $white-color;
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+
+        &--verified {
+            background-color: $secondary-color-2;
+        }
+
+        &--guarantee {
+            background-color: $green500-color;
+        }
+
+        &--default {
+            background-color: $blue100a-color;
+            color: $text-primary-color;
+        }
+    }
+}

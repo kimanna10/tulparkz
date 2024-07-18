@@ -1,0 +1,118 @@
+
+@import 'colors';
+@import 'mixin';
+
+
+.table-block{
+    &__header{
+        &:nth-child(1) {
+            min-width: 350px;
+            text-align: center;
+        }
+        &:nth-child(2) {
+            min-width: 150px;
+            text-align: start;
+        }
+        &:nth-child(3) {
+            min-width: 150px;
+            text-align: start;
+        }
+        &:nth-child(4) {
+            min-width: 150px;
+            text-align: start;
+        }
+        &:nth-child(5) {
+            min-width: 170px;
+            text-align: start;
+        }
+        &:nth-child(6) {
+            min-width: 200px;
+            text-align: start;
+        }
+        &:nth-child(7) {
+            min-width: 200px;
+            text-align: start;
+        }
+        &:nth-child(8) {
+            min-width: 350px;
+            text-align: start;
+        }
+    }
+
+    &__data{
+
+        &:nth-child(2) {
+           text-align: start;
+        }
+        &:nth-child(3) {
+            text-align: start;
+        }
+        &:nth-child(4) {
+            text-align: start;
+        }
+        &:nth-child(5) {
+            text-align: start;
+        }
+        &:nth-child(6) {
+            text-align: start;
+        }
+        &:nth-child(7) {
+            text-align: start;
+        }
+        &:nth-child(8) {
+            text-align: start;
+        }
+
+    }
+}
+
+.table-section__top{
+    border-top-right-radius: 0;
+}
+
+/* Для устройств с экранами шириной от 320px до 480px (например, мобильные телефоны) */
+@media (min-width: 320px) and (max-width: 479px) {
+    .table-section__top{
+        border-top-left-radius: 0;
+    }
+    
+}
+  
+  /* Для устройств с экранами шириной от 481px до 768px (например, небольшие планшеты) */
+  @media (min-width: 480px) and (max-width: 767px) {
+
+  }
+  
+  /* Для устройств с экранами шириной от 769px до 1024px (например, большие планшеты и небольшие ноутбуки) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .main{
+        &__drop-block {
+            width: calc((100% - 24px) / 2);
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1025px до 1280px (например, стандартные ноутбуки) */
+  @media (min-width: 1024px) and (max-width: 1280px) {
+  }
+  
+  /* Для устройств с экранами шириной от 1281px до 1600px (например, большие ноутбуки и настольные мониторы) */
+  @media (min-width: 1281px) and (max-width: 1600px) {
+
+  }
+  
+  /* Для устройств с экранами шириной от 1601px до 1920px (например, HD мониторы) */
+  @media (min-width: 1601px) and (max-width: 1919px) {
+    .main{
+        &__drop-block {
+            width: calc((100% - 24px) / 2);
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1921px до 2560px (например, 2K и 4K мониторы) */
+  @media (min-width: 1920px) and (max-width: 2560px) {
+  }
+  
+
+

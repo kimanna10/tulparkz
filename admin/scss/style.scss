@@ -1,0 +1,158 @@
+@import 'colors';
+@import 'reset';
+@import '../assets/icons/scss/icons';
+@import '../assets/fonts/scss/fonts';
+@import 'mixin';
+@import 'components';
+@import 'table';
+@import 'tabs';
+
+
+
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $text-primary-color;
+    font-size: 1rem;
+    background-color: $white300-color;
+}
+
+
+
+.main{
+    &__top{
+        background-color: $white-color;
+        box-shadow: 0px 2px 10px 0px  rgba( #E2E3E7 , .45);
+    }
+    &__top-wrapper{
+        @include flexbox(flex, row, center, end);
+        padding: 14px 0;
+
+    }
+    &__user-account{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+    &__user-img-block{
+        width: 24px;
+        height: 24px;
+    }
+    &__user-img{
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    &__user-name{
+        @include subhead-regular;
+    }
+
+    &__filter{
+        padding: 14px 0;
+    }
+
+    &__filter-info{
+
+       @include flexbox(flex,row, center, start);
+       gap: 18px;
+    }
+
+    &__filter-title{
+        @include title-1-bold;
+    }
+
+
+    &__filter-content{
+        @include flexbox(flex,row, start, stretch);
+        gap: 18px;
+        margin-top: 12px;
+
+    }
+    &__filter-block{
+        width: calc((100% - 18px) / 2);
+    }
+
+
+    &__result-block{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        background-color: $white-color;
+        box-shadow: 0px 4px 30px 0px rgba(#1F1D68, 0.04);
+        padding: 20px;
+        border-radius: 12px;
+        width: calc((100% - 18px ) / 3);
+    }
+    &__result-quantity{
+        @include title-1-bold;
+    }
+    &__result-decs{
+        @include headline-regular;
+        color:  rgba( $text-secondary-color , .44);
+    }
+    &__result-icon{
+        border-radius: 11px;
+        background-color: $blue100a-color;
+        padding: 12px;
+    }
+
+
+    &__result-icon-announcement{
+        background-color: $text-primary-color;
+            width: 32px;
+            height: 32px;
+    }
+    &__result-icon-desktop{
+        background-color: $primary-color;
+            width: 32px;
+            height: 32px;
+    }
+    &__result-icon-check-double{
+        background-color: $green500-color;
+            width: 32px;
+            height: 32px;
+    }
+
+    &__result-icon-car{
+        background-color: $primary-color;
+            width: 32px;
+            height: 32px;
+    }
+    &__result-icon-check{
+        background-color: $green500-color;
+            width: 32px;
+            height: 32px;
+    }
+    &__result-icon-drive{
+        background-color: $primary-color;
+            width: 32px;
+            height: 32px;
+    }
+    &__filter-form{
+        background-color: $white-color;
+        box-shadow: 0px 4px 30px 0px rgba(#1F1D68, 0.04);
+        padding: 12px 15px;
+        border-radius: 12px;
+        @include flexbox(flex, row, center, space-between);
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    &__drop-block{
+        width: calc((100% - 24px ) / 3);
+    }
+
+    &__filter-buttons-block{
+        @include flexbox(flex,row, senter, start);
+        gap: 12px;
+    }
+    &__table-page{
+        padding-bottom: 24px;
+
+    }
+}
+
+
+@import 'adapt';

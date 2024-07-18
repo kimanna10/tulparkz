@@ -1,0 +1,285 @@
+
+@import 'colors';
+@import 'mixin';
+
+.main{
+  
+    &__content-section{
+        @include flexbox(flex, row, start, space-between);
+        gap: 24px;
+    }
+    &__sales-section{
+        width: 38%;
+    }
+    &__filter-form{
+        justify-content: flex-end;
+    }
+
+    &__sales-block{
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 16px 15px;
+
+        @include flexbox(flex, column, start, start);
+        gap: 16px;
+    }
+    &__sales-title{
+        @include title-3-bold;
+    }
+    &__sales-bottom{
+        @include flexbox(flex, row, center, flex-end);
+        width: 100%;
+        .button{
+            @include subhead-regular;
+            padding: 8.5px 17.5px;
+        }
+    }
+    &__sales-button{
+        width: 160px;
+    }
+    &__sales-item{
+        @include flexbox(flex, row, center, space-between);
+        flex-wrap: wrap;
+        gap: 12px;    
+    }
+    &__sales-item-content{
+        @include flexbox(flex, row, center, space-between);
+        gap: 12px;
+
+        width: calc(100% - 101px);
+
+  
+    }
+    &__sales-item-text{
+        min-width: max-content;
+        @include title-4-regular;
+    }
+    &__sales-item-block{
+        @include flexbox(flex, row, center, space-between);
+        gap: 12px;
+
+        width: 100%;
+    }
+    &__sales-item-operations{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+        &__sales-item-drop {
+            &.percent {
+                width: 100%;
+                .dropdown{
+                    min-width: 120px;
+                }
+            }
+            &.city  {
+                width: 100%;
+                .dropdown{
+                    min-width: 160px;
+                }
+            }
+        }
+    &__button-trash{
+        background-color: transparent;
+        &:focus{
+            outline: none;
+        }
+    }
+    &__sales-list{
+        width: 100%;
+        @include flexbox(flex, column, stretch , start);
+        gap: 16px;
+    }
+}
+.table-section{
+    width: 62%;
+}
+.table-block{
+    &__header{
+        &:nth-child(1) {
+            min-width: 300px;
+            text-align: center;
+        }
+        &:nth-child(2) {
+            min-width: 150px;
+            text-align: start;
+        }
+        &:nth-child(3) {
+            min-width: 150px;
+            text-align: start;
+        }
+        &:nth-child(4) {
+            min-width: 150px;
+            text-align: start;
+        }
+
+    }
+
+    &__data{
+        &:nth-child(1) {
+            padding-left: 50px;
+        }
+        &:nth-child(2) {
+           text-align: start;
+        }
+        &:nth-child(3) {
+            text-align: start;
+        }
+        &:nth-child(4) {
+            text-align: start;
+        }
+
+
+    }
+}
+
+/* Для устройств с экранами шириной от 320px до 480px (например, мобильные телефоны) */
+@media (min-width: 320px) and (max-width: 479px) {
+    .main{
+        &__content-section{
+            flex-direction: column;
+        }
+
+        &__sales-section {
+            width: 100%;
+        }
+        &__sales-item{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__sales-item-content{
+            flex-direction: column;
+            width: 100%;
+        }
+        
+    }
+    .table-section {
+        width: 100%;
+    }
+    .table-block{
+        &__data{
+            &:nth-child(1){
+                padding-left: 15px;
+            }
+        }
+        &__employee-img-block {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+  
+  /* Для устройств с экранами шириной от 481px до 768px (например, небольшие планшеты) */
+  @media (min-width: 480px) and (max-width: 767px) {
+    .main{
+        &__content-section{
+            flex-direction: column;
+        }
+
+        &__sales-section {
+            width: 100%;
+        }
+        &__sales-item{
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &__sales-item-content{
+            flex-direction: column;
+            width: 100%;
+        }
+        
+    }
+    .table-section {
+        width: 100%;
+    }
+    .table-block{
+        &__data{
+            &:nth-child(1){
+                padding-left: 15px;
+            }
+        }
+        &__employee-img-block {
+            width: 50px;
+            height: 50px;
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 769px до 1024px (например, большие планшеты и небольшие ноутбуки) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .main{
+        &__content-section{
+            flex-direction: column;
+        }
+        &__sales-section {
+            width: 100%;
+        }
+
+    }
+    .table-section {
+        width: 100%;
+        
+    }
+    .table-block{
+        &__data{
+            &:nth-child(1){
+                padding-left: 15px;
+            }
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1025px до 1280px (например, стандартные ноутбуки) */
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .main{
+        &__content-section{
+            flex-direction: column;
+        }
+        &__sales-section {
+            width: 100%;
+        }
+
+    }
+    .table-section {
+        width: 100%;
+    }
+    .table-block{
+        &__data{
+            &:nth-child(1){
+                padding-left: 15px;
+            }
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1281px до 1600px (например, большие ноутбуки и настольные мониторы) */
+  @media (min-width: 1281px) and (max-width: 1600px) {
+    .main{
+        &__content-section{
+            flex-direction: column;
+        }
+        &__sales-section {
+            width: 100%;
+        }
+
+    }
+    .table-section {
+        width: 100%;
+    }
+
+  }
+  
+  /* Для устройств с экранами шириной от 1601px до 1920px (например, HD мониторы) */
+  @media (min-width: 1601px) and (max-width: 1919px) {
+    .main{
+        &__sales-item-content{
+            flex-direction: column;
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1921px до 2560px (например, 2K и 4K мониторы) */
+  @media (min-width: 1920px) and (max-width: 2560px) {
+  }
+  
+
+

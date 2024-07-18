@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Отдел продаж</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kso.css">
+
+
+</head>
+
+<body>
+
+    <main class="main">
+
+        <div class="main__wrapper">
+
+            <div class="main__table-page">
+                <div class="main__top">
+                    <div class="container">
+                        <div class="main__top-wrapper">
+                            <div class="main__user-account">
+                                <div class="main__user-img-block">
+                                    <img src="assets/img/car-img.png" class="main__user-img" alt="">
+                                </div>
+                                <div class="main__top-user-name">Ахмадиева Камила</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="main__filter">
+                    <div class="container">
+                        <div class="main__filter-title" id="filter-title">Входящие объявления</div>
+                        <div class="main__filter-content">
+                            <div class="main__filter-block">
+                                <div class="main__filter-form">
+
+
+                                    <div class="main__drop-block">
+                                        <div class="input-drop">
+                                            <div
+                                                class="input-drop__input-block input-block input-drop__dropdown--search ">
+                                                <i class="input-drop__icon-search icon-search-magnifying-glass"></i>
+                                                <input type="number" class="textfield textfield__grey field-search"
+                                                    id="search" placeholder="ID пользователя">
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+                                    <div class="main__drop-block">
+                                        <li class="dropdown">
+                                            <a class="dropdown__toggle dropdown__toggle--status" id="dropdownToggle">
+                                                <div class="dropdown__drop-text" id="status-filter">
+                                                    <div class="dropdown__status-text">Статус объявления</div>
+                                                </div>
+                                                <div class="dropdown__icon-block">
+                                                    <div class="dropdown__caret-icon icon-caret-down"></div>
+                                                </div>
+
+                                            </a>
+                                            <ul class="dropdown__menu">
+                                                <div class="dropdown__drop">
+                                                    <div class="dropdown__drop-list">
+                                                        <div class="dropdown__column">
+                                                            <div class="radio-item choose-item">
+                                                                <label for="sent" class="radio-item__label radio-item__label--process">
+                                                                    <i class="radio-item__icon radio-item__icon--progress icon-mail"></i>Отправлено</label>
+                                                                <input type="radio" id="sent" name="radios" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            <div class="radio-item choose-item">
+                                                                <label for="denied" class="radio-item__label radio-item__label--archive">
+                                                                    <i class="radio-item__icon radio-item__icon--archive icon-close-circle"></i>Отказано</label>
+                                                                <input type="radio" id="denied" name="radios" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            <div class="radio-item choose-item">
+                                                                <label for="new" class="radio-item__label radio-item__label--new">
+                                                                    <i class="radio-item__icon radio-item__icon--new icon-add-plus-circle"></i>Новое</label>
+                                                                <input type="radio" id="new" name="radios" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            <div class="radio-item choose-item">
+                                                                <label for="accepted" class="radio-item__label radio-item__label--done">
+                                                                    <i class="radio-item__icon radio-item__icon--done icon-circle-check1"></i>Одобрено</label>
+                                                                <input type="radio" id="accepted" name="radios" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            
+                                                        </div>
+                
+                                                    </div>
+                                                   
+                                                </div>
+                
+                                                
+                                                    
+                                               
+                                            </ul>
+                                        </li>
+                                    </div>
+
+
+                                    <div class="main__drop-block">
+                                        <div class="main__price-block">
+                                            <div id="rangeDisplay" class="range-display">
+                                                <div class="price-view">
+                                                    от
+                                                    <div class="price-min"></div>
+                                                    ₸
+                                                </div>
+                                                <div class="dash">—</div>
+                                                <div class="price-view">
+                                                    от
+                                                    <div class="price-max"></div>
+                                                    ₸
+                                                </div>
+                                            </div>
+
+                                            <div class="slider-range">
+                                                <div class="progress"></div>
+                                            </div>
+                                            <div class="range-input">
+                                                <input type="range" class="range-min" min="0" max="100000000"
+                                                    value="25000000" step="100">
+                                                <input type="range" class="range-max" min="0" max="100000000"
+                                                    value="75000000" step="100">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="main__drop-block">
+                                        <li class="dropdown">
+                                            <a class="dropdown__toggle" id="dropdownToggle">
+                                                <div class="dropdown__drop-text date-pick">Выберите дату</div>
+                                                <div class="dropdown__icon-block">
+                                                    <div class="dropdown__caret-icon icon-caret-down"></div>
+                                                </div>
+
+                                            </a>
+                                            <ul class="dropdown__menu">
+                                                <div class="dropdown__drop">
+                                                    <div class="custom-calendar" id="custom-calendar">
+                                                        <div class="calendar-header">
+                                                            <button class="calendar-button" id="prevMonthBtn">
+                                                                <div class="calendar-arrow icon-caret-left"></div>
+                                                            </button>
+                                                            <span class="calendar-month" id="currentMonth"></span>
+                                                            <button class="calendar-button" id="nextMonthBtn">
+                                                                <div class="calendar-arrow icon-caret-right"></div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="weekdays"></div>
+                                                            <div class="days"></div>
+                                                        </div>
+                                                        <button type="submit" id="saveBtn"
+                                                            class="button button__primary button--mini">Сохранить</button>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+                                            </ul>
+                                        </li>
+                                    </div>
+
+
+
+
+
+                                    <div class="main__drop-block">
+                                        <div class="main__filter-buttons-block">
+                                            <button type="submit" class="button button__secondary button--mini"
+                                                id="filter-reset">Очистить</button>
+                                            <button type="submit"
+                                                class="button button__primary button--mini">Искать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main__filter-block">
+                                <div class="main__filter-info">
+                                    <div class="main__result-block">
+                                        <div class="main__result-icon">
+                                            <div class="main__result-icon-announcement icon-announcement"></div>
+                                        </div>
+                                        <div class="main__result-info">
+                                            <div class="main__result-quantity">103</div>
+                                            <div class="main__result-decs">Всего обращений</div>
+                                        </div>
+                                    </div>
+                                    <div class="main__result-block">
+                                        <div class="main__result-icon">
+                                            <div class="main__result-icon-desktop icon-desktop"></div>
+                                        </div>
+                                        <div class="main__result-info">
+                                            <div class="main__result-quantity">10</div>
+                                            <div class="main__result-decs">В работе</div>
+                                        </div>
+                                    </div>
+                                    <div class="main__result-block">
+                                        <div class="main__result-icon">
+                                            <div class="main__result-icon-check-double icon-check-double"></div>
+                                        </div>
+                                        <div class="main__result-info">
+                                            <div class="main__result-quantity">22</div>
+                                            <div class="main__result-decs">Завершено</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__content">
+                    <div class="container">
+
+                        <div class="tab-container">
+                            <div class="tab-buttons">
+                              <button class="tab-button active" data-tab="tab1" >Все обращения</button>
+                              <button class="tab-button " data-tab="tab2">Результаты</button>
+                            </div>
+                            <div class="tab-content active" id="tab1">
+                                <div class="table-section">
+
+                                    <div class="table-section__top">
+                                        <div class="table-section__title-block">
+                                            <div class="table-section__title">Объявления</div>
+                                            <div class="table-section__button">
+                                                <button type="submit" class="button button__secondary">
+                                                    <div class="button__icon button__icon--secondary icon-plus"></div>
+                                                    Создать
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="pagination-container" id="pagination-1">
+                                            <div class="pagination">
+                                                <ul>
+                                                    <li id="prev"><span>&laquo;</span></li>
+                                                    <!-- Page numbers will be dynamically generated here -->
+                                                    <li data-page="next"><span>&raquo;</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+        
+                                    <div class="table-wrapper">
+        
+                                        <table class="table-block" id="table-1">
+                                            <thead class="table-block__head">
+                                                <tr class="table-block__head-row">
+                                                    <th class="table-block__header">Модель</th>
+                                                    <th class="table-block__header">Стоимость</th>
+                                                    <th class="table-block__header">П. взнос</th>
+                                                    <th class="table-block__header">Срок кредита</th>
+                                                    <th class="table-block__header">Ежемес. платеж</th>
+                                                    <th class="table-block__header">Банк</th>
+                                                    <th class="table-block__header">Статус заявки</th>
+                                                    <th class="table-block__header">ID пользователя</th>
+        
+                                                </tr>
+        
+                                            </thead>
+        
+                                            <tbody class="table-block__body">
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/halyk.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Halyk</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">60 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/kaspi.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Kaspi</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__done">
+                                                                <i class="status__icon status__icon--done icon-circle-check1"></i>Одобрено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/homebank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Home Credit Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__archive">
+                                                                <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/bcc.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Банк Центр Кредит</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/eurasiabank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Евразийский Банк</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/jusan.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Jusan</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/forte.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Forte Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/bank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Банк</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <div class="table-block__bank-title">-</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--yellow">
+                                                                    <div class="link__icon link__icon--yellow icon-edit-pencil"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tab2">
+                                <div class="table-section">
+                                    <div class="table-section__top">
+                                       
+                                            <div class="table-section__title">
+                                                <div class="table-section__top-icon icon-calendar-days"></div>Результаты обращений</div>
+                 
+                                        <div class="pagination-container" id="pagination-2">
+                                            <div class="pagination">
+                                                <ul>
+                                                    <li id="prev"><span>&laquo;</span></li>
+                                                    <!-- Page numbers will be dynamically generated here -->
+                                                    <li data-page="next"><span>&raquo;</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+        
+                                    <div class="table-wrapper">
+        
+                                        <table class="table-block" id="table-2">
+                                            <thead class="table-block__head">
+                                                <tr class="table-block__head-row">
+                                                    <th class="table-block__header">Модель</th>
+                                                    <th class="table-block__header">Стоимость</th>
+                                                    <th class="table-block__header">П. взнос</th>
+                                                    <th class="table-block__header">Срок кредита</th>
+                                                    <th class="table-block__header">Ежемес. платеж</th>
+                                                    <th class="table-block__header">Банк</th>
+                                                    <th class="table-block__header">Статус заявки</th>
+                                                    <th class="table-block__header">ID пользователя</th>
+        
+                                                </tr>
+        
+                                            </thead>
+        
+                                            <tbody class="table-block__body">
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/halyk.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Halyk</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">60 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/kaspi.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Kaspi</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__done">
+                                                                <i class="status__icon status__icon--done icon-circle-check1"></i>Одобрено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/homebank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Home Credit Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__archive">
+                                                                <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/bcc.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Банк Центр Кредит</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/eurasiabank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Евразийский Банк</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/jusan.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Jusan</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/forte.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Forte Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/bank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Банк</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <div class="table-block__bank-title">-</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+
+                                                  <!-- ROW-ELEMENT -->
+                                                  <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/homebank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Home Credit Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__archive">
+                                                                <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/bcc.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Банк Центр Кредит</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/eurasiabank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Евразийский Банк</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__new">
+                                                                <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/halyk.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Halyk</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">60 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/kaspi.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Kaspi</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__done">
+                                                                <i class="status__icon status__icon--done icon-circle-check1"></i>Одобрено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/homebank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Home Credit Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__archive">
+                                                                <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-1.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Kia Rio 2021</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">8 300 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">12 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">208 335 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/halyk.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Halyk</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__progress">
+                                                                <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                <!-- ROW-ELEMENT -->
+                                                <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">60 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/kaspi.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Kaspi</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__done">
+                                                                <i class="status__icon status__icon--done icon-circle-check1"></i>Одобрено
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+        
+                                                 <!-- ROW-ELEMENT -->
+                                                 <tr class="table-block__body-row">
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__model">
+                                                            <div class="table-block__model-img-block">
+                                                                <img src="assets/img/car-img-2.png"
+                                                                    class="table-block__model-img" alt="">
+                                                            </div>
+                                                            <div class="table-block__model-title">Hyundai Tucson 2020</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">12 000 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">1 700 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__credit">24 мес.</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__price">100 000 ₸</div>
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__bank">
+                                                            <img src="assets/img/bank/homebank.png" class="table-block__img-bank" alt="">
+                                                            <div class="table-block__bank-title">Home Credit Bank</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="table-block__data">
+        
+                                                        <div class="table-block__status-item">
+                                                            <div class="status status__archive">
+                                                                <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
+                                                            </div>
+                                                        </div>
+        
+                                                    </td>
+                                                    <td class="table-block__data">
+                                                        <div class="table-block__status">
+                                                            <div class="table-block__user-id">001001001001</div>
+        
+                                                            <div class="table-block__status-operation">
+                                                                <button href="#" class="link link__button link__button--green">
+                                                                    <div class="link__icon link__icon--green icon-user"></div>
+                                                                </button>
+                                
+                                                                <button href="#" class="link link__button link__button--blue">
+                                                                    <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                                                                </button>
+                                
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/radio.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/range.js"></script>
+    <script src="js/datepick.js"></script>
+    <script src="js/filter-reset.js"></script>
+    <script src="js/tabs.js"></script>
+</body>
+
+</html>

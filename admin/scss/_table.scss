@@ -1,0 +1,288 @@
+@import 'colors';
+@import 'mixin';
+
+.table-wrapper{
+    width: 100%;
+    overflow-x: auto;
+}
+.table-container{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-container table {
+    width: 100%; /* Заставляет таблицу занимать всю доступную ширину */
+    border-collapse: collapse; /* Убирает пробелы между ячейками */
+  }
+  
+
+
+.table-block{
+    width: 100%;
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden; 
+
+    &__head{
+        background-color: $blue100a-color;
+        border-top: 1px solid $blue100a-color;
+        border-bottom: 1px solid $blue100a-color;
+    }
+
+    &__header{
+        @include title-4-bold;
+        color: $text-secondary-color;
+        padding: 11px 0;
+    }
+
+    &__price,
+    &__city,
+    &__date,
+    &__auto-id,
+    &__credit,
+    &__user-id,
+    &__bank-title{
+        @include title-4-regular;
+    }
+
+    &__bank-title{
+        word-wrap: break-word;
+        width: 130px;
+    }
+
+    &__employee-city,
+    &__test-drive,
+    &__views{
+        @include title-3-medium;
+    }
+
+    &__data{
+
+        &:nth-child(2) {
+           text-align: center;
+        }
+        &:nth-child(3) {
+            text-align: center;
+        }
+        &:nth-child(4) {
+            text-align: center;
+        }
+
+    }
+
+    &__body-row{
+
+        border: 1px solid $white300-color;
+        background-color: $white-color;
+        cursor: pointer;
+    }
+    &__data{
+        &:nth-child(1){
+          padding: 10px 15px;
+        }
+    }
+    &__model{
+        @include flexbox(flex, row, center, start);
+        gap: 20px;
+    }
+    &__model-title{
+        @include title-4-medium;
+        word-wrap: break-word;
+        width: 130px;
+    }
+    &__model-img-block{
+        width: 155px;
+        height: 80px;
+        @media (min-width: 320px) and (max-width: 479px) {
+            width: 100px;
+            height: 60px;
+        }
+        @media (min-width: 480px) and (max-width: 767px) {
+            width: 100px;
+            height: 60px;
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            width: 120px;
+            height: 70px;
+        }
+        @media (min-width: 1024px) and (max-width: 1280px) {
+            width: 120px;
+            height: 70px;
+        }
+    }
+    &__model-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+    &__employee{
+        @include flexbox(flex, row, center, start);
+        gap: 20px;
+    }
+    &__employee-title{
+        @include title-3-medium;
+    }
+    &__employee-img-block{
+        width: 80px;
+        height: 80px;
+    }
+    &__employee-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    &__status{
+        @include flexbox(flex, row, center, space-between);
+    }
+    &__status-operation{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        padding-right: 30px;
+    }
+
+    &__bank{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+    }
+  
+    &__img-bank{
+        width: 24px;
+        height: 24px;
+    }
+
+
+}
+
+
+.table-section {
+   box-shadow: 0px 4px 30px 0px rgba(#1F1D68, .04);
+
+    &__top {
+        @include flexbox(flex, row, center, space-between);
+        background-color: $white-color;
+        padding: 16px 15px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+
+        /* Для устройств с экранами шириной от 481px до 768px (например, небольшие планшеты) */
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+    }
+    &__top-icon{
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+        margin: 0 auto
+    }
+    &__title-block{
+        @include flexbox(flex,row,center, start);
+        gap: 24px;
+        @media (max-width: 767px) and  (min-width: 480px){
+            align-items: center;
+        }
+        @media (max-width: 479px) and  (min-width: 320px){
+            flex-direction: column;
+            width: 100%;
+            align-items: stretch;
+        }
+    }
+    &__button{
+        min-width: 150px;
+        .button{
+            padding: 10px 0;
+        }
+    }
+
+    &__title {
+        @include title-3-bold;
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+    }
+}
+
+.pagination ul{
+    display: flex;
+    align-items: center;
+}
+
+
+.arrow-prev, .arrow-next{
+     border: 1px solid $white300-color; /* $white300-color*/
+     border-radius: 0 !important;
+     padding: 0 !important;
+}
+.pagination li {
+    display: inline-block;
+    margin-right: 4px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: $white-color;
+    border: 1px solid $white300-color;
+
+    @include title-4-medium;
+
+    @media (max-width: 767px){
+        padding: 0;
+    }
+
+}
+.pagination li span {
+    height: 30px;
+    @include flexbox(flex, row, center, center);
+    width: 30px;
+}
+.pagination{
+    &__icon{
+        background-color: $text-primary-color;
+        width: 24px;
+        height: 24px;
+    }
+
+ 
+
+}
+.pagination-container{
+    @media (max-width: 767px) {
+        align-self: flex-end;
+    }
+}
+.pagination li:hover{
+    color: #FCFDFF;
+    background-color: #1169CC; /* $primary*/
+}
+
+.pagination li:hover{
+    .pagination__icon{
+    background-color: $white-color;
+}
+}
+
+.pagination li.active{
+    color: #FCFDFF;
+    background-color: #1169CC; /* $primary*/
+}
+
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .pagination li span{
+        width: 24px;
+        height: 24px;
+    }
+    .pagination-container {
+        align-self: center;
+    }
+}
+
+
+
+

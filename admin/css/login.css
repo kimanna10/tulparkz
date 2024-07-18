@@ -1,0 +1,359 @@
+@charset "UTF-8";
+body {
+  background-color: #316BE6;
+}
+
+.main {
+  background-image: url("../assets/img/pattern-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* Для экранов шириной от 768px до 1023px -----------------------*/
+  /* Для экранов шириной от 768px до 1023px -----------------------*/
+  /* Для экранов шириной от 480px до 767px -----------------------*/
+  /* Для экранов шириной от 320px до 479px -----------------------*/
+  /* Для экранов шириной до 319px -----------------------*/
+}
+.main__login-content {
+  -webkit-box-shadow: -29px 30px 87.7px 0px rgba(45, 51, 194, 0.25);
+          box-shadow: -29px 30px 87.7px 0px rgba(45, 51, 194, 0.25);
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.main__login-input-block {
+  position: relative;
+}
+.main__login-top {
+  padding-bottom: 50px;
+}
+.main__logo-block {
+  background: url("../assets/img/admin_logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.main__login-title-block {
+  padding-bottom: 60px;
+}
+.main__login-title {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+.main__login-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.main__login-banner {
+  width: 100%;
+  border-radius: 14px;
+}
+.main__login-form {
+  padding: 30px;
+}
+.main__login-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main__login-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 28px;
+}
+.main__login-link {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #1169CC;
+}
+.main__login-link:hover {
+  color: #1169CC;
+}
+.main__login-sumbit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main__login-button-block {
+  padding-top: 64px;
+}
+.main__login-content-block {
+  width: 50%;
+}
+.main__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 8px;
+}
+.main__checkbox-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #D1D4DB;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  background-color: #FCFDFF;
+}
+.main__checkbox-input:checked {
+  background-color: #316BE6;
+  border-color: #316BE6;
+}
+.main__checkbox-input:checked::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  width: 26px;
+  height: 27px;
+  -webkit-mask: url("/assets/icons/ci_circle-check.svg") no-repeat center;
+          mask: url("/assets/icons/ci_circle-check.svg") no-repeat center;
+  background-color: #FFFFFF;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+.main__checkbox-label {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+.main__input-label {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.main__login-buttons-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+}
+.main__btn-icon {
+  background-color: #070C2B;
+}
+@media (max-width: 991px) and (min-width: 769px) {
+  .main__login-title-block {
+    padding-bottom: 40px;
+  }
+  .main__login-info {
+    gap: 20px;
+  }
+  .main__login-button-block {
+    padding-top: 30px;
+  }
+  .main__login-title {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .main__login-content-block:first-child {
+    display: none;
+  }
+  .main__login-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__login-content-block {
+    width: 100%;
+  }
+}
+@media (max-width: 479px) and (min-width: 320px) {
+  .main__login-title {
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  .main__login-form {
+    padding: 10px;
+  }
+  .main__login-title-block {
+    padding-bottom: 40px;
+  }
+  .main__login-info {
+    gap: 20px;
+  }
+  .main__login-button-block {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 319px) {
+  .main__login-title {
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  .main__login-form {
+    padding: 10px;
+  }
+  .main__login-title-block {
+    padding-bottom: 40px;
+  }
+  .main__login-info {
+    gap: 20px;
+  }
+  .main__login-button-block {
+    padding-top: 40px;
+  }
+}
+
+.code-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.code-input__box {
+  width: 36px;
+  height: 36px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #9CA0AF;
+  border-radius: 12px;
+  outline: none;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  caret-color: transparent;
+}
+.code-input__box:focus {
+  border-color: #316BE6;
+}
+.code-input__underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0); /* Начинаем с нулевой ширины */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.code-input__box:focus + .code-input__underline {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1); /* Увеличиваем ширину до 100% при фокусе */
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .code-input {
+    gap: 5px;
+  }
+  .code-input__box {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+.password-toggle-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+.password-toggle-icon i {
+  background-color: #9CA0AF;
+}

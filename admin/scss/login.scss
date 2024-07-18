@@ -1,0 +1,304 @@
+@import 'colors';
+@import 'mixin';
+
+body {
+    background-color: $secondary-color-2;
+}
+
+
+
+.main {
+    background-image: url('../assets/img/pattern-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    @include flexbox(flex, row, center, center);
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+
+
+    &__login-content {
+        box-shadow: -29px 30px 87.7px 0px rgba(#2D33C2, 0.25);
+        border-radius: 24px;
+        background-color: $white-color;
+        padding: 16px;
+        @include flexbox(flex, row, center, space-between);
+        gap: 16px;
+
+        max-width: 900px;
+    margin: 0 auto;
+
+    }
+    &__login-input-block{
+        position: relative;
+    }
+    &__login-top {
+        padding-bottom: 50px;
+        
+    }
+    &__logo-block{
+        background: url('../assets/img/admin_logo.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+    }
+
+    &__login-title-block{
+        padding-bottom: 60px
+    }
+
+    &__login-title {
+        @include title-1-bold;
+        padding-bottom: 12px;
+    }
+    &__login-subtitle {
+        @include title-4-regular;
+    }
+
+    &__login-banner {
+        width: 100%;
+        border-radius: 14px;
+    }
+
+    &__login-form {
+        padding: 30px;
+    }
+
+    &__login-row {
+        @include flexbox(flex, row, center, space-between);
+    }
+
+    &__login-info {
+        @include flexbox(flex, column, stretch);
+        gap: 28px;
+
+    }
+
+    &__login-link {
+        @include subhead-regular;
+        color: $primary-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__login-sumbit {
+        @include flexbox(flex, column, stretch);
+        
+    }
+    &__login-button-block{
+        padding-top: 64px;
+    }
+
+
+    &__login-content-block {
+        width: 50%;
+    }
+    &__checkbox{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+    &__checkbox-input{
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border: 1px solid $grey-color;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        background-color: $white50-color;
+
+
+        &:checked {
+            background-color: $secondary-color-2;
+            border-color: $secondary-color-2;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -3px;
+                width: 26px;
+                height: 27px;
+                mask: url('/assets/icons/ci_circle-check.svg') no-repeat center;
+                background-color: $white-color;
+                mask-size: cover;
+
+            }
+        }
+    }
+    &__checkbox-label{
+        @include subhead-regular;
+    }
+
+    &__input-label{
+        @include title-4-regular;
+    }
+
+    &__login-buttons-block {
+        @include flexbox(flex, row, center, space-between);
+        padding-top: 20px;
+    }
+
+    &__btn-icon {
+        background-color: $text-primary-color;
+    }
+
+ 
+
+    /* Для экранов шириной от 768px до 1023px -----------------------*/
+    @media (max-width: 991px) and (min-width: 769px) {
+        &__login-title-block {
+            padding-bottom: 40px;
+        }
+        &__login-info {
+            gap: 20px;
+        }
+
+        &__login-button-block{
+            padding-top: 30px;
+        }
+        &__login-title {
+            font-size: 1.75rem;
+        }
+
+
+
+    }
+
+    /* Для экранов шириной от 768px до 1023px -----------------------*/
+    @media (max-width: 768px) {
+        &__login-content-block {
+            &:first-child {
+                display: none;
+            }
+        }
+
+        &__login-content {
+            flex-direction: column;
+        }
+
+        &__login-content-block {
+            width: 100%;
+        }
+    }
+
+
+
+    /* Для экранов шириной от 480px до 767px -----------------------*/
+    @media (max-width: 767px) and (min-width: 480px) {}
+
+    /* Для экранов шириной от 320px до 479px -----------------------*/
+    @media (max-width: 479px) and (min-width: 320px) {
+&__login-title {
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+}
+        &__login-form {
+            padding: 10px;
+        }
+        &__login-title-block {
+            padding-bottom: 40px;
+        }
+        &__login-info {
+            gap: 20px;
+        }
+        &__login-button-block{
+            padding-top: 40px;
+        }
+    }
+
+    /* Для экранов шириной до 319px -----------------------*/
+    @media (max-width: 319px) {
+        &__login-title {
+            padding-bottom: 5px;
+            font-size: 1.5rem;
+        }
+                &__login-form {
+                    padding: 10px;
+                }
+                &__login-title-block {
+                    padding-bottom: 40px;
+                }
+                &__login-info {
+                    gap: 20px;
+                }
+                &__login-button-block{
+                    padding-top: 40px;
+                }
+            }
+
+}
+
+.code-input {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    &__box {
+        width: 36px;
+        height: 36px;
+        @include title-4-medium;
+        text-align: center;
+        border: 1px solid $text-thertiary-color;
+        border-radius: 12px;
+        outline: none;
+        transition: border-color 0.3s;
+        caret-color: transparent;
+        &:focus {
+            border-color: $secondary-color-2;
+        }
+    }
+    &__underline {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #007bff;
+        transform-origin: bottom left;
+        transform: scaleX(0); /* Начинаем с нулевой ширины */
+        transition: transform 0.3s ease;
+    }
+}
+.code-input__box:focus + .code-input__underline {
+    transform: scaleX(1); /* Увеличиваем ширину до 100% при фокусе */
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .code-input {
+        gap: 5px;
+        &__box {
+            width: 35px;
+            height: 35px;
+        }
+    }
+    
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    i {
+
+        background-color: $text-thertiary-color;
+
+    }
+}

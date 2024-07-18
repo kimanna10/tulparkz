@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Руководитель отдела продаж</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sales-dir.css">
+
+
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="main__wrapper">
+            <div class="main__table-page">
+                <div class="main__top">
+                    <div class="container">
+                        <div class="main__top-wrapper">
+                            <div class="main__user-account">
+                                <div class="main__user-img-block">
+                                    <img src="assets/img/car-img.png" class="main__user-img" alt="">
+                                </div>
+                                <div class="main__top-user-name">Ахмадиева Камила</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__filter">
+                    <div class="container">
+                        <div class="main__filter-title">Главная</div>
+                        <div class="main__filter-content">
+                            <div class="main__filter-block">
+                                <div class="main__filter-form">
+                                    <div class="main__drop-block">
+                                        <div class="input-drop">
+                                            <div
+                                                class="input-drop__input-block input-block input-drop__dropdown--search ">
+                                                <i class="input-drop__icon-search icon-search-magnifying-glass"></i>
+                                                <input type="text" class="textfield textfield__grey field-search"
+                                                    id="search" placeholder="Сотрудник">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="main__drop-block">
+                                        <li class="dropdown">
+                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                <div class="dropdown__drop-text">
+                                                    <div class="dropdown__status-text">Город</div>
+                                                </div>
+                                                <div class="dropdown__icon-block">
+                                                    <div class="dropdown__caret-icon icon-caret-down"></div>
+                                                </div>
+                                            </a>
+                                            <ul class="dropdown__menu">
+                                                <div class="dropdown__drop dropdown__drop--meeting">
+                                                    <div class="dropdown__drop-list">
+                                                        <div class="dropdown__column dropdown__column--meeting">
+                                                            <div class="radio-item choose-item">
+                                                                <label for="almaty-filter"
+                                                                    class="radio-item__label">Алматы</label>
+                                                                <input type="radio" id="almaty-filter"
+                                                                    name="filter-city" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            <div class="radio-item choose-item">
+                                                                <label for="astana-filter"
+                                                                    class="radio-item__label">Астана</label>
+                                                                <input type="radio" id="astana-filter"
+                                                                    name="filter-city" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                    </div>
+
+
+
+                                    <div class="main__drop-block">
+                                        <li class="dropdown">
+                                            <a class="dropdown__toggle">
+                                                <div class="dropdown__drop-text date-pick">Выберите дату</div>
+                                                <div class="dropdown__icon-block">
+                                                    <div class="dropdown__caret-icon icon-caret-down"></div>
+                                                </div>
+                                            </a>
+                                            <ul class="dropdown__menu">
+                                                <div class="dropdown__drop">
+                                                    <div class="custom-calendar">
+                                                        <div class="calendar-header">
+                                                            <button class="calendar-button" id="prevMonthBtn">
+                                                                <div class="calendar-arrow icon-caret-left"></div>
+                                                            </button>
+                                                            <span class="calendar-month" id="currentMonth"></span>
+                                                            <button class="calendar-button" id="nextMonthBtn">
+                                                                <div class="calendar-arrow icon-caret-right"></div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="calendar-body">
+                                                            <div class="weekdays"></div>
+                                                            <div class="days"></div>
+                                                        </div>
+                                                        <button type="submit" id="saveBtn"
+                                                            class="button button__primary button--mini">Сохранить</button>
+                                                    </div>
+
+                                                </div>
+
+                                            </ul>
+                                        </li>
+                                    </div>
+
+
+
+
+
+                                    <div class="main__drop-block">
+                                        <div class="main__filter-buttons-block">
+                                            <button type="submit" class="button button__secondary button--mini"
+                                                id="filter-reset">Очистить</button>
+                                            <button type="submit" class="button button__primary button--mini"
+                                                id="search-button">Искать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main__filter-block">
+                                <div class="main__filter-info">
+                                    <div class="main__result-block">
+                                        <div class="main__result-icon">
+                                            <div class="main__result-icon-check icon-circle-check1"></div>
+                                        </div>
+                                        <div class="main__result-info">
+                                            <div class="main__result-quantity">23</div>
+                                            <div class="main__result-decs">Всего обработано </div>
+                                        </div>
+                                    </div>
+                                    <div class="main__result-block">
+                                        <div class="main__result-icon">
+                                            <div class="main__result-icon-car icon-car"></div>
+                                        </div>
+                                        <div class="main__result-info">
+                                            <div class="main__result-quantity">10</div>
+                                            <div class="main__result-decs">Оффлайн показов</div>
+                                        </div>
+                                    </div>
+                                    <div class="main__result-block">
+                                        <div class="main__result-icon">
+                                            <div class="main__result-icon-drive icon-drive"></div>
+                                        </div>
+                                        <div class="main__result-info">
+                                            <div class="main__result-quantity">7</div>
+                                            <div class="main__result-decs">Тест-драйвов</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__content">
+                    <div class="container">
+                        <div class="main__content-section">
+                            <div class="table-section">
+                                <div class="table-section__top">
+                                    <div class="table-section__title">Статистика</div>
+                                    <div class="pagination-container" id="pagination-1">
+                                    <div class="pagination">
+                                        <ul>
+                                            <li id="prev"><span>&laquo;</span></li>
+                                            <!-- Page numbers will be dynamically generated here -->
+                                            <li data-page="next"><span>&raquo;</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="table-wrapper">
+                                    <table class="table-block" id="table-1">
+                                        <thead class="table-block__head">
+                                            <tr class="table-block__head-row">
+                                                <th class="table-block__header">Сотрудник</th>
+                                                <th class="table-block__header">Оффлайн показы</th>
+                                                <th class="table-block__header">Тест-драйвы</th>
+                                                <th class="table-block__header">Город</th>
+    
+    
+                                            </tr>
+    
+                                        </thead>
+    
+                                        <tbody class="table-block__body">
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Астана</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">46</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">30</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">20</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+    
+    
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+    
+                                            <!-- ROW-ELEMENT -->
+                                            <tr class="table-block__body-row">
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee">
+                                                        <div class="table-block__employee-img-block">
+                                                            <img src="assets/img/employee/employee1.png"
+                                                                class="table-block__employee-img" alt="">
+                                                        </div>
+                                                        <div class="table-block__employee-title">Алина Попова</div>
+                                                    </div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__views">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__test-drive">45</div>
+                                                </td>
+                                                <td class="table-block__data">
+                                                    <div class="table-block__employee-city">Алматы</div>
+                                                </td>
+    
+    
+                                            </tr>
+    
+                                         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                        </tbody>
+    
+                                    </table>
+                                </div>
+                               
+
+                            </div>
+
+
+                            <div class="main__sales-section">
+                                <div class="main__sales-block">
+                                    <div class="main__sales-title">Скидки на авто</div>
+                                    <div class="main__sales-list">
+                                        <div class="main__sales-item">
+                                            <div class="main__sales-item-content">
+                                                <div class="main__sales-item-block">
+                                                    <div class="main__sales-item-text">Назначить скидку</div>
+                                                    <div class="main__sales-item-drop percent">
+                                                        <li class="dropdown">
+                                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                                <div class="dropdown__drop-text">
+                                                                    <div class="dropdown__status-text">%</div>
+                                                                </div>
+                                                                <div class="dropdown__icon-block">
+                                                                    <div class="dropdown__caret-icon icon-caret-down">
+                                                                    </div>
+                                                                </div>
+
+                                                            </a>
+                                                            <ul class="dropdown__menu">
+                                                                <div class="dropdown__drop ">
+                                                                    <div class="dropdown__drop-list">
+                                                                        <div class="dropdown__column">
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio1"
+                                                                                    class="radio-item__label">10%</label>
+                                                                                <input type="radio" id="radio1"
+                                                                                    name="sale-discount1"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio2"
+                                                                                    class="radio-item__label">15%</label>
+                                                                                <input type="radio" id="radio2"
+                                                                                    name="sale-discount1"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                                <div class="main__sales-item-block">
+                                                    <div class="main__sales-item-text">в городе</div>
+                                                    <div class="main__sales-item-drop city">
+                                                        <li class="dropdown">
+                                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                                <div class="dropdown__drop-text">
+                                                                    <div class="dropdown__status-text">Город</div>
+                                                                </div>
+                                                                <div class="dropdown__icon-block">
+                                                                    <div class="dropdown__caret-icon icon-caret-down">
+                                                                    </div>
+                                                                </div>
+
+                                                            </a>
+                                                            <ul class="dropdown__menu">
+                                                                <div class="dropdown__drop">
+                                                                    <div class="dropdown__drop-list">
+                                                                        <div class="dropdown__column">
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio3"
+                                                                                    class="radio-item__label">Алматы</label>
+                                                                                <input type="radio" id="radio3"
+                                                                                    name="sale-city1"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio4"
+                                                                                    class="radio-item__label">Астана</label>
+                                                                                <input type="radio" id="radio4"
+                                                                                    name="sale-city1"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main__sales-item-operations">
+                                                <div class="toggle-switch">
+                                                    <input type="checkbox" id="toggle1" name="toggle1" value="option1"
+                                                        class="switch">
+                                                    <label for="toggle1"></label>
+                                                </div>
+                                                <button type="submit" class="main__button-trash">
+                                                    <div class="button__icon button__icon--trash icon-trash-full"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="main__sales-item">
+                                            <div class="main__sales-item-content">
+                                                <div class="main__sales-item-block">
+                                                    <div class="main__sales-item-text">Назначить скидку</div>
+                                                    <div class="main__sales-item-drop percent">
+                                                        <li class="dropdown">
+                                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                                <div class="dropdown__drop-text">
+                                                                    <div class="dropdown__status-text">%</div>
+                                                                </div>
+                                                                <div class="dropdown__icon-block">
+                                                                    <div class="dropdown__caret-icon icon-caret-down">
+                                                                    </div>
+                                                                </div>
+
+                                                            </a>
+                                                            <ul class="dropdown__menu">
+                                                                <div class="dropdown__drop ">
+                                                                    <div class="dropdown__drop-list">
+                                                                        <div class="dropdown__column">
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio5"
+                                                                                    class="radio-item__label">10%</label>
+                                                                                <input type="radio" id="radio5"
+                                                                                    name="sale-discount2"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio6"
+                                                                                    class="radio-item__label">15%</label>
+                                                                                <input type="radio" id="radio6"
+                                                                                    name="sale-discount2"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                                <div class="main__sales-item-block">
+                                                    <div class="main__sales-item-text">в городе</div>
+                                                    <div class="main__sales-item-drop city">
+                                                        <li class="dropdown">
+                                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                                <div class="dropdown__drop-text">
+                                                                    <div class="dropdown__status-text">Город</div>
+                                                                </div>
+                                                                <div class="dropdown__icon-block">
+                                                                    <div class="dropdown__caret-icon icon-caret-down">
+                                                                    </div>
+                                                                </div>
+
+                                                            </a>
+                                                            <ul class="dropdown__menu">
+                                                                <div class="dropdown__drop ">
+                                                                    <div class="dropdown__drop-list">
+                                                                        <div class="dropdown__column">
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio7"
+                                                                                    class="radio-item__label">Алматы</label>
+                                                                                <input type="radio" id="radio7"
+                                                                                    name="sale-city2"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio8"
+                                                                                    class="radio-item__label">Астана</label>
+                                                                                <input type="radio" id="radio8"
+                                                                                    name="sale-city2"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main__sales-item-operations">
+                                                <div class="toggle-switch">
+                                                    <input type="checkbox" id="toggle2" name="toggle2" value="option2"
+                                                        class="switch">
+                                                    <label for="toggle2"></label>
+                                                </div>
+                                                <button type="submit" class="main__button-trash">
+                                                    <div class="button__icon button__icon--trash icon-trash-full"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="main__sales-item">
+                                            <div class="main__sales-item-content">
+                                                <div class="main__sales-item-block">
+                                                    <div class="main__sales-item-text">Назначить скидку</div>
+                                                    <div class="main__sales-item-drop percent">
+                                                        <li class="dropdown">
+                                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                                <div class="dropdown__drop-text">
+                                                                    <div class="dropdown__status-text">%</div>
+                                                                </div>
+                                                                <div class="dropdown__icon-block">
+                                                                    <div class="dropdown__caret-icon icon-caret-down">
+                                                                    </div>
+                                                                </div>
+
+                                                            </a>
+                                                            <ul class="dropdown__menu">
+                                                                <div class="dropdown__drop ">
+                                                                    <div class="dropdown__drop-list">
+                                                                        <div class="dropdown__column">
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio9"
+                                                                                    class="radio-item__label">10%</label>
+                                                                                <input type="radio" id="radio9"
+                                                                                    name="sale-discount3"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio10"
+                                                                                    class="radio-item__label">15%</label>
+                                                                                <input type="radio" id="radio10"
+                                                                                    name="sale-discount3"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                                <div class="main__sales-item-block">
+                                                    <div class="main__sales-item-text">в городе</div>
+                                                    <div class="main__sales-item-drop city">
+                                                        <li class="dropdown">
+                                                            <a class="dropdown__toggle dropdown__toggle--status">
+                                                                <div class="dropdown__drop-text">
+                                                                    <div class="dropdown__status-text">Город</div>
+                                                                </div>
+                                                                <div class="dropdown__icon-block">
+                                                                    <div class="dropdown__caret-icon icon-caret-down">
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            <ul class="dropdown__menu">
+                                                                <div class="dropdown__drop ">
+                                                                    <div class="dropdown__drop-list">
+                                                                        <div class="dropdown__column">
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio11"
+                                                                                    class="radio-item__label">Алматы</label>
+                                                                                <input type="radio" id="radio11"
+                                                                                    name="sale-city3"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                            <div class="radio-item choose-item">
+                                                                                <label for="radio12"
+                                                                                    class="radio-item__label">Астана</label>
+                                                                                <input type="radio" id="radio12"
+                                                                                    name="sale-city3"
+                                                                                    class="radio-item__input">
+                                                                                <span class="radio-item__custom"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main__sales-item-operations">
+                                                <div class="toggle-switch">
+                                                    <input type="checkbox" id="toggle3" name="toggle3" value="option3"
+                                                        class="switch">
+                                                    <label for="toggle3"></label>
+                                                </div>
+                                                <button type="submit" class="main__button-trash">
+                                                    <div class="button__icon button__icon--trash icon-trash-full"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main__sales-bottom">
+                                        <div class="main__sales-button">
+                                            <button type="submit" class="button button__secondary" id="addNewSaleButton">
+                                                <div class="button__icon button__icon--secondary icon-plus"></div>
+                                                Новая скидка
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/radio.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/datepick.js"></script>
+    <script src="js/filter-reset.js"></script>
+
+
+
+
+
+   
+
+</body>
+
+</html>

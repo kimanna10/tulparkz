@@ -1,0 +1,156 @@
+
+@media (min-width: 1601px) and (max-width: 1919px) {
+    .main{
+        &__result-block{
+            padding: 15px;
+        }
+        &__result-icon {
+            padding: 10px;
+        }
+        
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .main{
+        &__filter-content{
+            flex-direction: column;
+        }
+        &__filter-block{
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 1201px) and (max-width: 1280px) {
+    .main{
+        &__filter-content{
+            flex-direction: column;
+        }
+        &__filter-block{
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 1200px) {
+
+    html{
+        font-size: 16px;
+    }
+    .container {
+        max-width: calc(100% - 90px);
+    }
+}
+
+/* Для экранов шириной от 1024px до 1199px -----------------------*/
+@media (max-width: 1201px) and (min-width: 1024px) {
+  
+    html{
+        font-size: 15px;
+    }
+    .container {
+        max-width: calc(100% - 90px);
+    }
+    .main{
+        &__filter-content{
+            flex-direction: column;
+        }
+        &__filter-block{
+            width: 100%;
+        }
+    }
+
+}
+
+/* Для экранов шириной от 768px до 1023px -----------------------*/
+@media (max-width: 1023px) and (min-width: 768px) {
+
+    html{
+        font-size: 14px;
+    }
+    .container {
+        max-width: calc(100% - 20px);
+    }
+    .main{
+        &__filter-content{
+            flex-direction: column;
+        }
+        &__filter-block{
+            width: 100%;
+        }
+    }
+}
+
+
+/* Для экранов шириной от 480px до 767px -----------------------*/
+@media (max-width: 767px) and (min-width: 480px) {
+
+    html{
+        font-size: 13px;
+    }
+    .container {
+        max-width: calc(100% - 20px);
+    }
+    .main{
+        &__filter-form{
+            flex-direction: column;
+        }
+        &__drop-block{
+            width: 100%;
+        }
+        &__filter-info{
+            flex-direction: column;
+        }
+        &__filter-content{
+            flex-direction: column;
+        }
+        &__filter-block{
+            width: 100%;
+        }
+        &__result-block{
+            width: 100%;
+        }
+    }
+}
+
+/* Для экранов шириной от 320px до 479px -----------------------*/
+@media (max-width: 479px) and (min-width: 320px) {
+
+    html{
+        font-size: 13px;
+    }
+    .container {
+        max-width: calc(100% - 10px);
+    }
+
+    .main{
+        &__filter-form{
+            flex-direction: column;
+        }
+        &__drop-block{
+            width: 100%;
+        }
+        &__filter-info{
+            flex-direction: column;
+        }
+        &__filter-content{
+            flex-direction: column;
+        }
+        &__filter-block{
+            width: 100%;
+        }
+        &__result-block{
+            width: 100%;
+        }
+    }
+
+    
+}
+
+/* Для экранов шириной до 319px -----------------------*/
+@media (max-width: 319px) {
+
+    html{
+        font-size: 13px;
+    }
+}
+

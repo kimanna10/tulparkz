@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Компоненты</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        h3 {
+            padding-top: 20px;
+        }
+
+        .components {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .components-block {
+            flex-direction: column;
+            width: calc((100% - 50px) / 2);
+            padding: 20px;
+            border: 1px solid #9CA0AF;
+            border-radius: 12px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #fff">
+
+
+    <main class="main">
+        <div class="container">
+            <div class="main__wrapper components">
+
+
+                <!-- SNACKBAR -->
+                <div class="components-block">
+                    <h3>snackbar snackbar--error</h3>
+                    <div class="snackbar snackbar--error">
+                        <div class="snackbar__left">
+                            <div class="snackbar__icon snackbar__icon--close icon-close"></div>
+                            <div class="snackbar__status">Simple error text</div>
+                        </div>
+                        <div class="snackbar__right">
+                            <div class="snackbar__icon icon-close"></div>
+                        </div>
+                    </div>
+
+                    <h3>snackbar snackbar--warning</h3>
+                    <div class="snackbar snackbar--warning">
+                        <div class="snackbar__left">
+                            <div class="snackbar__icon snackbar__icon--warning icon-circle-warning"></div>
+                            <div class="snackbar__status">Simple warning text</div>
+                        </div>
+                        <div class="snackbar__right">
+                            <div class="snackbar__icon icon-close"></div>
+                        </div>
+                    </div>
+
+                    <h3>snackbar snackbar--success</h3>
+                    <div class="snackbar snackbar--success">
+                        <div class="snackbar__left">
+                            <div class="snackbar__icon snackbar__icon--check icon-circle-check"></div>
+                            <div class="snackbar__status">Simple success text</div>
+                        </div>
+                        <div class="snackbar__right">
+                            <div class="snackbar__icon icon-close"></div>
+                        </div>
+                    </div>
+
+                    <h3>snackbar snackbar--info</h3>
+                    <div class="snackbar snackbar--info">
+                        <div class="snackbar__left">
+                            <div class="snackbar__icon snackbar__icon--info icon-circle-warning"></div>
+                            <div class="snackbar__status">Simple info text</div>
+                        </div>
+                        <div class="snackbar__right">
+                            <div class="snackbar__icon icon-close"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INPUTS -->
+                <div class="components-block">
+                    <h3>input-grey</h3>
+                    <div class="input-block">
+                        <label for="phone-email" class="textfield__label">Текст</label>
+                        <input type="text" class="textfield textfield__grey" id="phone-email"
+                            placeholder="Введите телефон или адрес эл. почты" autocomplete="off">
+                    </div>
+
+                    <h3>input-error</h3>
+                    <div class="input-block">
+                        <label for="email" class="textfield__label">Текст</label>
+                        <input type="text" class="textfield textfield__grey textfield__grey--error" id="email"
+                            placeholder="Введите телефон или адрес эл. почты" autocomplete="off">
+                        <div class="textfield__label textfield__label--error">Текст</div>
+                    </div>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="components-block">
+                    <h3>button button__secondary button--mini</h3>
+                    <button type="submit" class="button button__secondary button--mini">Войти</button>
+
+                    <h3>button button__secondary button--mini</h3>
+                    <button type="submit" class="button button__secondary button--mini" disabled>Войти</button>
+
+                    <h3>button button__primary--mini</h3>
+                    <button type="submit" class="button button__primary button--mini">Войти</button>
+
+                    <h3>button button__primary--mini disabled</h3>
+                    <button type="submit" class="button button__primary button--mini" disabled>Войти</button>
+
+                    <h3>button button__secondary</h3>
+                    <button type="submit" class="button button__secondary">
+                        <div class="button__icon button__icon--secondary icon-phone"></div>
+                        Войти
+                    </button>
+
+                    <h3>button button__secondary disabled</h3>
+                    <button type="submit" class="button button__secondary" disabled>
+                        <div class="button__icon button__icon--secondary icon-phone"></div>
+                        Войти
+                    </button>
+
+                    <h3>button button__primary</h3>
+                    <button type="submit" class="button button__primary">
+                        <div class="button__icon button__icon--primary icon-phone"></div>
+                        Войти
+                    </button>
+
+                    <h3>button button__primary disabled</h3>
+                    <button type="submit" class="button button__primary" disabled>
+                        <div class="button__icon button__icon--primary icon-phone"></div>
+                        Войти
+                    </button>
+                </div>
+
+                <!-- LINKS -->
+                <div class="components-block">
+                    <h3>link</h3>
+                    <a href="#" class="link link__text">Искать</a>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--blue">
+                        <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--blue" disabled>
+                        <div class="link__icon link__icon--blue icon-share-ios-export"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--red">
+                        <div class="link__icon link__icon--red icon-archive"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--blue" disabled>
+                        <div class="link__icon link__icon--red icon-archive"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--green">
+                        <div class="link__icon link__icon--green icon-user"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--blue" disabled>
+                        <div class="link__icon link__icon--green icon-user"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--yellow">
+                        <div class="link__icon  link__icon--yellow icon-edit-pencil"></div>
+                    </button>
+
+                    <h3>link</h3>
+                    <button href="#" class="link link__button link__button--blue" disabled>
+                        <div class="link__icon  link__icon--yellow icon-edit-pencil"></div>
+                    </button>
+                </div>
+
+
+
+                <!-- STATUS -->
+                <div class="components-block">
+                    <h3>status</h3>
+                    <div class="status status__progress">
+                        <i class="status__icon status__icon--progress icon-clock"></i>В работе
+                    </div>
+
+                    <h3>status</h3>
+                    <div class="status status__done">
+                        <i class="status__icon status__icon--done icon-circle-check1"></i>Завершенное
+                    </div>
+
+                    <h3>status</h3>
+                    <div class="status status__new">
+                        <i class="status__icon status__icon--new icon-add-plus-circle"></i>Новое
+                    </div>
+
+                    <h3>status</h3>
+                    <div class="status status__archive">
+                        <i class="status__icon status__icon--archive icon-close-circle"></i>Архив
+                    </div>
+
+                    <h3>status</h3>
+                    <div class="status status__progress">
+                        <i class="status__icon status__icon--progress icon-mail"></i>Отправлено
+                    </div>
+
+                    <h3>status</h3>
+                    <div class="status status__archive">
+                        <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
+                    </div>
+
+                    <h3>status</h3>
+                    <div class="status status__done">
+                        <i class="status__icon status__icon--done icon-circle-check1"></i>Одобрено
+                    </div>
+                </div>
+
+                 <!-- MEETING -->
+                 <div class="components-block">
+                    <h3>meeting</h3>
+                    <div class="meeting meeting__offline">Оффлайн показ</div>
+
+                    <h3>meeting</h3>
+                    <div class="meeting meeting__test-drive">Тест-драйв</div>
+
+                    <h3>meeting</h3>
+                    <div class="meeting meeting__none">Не назначено</div>
+
+                </div>
+
+                <!-- RADIO -->
+                <div class="components-block">
+
+                    <h3>radio</h3>
+                    <div class="radio-item">
+                        <label for="radio1" class="radio-item__label radio-item__label--process">
+                            <i class="radio-item__icon radio-item__icon--progress icon-clock"></i>В работе</label>
+                        <input type="radio" id="radio1" name="radios" class="radio-item__input">
+                        <span class="radio-item__custom"></span>
+                    </div>
+                    <h3>radio-checked</h3>
+                    <div class="radio-item">
+                        <label for="radio2" class="radio-item__label radio-item__label--archive">
+                            <i class="radio-item__icon radio-item__icon--archive icon-close-circle"></i>В архиве</label>
+                        <input type="radio" id="radio2" name="radios" class="radio-item__input" checked>
+                        <span class="radio-item__custom"></span>
+                    </div>
+                    <h3>radio</h3>
+                    <div class="radio-item">
+                        <label for="radio3" class="radio-item__label radio-item__label--new">
+                            <i class="radio-item__icon radio-item__icon--new icon-add-plus-circle"></i>Новое</label>
+                        <input type="radio" id="radio3" name="radios" class="radio-item__input">
+                        <span class="radio-item__custom"></span>
+                    </div>
+                    <h3>radio</h3>
+                    <div class="radio-item">
+                        <label for="radio4" class="radio-item__label radio-item__label--done">
+                            <i
+                                class="radio-item__icon radio-item__icon--done icon-circle-check1"></i>Завершенное</label>
+                        <input type="radio" id="radio4" name="radios" class="radio-item__input">
+                        <span class="radio-item__custom"></span>
+                    </div>
+                </div>
+
+                <!-- CHECKBOX -->
+                <div class="components-block">
+                    <h3>checkbox-checked</h3>
+                    <button class="checkbox-group">
+                        <input type="checkbox" class="checkbox-group__check" id="option1" name="option" checked>
+                        <label for="option1" class="checkbox-group__label">Деталь перекрашена</label>
+                    </button>
+
+                    <h3>checkbox</h3>
+                    <button class="checkbox-group">
+                        <input type="checkbox" class="checkbox-group__check" id="option2" name="option">
+                        <label for="option2" class="checkbox-group__label">Деталь перекрашена</label>
+
+                    </button>
+
+                    <h3>checkbox-disabled</h3>
+                    <button class="checkbox-group" disabled>
+                        <input type="checkbox" class="checkbox-group__check" id="option3" name="option">
+                        <label for="option3" class="checkbox-group__label">Деталь перекрашена</label>
+                    </button>
+
+                    <h3>checkbox-checked-disabled</h3>
+                    <button class="checkbox-group" disabled>
+                        <input type="checkbox" class="checkbox-group__check" id="option4" name="option" checked>
+                        <label for="option4" class="checkbox-group__label">Деталь перекрашена</label>
+                    </button>
+                </div>
+
+
+                <div class="components-block">
+
+       
+                        <li class="dropdown">
+                            <a class="dropdown__toggle" id="dropdownToggle">
+                                <div class="dropdown__drop-text">Двигатель</div>
+                                <div class="dropdown__icon-block">
+                                     <div class="dropdown__caret-icon icon-caret-down"></div>
+                                </div>
+                               
+                            </a>
+                            <ul class="dropdown__menu">
+                                <div class="dropdown__drop">
+                                    <div class="dropdown__drop-list">
+                                        <div class="dropdown__column">
+                                            <div class="radio-item choose-item">
+                                                <label for="radio5" class="radio-item__label radio-item__label--process">
+                                                    <i class="radio-item__icon radio-item__icon--progress icon-clock"></i>В работе</label>
+                                                <input type="radio" id="radio5" name="radios" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="radio6" class="radio-item__label radio-item__label--archive">
+                                                    <i class="radio-item__icon radio-item__icon--archive icon-close-circle"></i>В архиве</label>
+                                                <input type="radio" id="radio6" name="radios" class="radio-item__input" checked>
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="radio7" class="radio-item__label radio-item__label--new">
+                                                    <i class="radio-item__icon radio-item__icon--new icon-add-plus-circle"></i>Новое</label>
+                                                <input type="radio" id="radio7" name="radios" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="radio8" class="radio-item__label radio-item__label--done">
+                                                    <i class="radio-item__icon radio-item__icon--done icon-circle-check1"></i>Завершенное</label>
+                                                <input type="radio" id="radio8" name="radios" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                   
+                                </div>
+
+                                
+                                    
+                               
+                            </ul>
+                        </li>
+               
+
+                </div>
+
+                <div class="components-block">
+
+                    <div class="choose-tag choose-tag--progress">
+                        <div class="choose-tag__text">В работе</div>
+                        <div class="choose-tag__icon choose-tag__icon--progress icon-close"></div>
+                    </div>
+
+                    <div class="choose-tag choose-tag--done">
+                        <div class="choose-tag__text">Завершенное</div>
+                        <div class="choose-tag__icon choose-tag__icon--done icon-close"></div>
+                    </div>
+
+                    <div class="choose-tag choose-tag--archive">
+                        <div class="choose-tag__text">В архиве</div>
+                        <div class="choose-tag__icon choose-tag__icon--archive icon-close"></div>
+                    </div>
+
+                    <div class="choose-tag choose-tag--new">
+                        <div class="choose-tag__text">Новое</div>
+                        <div class="choose-tag__icon choose-tag__icon--new icon-close"></div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+    <script src="js/radio.js"></script>
+    <script src="js/dropdown.js"></script>
+
+
+</body>
+
+</html>

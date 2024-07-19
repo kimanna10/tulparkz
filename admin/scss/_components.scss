@@ -622,6 +622,8 @@
             position: absolute;
             width: 100%;
             z-index: 1;
+
+
         }
         &__icon-block {
             @include flexbox(flex, row, center, end);
@@ -639,6 +641,7 @@
 
             &--meeting{
                 background-color: $white300-color;
+                min-width: 200px;
             }
             
         }

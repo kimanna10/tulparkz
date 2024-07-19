@@ -98,15 +98,27 @@
   .table-block__status {
     position: relative;
 }
-  .dropdown-content {
-    display: none; /* Скрываем дропдаун по умолчанию */
+
+.dropdown-content {
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 5px;
+    display: none;
+    border: 1px solid $blue100a-color;
+    box-shadow: 0px 15px 34px 0px rgba(#9BA3F2, 0.2);
     position: absolute;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    z-index: 1000; /* Обеспечиваем отображение поверх других элементов */
+    z-index: 1;
+    width: 100%;
+    
 }
 
-.table-block__status-item.active .dropdown-content {
-    display: block; /* Показываем дропдаун при активации */
+
+.save-button {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.meeting {
+    padding: 10px;
+    cursor: pointer;
 }

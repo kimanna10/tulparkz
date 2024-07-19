@@ -57,15 +57,25 @@
 }
 
 .dropdown-content {
-  display: none; /* Скрываем дропдаун по умолчанию */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 5px;
+  display: none;
+  border: 1px solid rgba(114, 168, 230, 0.12);
+  -webkit-box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
+          box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
   position: absolute;
-  background-color: white;
-  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  z-index: 1000; /* Обеспечиваем отображение поверх других элементов */
+  z-index: 1;
+  width: 100%;
 }
 
-.table-block__status-item.active .dropdown-content {
-  display: block; /* Показываем дропдаун при активации */
+.save-button {
+  margin-top: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.meeting {
+  padding: 10px;
+  cursor: pointer;
 }

@@ -1624,6 +1624,7 @@ h6 {
 }
 .dropdown__drop--meeting {
   background-color: #F3F5F7;
+  min-width: 200px;
 }
 .dropdown__drop-list {
   display: -webkit-box;

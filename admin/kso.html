@@ -243,7 +243,7 @@
                                         <div class="table-section__title-block">
                                             <div class="table-section__title">Объявления</div>
                                             <div class="table-section__button">
-                                                <button type="submit" class="button button__secondary">
+                                                <button type="submit" class="button button__secondary" id="create-adv" data-target="#modal-create-adv">
                                                     <div class="button__icon button__icon--secondary icon-plus"></div>
                                                     Создать
                                                 </button>
@@ -370,7 +370,7 @@
                                                     </td>
                                                     <td class="table-block__data">
         
-                                                        <div class="table-block__status-item">
+                                                        <div class="table-block__status-item" data-tooltip="tooltip1">
                                                             <div class="status status__done">
                                                                 <i class="status__icon status__icon--done icon-circle-check1"></i>Одобрено
                                                             </div>
@@ -429,7 +429,7 @@
                                                     </td>
                                                     <td class="table-block__data">
         
-                                                        <div class="table-block__status-item">
+                                                        <div class="table-block__status-item" data-tooltip="tooltip2">
                                                             <div class="status status__archive">
                                                                 <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
                                                             </div>
@@ -1881,7 +1881,197 @@
                 </div>
             </div>
         </div>
+
+
+
     </main>
+
+
+    <div class="tooltip" id="tooltip1">
+        <div class="tooltip-block__wrapper">
+            <div class="tooltip-block__item">
+                <div class="tooltip-block__status">
+                    <div class="tooltip-block__icon tooltip-block__icon--success icon-circle-check1"></div>
+                    <div class="tooltip-block__status-text tooltip-block__status-text--success">Одобрено:</div>
+                </div>
+                <div class="tooltip-block__status">
+                    <div class="tooltip-block__icon tooltip-block__icon--denied icon-close-circle"></div>
+                    <div class="tooltip-block__status-text tooltip-block__status-text--denied">Отказано:</div>
+                </div>
+            </div>
+            <div class="tooltip-block__item">
+                <div class="tooltip-block__bank">
+                    <img src="assets/img/bank/kaspi.png" class="tooltip-block__bank-icon" alt="">
+                    <div class="tooltip-block__bank-text">Kaspi</div>
+                </div>
+                <div class="tooltip-block__bank">
+                    <img src="assets/img/bank/jusan.png" class="tooltip-block__bank-icon" alt="">
+                    <div class="tooltip-block__bank-text">Jusan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tooltip" id="tooltip2">
+        <div class="tooltip-block__wrapper">
+            <div class="tooltip-block__item">
+                <div class="tooltip-block__status">
+                    <div class="tooltip-block__icon tooltip-block__icon--denied icon-close-circle"></div>
+                    <div class="tooltip-block__status-text tooltip-block__status-text--denied">Отказано:</div>
+                </div>
+            </div>
+            <div class="tooltip-block__item">
+                <div class="tooltip-block__bank">
+                    <img src="assets/img/bank/kaspi.png" class="tooltip-block__bank-icon" alt="">
+                    <div class="tooltip-block__bank-text">Kaspi</div>
+                </div>
+                <div class="tooltip-block__bank">
+                    <img src="assets/img/bank/jusan.png" class="tooltip-block__bank-icon" alt="">
+                    <div class="tooltip-block__bank-text">Jusan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-create-adv" class="modal">
+        <div class="modal-section">
+            <div class="modal-content  modal-content__create-adv">
+                <div class="modal-content__top">
+                    <div class="modal-content__title-icon icon-file-edit"></div>
+                    <div class="modal-content__title">Создать заявку</div>
+                </div>
+                <div class="modal-content__body">
+                    <div class="modal-content__block">
+                        <div class="input-block">
+                            <label for="id" class="textfield__label">ИИН</label>
+                            <input type="number" class="textfield textfield__grey" id="id" placeholder="XXXXXXXXXXXX" autocomplete="off">
+                        </div>
+                        <div class="input-block">
+                            <label for="salary" class="textfield__label">Доход покупателя</label>
+                            <input type="text" class="textfield textfield__grey amount-input" id="salary" placeholder="Введите сумму" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="modal-content__block">
+    
+                        <div class="input-block">
+                            <div class="textfield__label">Банк</div>
+                            <div class="scroll-wrapper">
+                                <div class="radio-container radio-group-2">
+                        
+                                    <label class="radio-block selected">
+                                        <input type="checkbox" name="bank-term" value="kaspi" class="bank-term" checked>
+                                        <img src="assets/img/bank/kaspi.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">Kaspi</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="halyk" class="bank-term">
+                                        <img src="assets/img/bank/halyk.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">Halyk</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="jusan"  class="bank-term">
+                                        <img src="assets/img/bank/jusan.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">Jusan</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="altyn" class="bank-term">
+                                        <img src="assets/img/bank/bank.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">Altyn</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="forte" class="bank-term">
+                                        <img src="assets/img/bank/forte.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">ForteBank</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="homebank" class="bank-term">
+                                        <img src="assets/img/bank/homebank.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">HomeBank</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="bcc" class="bank-term">
+                                        <img src="assets/img/bank/bcc.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">BCC</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="checkbox" name="bank-term" value="eurasiabank" class="bank-term">
+                                        <img src="assets/img/bank/eurasiabank.png" alt="" class="radio-block__icon">
+                                        <span class="radio-title">EurasiaBank</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="input-block">
+                            <label for="price" class="textfield__label">Стоимость автомобиля</label>
+                            <input type="text" class="textfield textfield__grey amount-input" id="price" placeholder="9 100 000" autocomplete="off">
+                            <i class="textfield__icon icon-tenge"></i>
+                        </div>
+                        <div class="input-block">
+                            <label for="first-price" class="textfield__label">Первоначальный взнос</label>
+                            <input type="text" class="textfield textfield__grey amount-input" id="first-price" placeholder="3 640 000" autocomplete="off">
+                            <i class="textfield__icon icon-tenge"></i>
+                        </div>
+    
+                        <div class="input-block">
+                            <div class="textfield__label">Срок кредитования</div>
+                            <div class="scroll-wrapper">
+                                <div class="radio-container radio-group-1">
+                        
+                                    <label class="radio-block selected">
+                                        <input type="radio" name="credit-term" value="12" class="credit-term" checked>
+                                        <span class="radio-title">12 мес</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="radio" name="credit-term" value="24" class="credit-term">
+                                        <span class="radio-title">24 мес</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="radio" name="credit-term" value="36" class="credit-term">
+                                        <span class="radio-title">36 мес</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="radio" name="credit-term" value="48" class="credit-term">
+                                        <span class="radio-title">48 мес</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                    <label class="radio-block">
+                                        <input type="radio" name="credit-term" value="60" class="credit-term">
+                                        <span class="radio-title">60 мес</span>
+                                        <span class="checkmark"><i class="icon-circle-check"></i></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="input-block">
+                            <div class="textfield__label">Ежемесячный платеж</div>
+                            <div class="modal-content__input textfield__grey">172 000 ₸/мес</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-content__bottom">
+                    <button type="submit" class="button button__secondary button--mini">Очистить</button>
+                    <button type="submit" class="button button__primary button--mini openModal" data-modal="application">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -1893,6 +2083,10 @@
     <script src="js/datepick.js"></script>
     <script src="js/filter-reset.js"></script>
     <script src="js/tabs.js"></script>
+
+    <script src="js/input-price.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tooltip.js"></script>
 </body>
 
 </html>

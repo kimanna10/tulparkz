@@ -63,7 +63,7 @@
                                                         </div>
                                                        
                                                     </a>
-                                                    <ul class="dropdown__menu">
+                                                    <!-- <ul class="dropdown__menu">
                                                         <div class="dropdown__drop dropdown__drop--meeting">
                                                             <div class="dropdown__drop-list">
                                                                 <div class="dropdown__column dropdown__column--meeting">
@@ -94,6 +94,61 @@
                                                         
                                                             
                                                        
+                                                    </ul> -->
+
+
+                                                    <ul class="dropdown__menu">
+                                                        <div class="dropdown__drop">
+                                                            <div class="dropdown__drop-list">
+                                                                <div class="dropdown__column">
+                                                                    <div class="radio-item choose-item">
+                                                                        <label for="progress"
+                                                                            class="radio-item__label radio-item__label--process">
+                                                                            <i
+                                                                                class="radio-item__icon radio-item__icon--progress icon-clock"></i>В
+                                                                            работе</label>
+                                                                        <input type="radio" id="progress" name="radios"
+                                                                            class="radio-item__input">
+                                                                        <span class="radio-item__custom"></span>
+                                                                    </div>
+                                                                    <div class="radio-item choose-item">
+                                                                        <label for="archive"
+                                                                            class="radio-item__label radio-item__label--archive">
+                                                                            <i
+                                                                                class="radio-item__icon radio-item__icon--archive icon-close-circle"></i>В
+                                                                            архиве</label>
+                                                                        <input type="radio" id="archive" name="radios"
+                                                                            class="radio-item__input">
+                                                                        <span class="radio-item__custom"></span>
+                                                                    </div>
+                                                                    <div class="radio-item choose-item">
+                                                                        <label for="new"
+                                                                            class="radio-item__label radio-item__label--new">
+                                                                            <i
+                                                                                class="radio-item__icon radio-item__icon--new icon-add-plus-circle"></i>Новое</label>
+                                                                        <input type="radio" id="new" name="radios"
+                                                                            class="radio-item__input">
+                                                                        <span class="radio-item__custom"></span>
+                                                                    </div>
+                                                                    <div class="radio-item choose-item">
+                                                                        <label for="done"
+                                                                            class="radio-item__label radio-item__label--done">
+                                                                            <i
+                                                                                class="radio-item__icon radio-item__icon--done icon-circle-check1"></i>Завершенное</label>
+                                                                        <input type="radio" id="done" name="radios"
+                                                                            class="radio-item__input">
+                                                                        <span class="radio-item__custom"></span>
+                                                                    </div>
+        
+                                                                </div>
+        
+                                                            </div>
+        
+                                                        </div>
+        
+        
+        
+        
                                                     </ul>
                                                 </li>
                                             </div>   
@@ -223,6 +278,7 @@
                                 </div>
         
                                 <div class="table-wrapper"> 
+
                                 
                                 <table class="table-block" id="table-1">
                                     <thead class="table-block__head">
@@ -270,6 +326,8 @@
                                                     </div>
                                                 </div>
                                             </td>
+
+                                            
                                         </tr>
                                         
                                         <!-- ROW-ELEMENT -->
@@ -1265,6 +1323,8 @@
 <script src="js/range.js"></script>
 <script src="js/datepick.js"></script>
 <script src="js/filter-reset.js"></script>
+
+<script src="js/drop-modal.js"></script>
 
 </body>
 </html>

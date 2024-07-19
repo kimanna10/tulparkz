@@ -71,6 +71,9 @@ $desktop: '/admin/assets/icons/desktop.svg';
 $car: '/admin/assets/icons/car.svg';
 $drive: '/admin/assets/icons/speed.svg';
 
+$file-edit: '/admin/assets/icons/file-edit.svg';
+
+
 @mixin icon($name, $path) {
     .icon-#{$name} {
         background-size: cover;
@@ -159,3 +162,4 @@ $drive: '/admin/assets/icons/speed.svg';
 
 @include icon(car, $car);
 @include icon(drive, $drive);
+@include icon(file-edit, $file-edit);

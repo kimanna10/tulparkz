@@ -52,3 +52,20 @@
   }
 }
 /* Для устройств с экранами шириной от 1921px до 2560px (например, 2K и 4K мониторы) */
+.table-block__status {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; /* Скрываем дропдаун по умолчанию */
+  position: absolute;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000; /* Обеспечиваем отображение поверх других элементов */
+}
+
+.table-block__status-item.active .dropdown-content {
+  display: block; /* Показываем дропдаун при активации */
+}

@@ -52,30 +52,3 @@
   }
 }
 /* Для устройств с экранами шириной от 1921px до 2560px (например, 2K и 4K мониторы) */
-.table-block__status {
-  position: relative;
-}
-
-.dropdown-content {
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 5px;
-  display: none;
-  border: 1px solid rgba(114, 168, 230, 0.12);
-  -webkit-box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
-          box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-}
-
-.save-button {
-  margin-top: 10px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.meeting {
-  padding: 10px;
-  cursor: pointer;
-}

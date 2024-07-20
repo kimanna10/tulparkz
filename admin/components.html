@@ -13,11 +13,12 @@
 
 
 
+    <!-- Эти стили не общие! -->
+    <!-- просто для корректного отображения этой страницы и не более -->
     <style>
         h3 {
             padding-top: 20px;
         }
-
         .components {
             display: flex;
             flex-wrap: wrap;
@@ -32,9 +33,10 @@
             border: 1px solid #9CA0AF;
             border-radius: 12px;
         }
-        .table-block__status-item{
-           max-width: 170px;
-           cursor: pointer;
+
+        .table-block__status-item {
+            cursor: pointer;
+            width: 200px;
         }
     </style>
 
@@ -49,7 +51,8 @@
                 <!-- MODAL -->
                 <div class="components-block">
                     <h3>Modal "Отправить заявку"</h3>
-                    <button type="submit" class="button button__primary button--mini openModal" data-modal="application">Отправить</button>
+                    <button type="submit" class="button button__primary button--mini openModal"
+                        data-modal="application">Отправить</button>
 
                     <h3>Modal "Одобрить объявление"</h3>
                     <button type="submit" class="button button__primary openModal" data-modal="accept">
@@ -58,7 +61,8 @@
                     </button>
 
                     <h3>Modal "Архивировать объявление"</h3>
-                    <button type="submit" class="button button__secondary button__secondary--red openModal" data-modal="archive">
+                    <button type="submit" class="button button__secondary button__secondary--red openModal"
+                        data-modal="archive">
                         <div class="button__icon button__icon--red icon-archive"></div>
                         Архивировать
                     </button>
@@ -86,7 +90,8 @@
 
 
                     <h3>Modal "Создать заявку"</h3>
-                    <button type="submit" class="button button__secondary" id="create-adv" data-target="#modal-create-adv">
+                    <button type="submit" class="button button__secondary" id="create-adv"
+                        data-target="#modal-create-adv">
                         <div class="button__icon button__icon--secondary icon-plus"></div>
                         Создать
                     </button>
@@ -94,7 +99,46 @@
 
                 </div>
 
-                <!-- TOOL TIP -->
+                <!-- BUTTONS -->
+                <div class="components-block">
+                    <h3>button button__secondary button--mini</h3>
+                    <button type="submit" class="button button__secondary button--mini">Войти</button>
+
+                    <h3>button button__secondary button--mini</h3>
+                    <button type="submit" class="button button__secondary button--mini" disabled>Войти</button>
+
+                    <h3>button button__primary--mini</h3>
+                    <button type="submit" class="button button__primary button--mini">Войти</button>
+
+                    <h3>button button__primary--mini disabled</h3>
+                    <button type="submit" class="button button__primary button--mini" disabled>Войти</button>
+
+                    <h3>button button__secondary</h3>
+                    <button type="submit" class="button button__secondary">
+                        <div class="button__icon button__icon--secondary icon-phone"></div>
+                        Войти
+                    </button>
+
+                    <h3>button button__secondary disabled</h3>
+                    <button type="submit" class="button button__secondary" disabled>
+                        <div class="button__icon button__icon--secondary icon-phone"></div>
+                        Войти
+                    </button>
+
+                    <h3>button button__primary</h3>
+                    <button type="submit" class="button button__primary">
+                        <div class="button__icon button__icon--primary icon-phone"></div>
+                        Войти
+                    </button>
+
+                    <h3>button button__primary disabled</h3>
+                    <button type="submit" class="button button__primary" disabled>
+                        <div class="button__icon button__icon--primary icon-phone"></div>
+                        Войти
+                    </button>
+                </div>
+
+                <!-- TOOL TIP DROP MEETING CHANGE -->
                 <div class="components-block">
 
                     <h3>tooltip hover</h3>
@@ -110,6 +154,31 @@
                             <i class="status__icon status__icon--archive icon-close-circle"></i>Отказано
                         </div>
                     </div>
+
+
+                    <h3>Meeting drop click change</h3>
+                    <div class="table-block__status">
+                        <div class="table-block__status-item meeting-item">
+                            <div class="meeting meeting__none">Не назначено</div>
+                        </div>
+                    </div>
+
+                    <h3>Meeting drop click change</h3>
+                    <div class="table-block__status">
+                        <div class="table-block__status-item meeting-item">
+                            <div class="meeting meeting__offline">Оффлайн показ</div>
+                        </div>
+                    </div>
+
+                    <h3>Meeting drop click change</h3>
+                    <div class="table-block__status">
+                        <div class="table-block__status-item meeting-item">
+                            <div class="meeting meeting__test-drive">Тест-драйв</div>
+                        </div>
+                    </div>
+
+
+
 
 
 
@@ -205,44 +274,6 @@
                     </div>
                 </div>
 
-                <!-- BUTTONS -->
-                <div class="components-block">
-                    <h3>button button__secondary button--mini</h3>
-                    <button type="submit" class="button button__secondary button--mini">Войти</button>
-
-                    <h3>button button__secondary button--mini</h3>
-                    <button type="submit" class="button button__secondary button--mini" disabled>Войти</button>
-
-                    <h3>button button__primary--mini</h3>
-                    <button type="submit" class="button button__primary button--mini">Войти</button>
-
-                    <h3>button button__primary--mini disabled</h3>
-                    <button type="submit" class="button button__primary button--mini" disabled>Войти</button>
-
-                    <h3>button button__secondary</h3>
-                    <button type="submit" class="button button__secondary">
-                        <div class="button__icon button__icon--secondary icon-phone"></div>
-                        Войти
-                    </button>
-
-                    <h3>button button__secondary disabled</h3>
-                    <button type="submit" class="button button__secondary" disabled>
-                        <div class="button__icon button__icon--secondary icon-phone"></div>
-                        Войти
-                    </button>
-
-                    <h3>button button__primary</h3>
-                    <button type="submit" class="button button__primary">
-                        <div class="button__icon button__icon--primary icon-phone"></div>
-                        Войти
-                    </button>
-
-                    <h3>button button__primary disabled</h3>
-                    <button type="submit" class="button button__primary" disabled>
-                        <div class="button__icon button__icon--primary icon-phone"></div>
-                        Войти
-                    </button>
-                </div>
 
                 <!-- LINKS -->
                 <div class="components-block">
@@ -478,8 +509,8 @@
 
     <div id="modal2" class="modal">
         <div class="modal-content  modal-content__success">
-           <img src="assets/img/success.png" class="modal-content__icon" alt="">
-           <div class="modal-success"></div>
+            <img src="assets/img/success.png" class="modal-content__icon" alt="">
+            <div class="modal-success"></div>
         </div>
     </div>
 
@@ -495,20 +526,22 @@
                     <div class="modal-content__block">
                         <div class="input-block">
                             <label for="id" class="textfield__label">ИИН</label>
-                            <input type="number" class="textfield textfield__grey" id="id" placeholder="XXXXXXXXXXXX" autocomplete="off">
+                            <input type="number" class="textfield textfield__grey" id="id" placeholder="XXXXXXXXXXXX"
+                                autocomplete="off">
                         </div>
                         <div class="input-block">
                             <label for="salary" class="textfield__label">Доход покупателя</label>
-                            <input type="text" class="textfield textfield__grey amount-input" id="salary" placeholder="Введите сумму" autocomplete="off">
+                            <input type="text" class="textfield textfield__grey amount-input" id="salary"
+                                placeholder="Введите сумму" autocomplete="off">
                         </div>
                     </div>
                     <div class="modal-content__block">
-    
+
                         <div class="input-block">
                             <div class="textfield__label">Банк</div>
                             <div class="scroll-wrapper">
                                 <div class="radio-container radio-group-2">
-                        
+
                                     <label class="radio-block selected">
                                         <input type="checkbox" name="bank-term" value="kaspi" class="bank-term" checked>
                                         <img src="assets/img/bank/kaspi.png" alt="" class="radio-block__icon">
@@ -522,7 +555,7 @@
                                         <span class="checkmark"><i class="icon-circle-check"></i></span>
                                     </label>
                                     <label class="radio-block">
-                                        <input type="checkbox" name="bank-term" value="jusan"  class="bank-term">
+                                        <input type="checkbox" name="bank-term" value="jusan" class="bank-term">
                                         <img src="assets/img/bank/jusan.png" alt="" class="radio-block__icon">
                                         <span class="radio-title">Jusan</span>
                                         <span class="checkmark"><i class="icon-circle-check"></i></span>
@@ -560,23 +593,25 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="input-block">
                             <label for="price" class="textfield__label">Стоимость автомобиля</label>
-                            <input type="text" class="textfield textfield__grey amount-input" id="price" placeholder="9 100 000" autocomplete="off">
+                            <input type="text" class="textfield textfield__grey amount-input" id="price"
+                                placeholder="9 100 000" autocomplete="off">
                             <i class="textfield__icon icon-tenge"></i>
                         </div>
                         <div class="input-block">
                             <label for="first-price" class="textfield__label">Первоначальный взнос</label>
-                            <input type="text" class="textfield textfield__grey amount-input" id="first-price" placeholder="3 640 000" autocomplete="off">
+                            <input type="text" class="textfield textfield__grey amount-input" id="first-price"
+                                placeholder="3 640 000" autocomplete="off">
                             <i class="textfield__icon icon-tenge"></i>
                         </div>
-    
+
                         <div class="input-block">
                             <div class="textfield__label">Срок кредитования</div>
                             <div class="scroll-wrapper">
                                 <div class="radio-container radio-group-1">
-                        
+
                                     <label class="radio-block selected">
                                         <input type="radio" name="credit-term" value="12" class="credit-term" checked>
                                         <span class="radio-title">12 мес</span>
@@ -605,7 +640,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="input-block">
                             <div class="textfield__label">Ежемесячный платеж</div>
                             <div class="modal-content__input textfield__grey">172 000 ₸/мес</div>
@@ -614,7 +649,8 @@
                 </div>
                 <div class="modal-content__bottom">
                     <button type="submit" class="button button__secondary button--mini">Очистить</button>
-                    <button type="submit" class="button button__primary button--mini openModal" data-modal="application">Отправить</button>
+                    <button type="submit" class="button button__primary button--mini openModal"
+                        data-modal="application">Отправить</button>
                 </div>
             </div>
         </div>
@@ -631,7 +667,7 @@
                     <div class="tooltip-block__icon tooltip-block__icon--denied icon-close-circle"></div>
                     <div class="tooltip-block__status-text tooltip-block__status-text--denied">Отказано:</div>
                 </div>
-                
+
             </div>
 
             <div class="tooltip-block__item">
@@ -669,6 +705,35 @@
     </div>
 
 
+    <!-- Dropdown Content -->
+    <div id="dropdown-content" class="dropdown-content">
+        <div class="dropdown__drop dropdown__drop--meeting">
+            <div class="dropdown__drop-list">
+                <div class="dropdown__column dropdown__column--meeting">
+                    <div class="radio-item choose-item">
+                        <label for="none" class="radio-item__label radio-item__label--none">Не назначено</label>
+                        <input type="radio" id="none" name="meeting" class="radio-item__input">
+                        <span class="radio-item__custom"></span>
+                    </div>
+                    <div class="radio-item choose-item">
+                        <label for="offline" class="radio-item__label radio-item__label--offline">Оффлайн показ</label>
+                        <input type="radio" id="offline" name="meeting" class="radio-item__input">
+                        <span class="radio-item__custom"></span>
+                    </div>
+                    <div class="radio-item choose-item">
+                        <label for="test-drive"
+                            class="radio-item__label radio-item__label--test-drive">Тест-драйв</label>
+                        <input type="radio" id="test-drive" name="meeting" class="radio-item__input">
+                        <span class="radio-item__custom"></span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="button button__primary button--mini save-button">Сохранить</button>
+        </div>
+    </div>
+
+
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -680,6 +745,7 @@
 
     <script src="js/input-price.js"></script>
     <script src="js/tooltip.js"></script>
+    <script src="js/drop-modal.js"></script>
 
 </body>
 

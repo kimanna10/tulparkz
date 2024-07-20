@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <style>
+        /* Основные стили для дропдауна */
+        .dropdown-content {
+            display: none; /* Скрываем дропдаун по умолчанию */
+            position: absolute; /* Позиционируем относительно родителя */
+            background-color: white;
+            border: 1px solid #ddd;
+            z-index: 1000; /* Для отображения поверх других элементов */
+            padding: 10px;
+            width: 200px; /* Задайте ширину по вашему усмотрению */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .button {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .radio-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="table-block__data">
+                    <div class="table-block__status">
+                        <div class="table-block__status-item meeting-item">
+                            <div class="meeting meeting__offline">Оффлайн показ</div>
+                            <!-- Dropdown Content -->
+                            <div class="dropdown-content">
+                                <div class="dropdown__drop dropdown__drop--meeting">
+                                    <div class="dropdown__drop-list">
+                                        <div class="dropdown__column dropdown__column--meeting">
+                                            <div class="radio-item choose-item">
+                                                <label for="none-1" class="radio-item__label radio-item__label--none">Не назначено</label>
+                                                <input type="radio" id="none-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="offline-1" class="radio-item__label radio-item__label--offline">Оффлайн показ</label>
+                                                <input type="radio" id="offline-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="test-drive-1" class="radio-item__label radio-item__label--test-drive">Тест-драйв</label>
+                                                <input type="radio" id="test-drive-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="button button__primary button--mini save-button">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="table-block__data">
+                    <div class="table-block__status">
+                        <div class="table-block__status-item meeting-item">
+                            <div class="meeting meeting__offline">Оффлайн показ</div>
+                            <!-- Dropdown Content -->
+                            <div class="dropdown-content">
+                                <div class="dropdown__drop dropdown__drop--meeting">
+                                    <div class="dropdown__drop-list">
+                                        <div class="dropdown__column dropdown__column--meeting">
+                                            <div class="radio-item choose-item">
+                                                <label for="none-1" class="radio-item__label radio-item__label--none">Не назначено</label>
+                                                <input type="radio" id="none-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="offline-1" class="radio-item__label radio-item__label--offline">Оффлайн показ</label>
+                                                <input type="radio" id="offline-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="test-drive-1" class="radio-item__label radio-item__label--test-drive">Тест-драйв</label>
+                                                <input type="radio" id="test-drive-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="button button__primary button--mini save-button">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-block__data">
+                    <div class="table-block__status">
+                        <div class="table-block__status-item meeting-item">
+                            <div class="meeting meeting__offline">Оффлайн показ</div>
+                            <!-- Dropdown Content -->
+                            <div class="dropdown-content">
+                                <div class="dropdown__drop dropdown__drop--meeting">
+                                    <div class="dropdown__drop-list">
+                                        <div class="dropdown__column dropdown__column--meeting">
+                                            <div class="radio-item choose-item">
+                                                <label for="none-1" class="radio-item__label radio-item__label--none">Не назначено</label>
+                                                <input type="radio" id="none-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="offline-1" class="radio-item__label radio-item__label--offline">Оффлайн показ</label>
+                                                <input type="radio" id="offline-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                            <div class="radio-item choose-item">
+                                                <label for="test-drive-1" class="radio-item__label radio-item__label--test-drive">Тест-драйв</label>
+                                                <input type="radio" id="test-drive-1" name="radios-1" class="radio-item__input">
+                                                <span class="radio-item__custom"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="button button__primary button--mini save-button">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Функция открытия дропдауна
+            function openDropdown($statusItem) {
+                const dropdownContent = $statusItem.find('.dropdown-content');
+                const offset = $statusItem.offset();
+                dropdownContent.css({
+                    top: offset.top + $statusItem.outerHeight(),
+                    left: offset.left,
+                    display: 'block'
+                });
+            }
+
+            // Функция закрытия дропдауна
+            function closeDropdown() {
+                $('.dropdown-content').hide();
+            }
+
+            // Открытие дропдауна при клике на элемент статуса
+            $('.meeting-item').on('click', function(event) {
+                event.stopPropagation(); // Предотвращаем всплытие события
+                closeDropdown(); // Закрываем все дропдауны перед открытием нового
+                openDropdown($(this));
+            });
+
+            // Обработка выбора и сохранения
+            $(document).on('click', '.save-button', function(event) {
+                event.stopPropagation(); // Предотвращаем всплытие события
+                const dropdown = $(this).closest('.dropdown-content');
+                const selectedRadio = dropdown.find('input[name^="radios"]:checked');
+                if (selectedRadio.length) {
+                    const selectedLabel = selectedRadio.siblings('label').text();
+                    const meetingItem = dropdown.closest('.meeting-item');
+                    meetingItem.find('.meeting').text(selectedLabel);
+                }
+                closeDropdown();
+            });
+
+            // Закрытие дропдауна при клике вне его области
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.meeting-item, .dropdown-content').length) {
+                    closeDropdown();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

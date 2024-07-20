@@ -71,7 +71,6 @@
     }
 
     &__body-row{
-
         border: 1px solid $white300-color;
         background-color: $white-color;
         cursor: pointer;
@@ -137,6 +136,11 @@
 
     &__status{
         @include flexbox(flex, row, center, space-between);
+        position: relative;
+    }
+    &__status-item{
+        position: relative;
+        cursor: pointer;
     }
     &__status-operation{
         @include flexbox(flex, row, center, start);

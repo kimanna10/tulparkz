@@ -33,6 +33,7 @@ body {
   width: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 input,
@@ -2007,11 +2008,15 @@ h6 {
 
 .tooltip {
   position: absolute;
+  display: none;
   z-index: 100;
   opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .tooltip.active {
+  display: block;
   opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -2132,6 +2137,28 @@ h6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 500;
+}
+
+.dropdown-content {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: none;
+  border: 1px solid rgba(114, 168, 230, 0.12);
+  -webkit-box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
+          box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-content .save-button {
+  margin-top: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.meeting-item {
+  position: relative;
 }
 
 .notification {
@@ -2603,6 +2630,11 @@ input[type=range]::-moz-range-thumb {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+.table-block__status-item {
+  position: relative;
+  cursor: pointer;
 }
 .table-block__status-operation {
   display: -webkit-box;

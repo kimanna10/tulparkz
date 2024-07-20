@@ -1,19 +1,50 @@
 $(document).ready(function() {
     $('.table-block__status-item').hover(
-        function(event) {
+        function() {
             var tooltipId = $(this).data('tooltip');
             var $tooltip = $('#' + tooltipId);
-            var offset = $(this).offset();
-            var width = $(this).outerWidth();
+            var $this = $(this);
 
-            $tooltip.css({
-                top: offset.top - 10 + 'px',
-                left: offset.left + (width - 50) + 'px'
-            }).addClass('active');
+            // Установка позиции тултипа
+            updateTooltipPosition($tooltip, $this);
+            $tooltip.addClass('active');
         },
         function() {
             var tooltipId = $(this).data('tooltip');
             $('#' + tooltipId).removeClass('active');
         }
     );
+
+    // Обновление позиции тултипа при скролле контейнера
+    $('.table-wrapper').on('scroll', function() {
+        $('.tooltip.active').each(function() {
+            var tooltipId = $(this).attr('id');
+            var $target = $('[data-tooltip="' + tooltipId + '"]');
+            var $tooltip = $(this);
+
+            updateTooltipPosition($tooltip, $target);
+        });
+    });
+    $('body').on('scroll', function() {
+        $('.tooltip.active').each(function() {
+            var tooltipId = $(this).attr('id');
+            var $target = $('[data-tooltip="' + tooltipId + '"]');
+            var $tooltip = $(this);
+
+            updateTooltipPosition($tooltip, $target);
+        });
+    });
+
+    // Функция для обновления позиции тултипа
+    function updateTooltipPosition($tooltip, $target) {
+        var offset = $target.position(); // Получаем позицию относительно родительского элемента
+        var width = $target.outerWidth();
+        var tooltipWidth = $tooltip.outerWidth();
+        var tooltipHeight = $tooltip.outerHeight();
+
+        $tooltip.css({
+            top: offset.top - tooltipHeight - 5 + 'px',
+            left: offset.left + (width - tooltipWidth) / 2 + 5 + 'px'
+        });
+    }
 });

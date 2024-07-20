@@ -2,9 +2,6 @@
 @import 'colors';
 @import 'mixin';
 
-// .main{
-  
-// }
 
 .table-block{
     &__header{
@@ -95,30 +92,5 @@
   }
   
 
-  .table-block__status {
-    position: relative;
-}
-
-.dropdown-content {
-    overflow: hidden;
-    border-radius: 12px;
-    margin-top: 5px;
-    display: none;
-    border: 1px solid $blue100a-color;
-    box-shadow: 0px 15px 34px 0px rgba(#9BA3F2, 0.2);
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-
-}
 
 
-.save-button {
-    margin-top: 10px;
-    align-self: flex-end;
-}
-
-.meeting {
-    padding: 10px;
-    cursor: pointer;
-}

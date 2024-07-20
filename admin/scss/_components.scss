@@ -932,14 +932,16 @@
 // TOOLTIP ---------------------
 .tooltip {
     position: absolute;
+    display: none;
     z-index: 100;
     opacity: 0;
+    transition: opacity .3s;
 }
 .tooltip.active {
+    display: block;
     opacity: 1;
     transition: opacity .3s;
 }
-
 .tooltip-block{
     &__wrapper{
         padding: 15px;
@@ -1011,7 +1013,27 @@
     }
 }
 
+// MEETING DROP CHANGE--------
+.dropdown-content {
 
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+    border: 1px solid $blue100a-color;
+    box-shadow: 0px 15px 34px 0px rgba(#9BA3F2, 0.2);
+    position: absolute;
+    z-index: 1;
+    .save-button {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+.meeting-item{
+    position: relative;
+}
 
 
 

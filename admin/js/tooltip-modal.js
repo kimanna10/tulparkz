@@ -9,7 +9,7 @@ $(document).ready(function() {
         if ($currentStatusItem) {
             const offset = $currentStatusItem.offset();
             const statusItemWidth = $currentStatusItem.outerWidth();
-            const dropdownContent = $('#tooltip-drop');
+            const dropdownContent = $($currentStatusItem.data('dropdown'));
             const dropdownWidth= dropdownContent.outerWidth();
             const dropdownHeight= dropdownContent.outerHeight();
 
@@ -17,7 +17,7 @@ $(document).ready(function() {
             if (offset.left + statusItemWidth + dropdownWidth > $(window).width()) {
                 // Открыть слева
                 dropdownContent.css({
-                    top: offset.top - (dropdownHeight / 2) + 20,
+                    top: offset.top,
                     left: offset.left - dropdownWidth - 10,
                     display: 'block',
                     marginRight: '10px'
@@ -25,7 +25,7 @@ $(document).ready(function() {
             } else {
                 // Открыть справа
                 dropdownContent.css({
-                    top: offset.top - (dropdownHeight / 2) + 20,
+                    top: offset.top,
                     left: offset.left + statusItemWidth,
                     display: 'block',
                     marginLeft: '10px'
@@ -42,12 +42,13 @@ $(document).ready(function() {
 
     // Закрытие дропдауна
     function closeDropdown() {
-        $('#tooltip-drop').hide();
+        $('.dropdown-content').hide();
     }
 
     // Открытие дропдауна при клике на элемент статуса
     $('.point-check').on('click', function(event) {
         event.stopPropagation(); // Предотвращаем всплытие события
+        closeDropdown();
         openDropdown($(this));
     });
 
@@ -57,18 +58,39 @@ $(document).ready(function() {
         closeDropdown();
     });
 
+    $('#autocheck-close').on('click', function(event) {
+        event.stopPropagation(); 
+        closeDropdown();
+    });
+
     // Закрытие дропдауна при клике вне его области
     $(document).on('click', function(event) {
-        if (!$(event.target).closest('.point-check, #tooltip-drop').length) {
+        if (!$(event.target).closest('.point-check, .dropdown-content').length) {
             closeDropdown();
         }
     });
 
-    // Обновление позиции дропдауна при прокрутке страницы
-    // $('.table-wrapper').on('scroll', function() {
-    //     
-    //     updateDropdownPosition();
-    // });
+    $('.point-autocheck__item .dropdown__toggle').on('click', function() {
+        const dropdownId = $(this).data('dropdown-id');
+        const $menu = $(`#dropdownMenu${dropdownId}`);
+
+        // Сначала убираем класс со всех элементов
+        $('.dropdown__toggle').removeClass('rounded-corners');
+
+        // Добавляем класс к текущему элементу, если меню ещё не видно
+        if (!$menu.hasClass('show')) {
+            $(this).addClass('rounded-corners');
+        }
+
+        // Переключаем видимость текущего меню
+        $menu.toggleClass('show');
+
+        // Закрываем все остальные меню
+        $('.dropdown__menu').not($menu).removeClass('show');
+    });
+
+
+
      // Обновление позиции дропдауна при прокрутке страницы
      $('body').on('scroll', function() {
         updateDropdownPosition();

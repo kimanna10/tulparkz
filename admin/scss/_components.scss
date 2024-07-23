@@ -596,7 +596,7 @@
         @include subhead-regular;
         color: $text-primary-color;
         display: flex;
-        width: 100%;
+        width: calc(100% - 24px);
         padding: 13px 0 13px 15px;
     }
 
@@ -743,6 +743,13 @@
                 padding: 20px;
                 box-shadow: 0px 2px 21.9px 0px rgba(23, 34, 139, 0.08);
             }
+            &--autocheck{
+                background-color: $blue50-color;
+                width: 350px;
+                padding: 20px 14px;
+                box-shadow: 0px 2px 21.9px 0px rgba(23, 34, 139, 0.08);
+                position: relative;
+            }
             
         }
         &__drop-list{
@@ -793,10 +800,75 @@
         @include subhead-regular;
         color: $text-secondary-color;
     }
-    &__text-block{
-        
+
+}
+
+.point-autocheck{
+    @include flexbox(flex, column, stretch, space-between);
+    min-height: 620px;
+
+
+    &__title{
+        @include title-4-medium;
+        padding-bottom: 20px
+    }
+    &__content{
+        @include flexbox(flex, column, stretch, space-between);
+        gap: 14px;
+        margin: 0 5px;
     }
 
+    &__bottom{
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        .button{
+            width: 100%;
+        }
+    }
+    &__item{
+        .dropdown__toggle{
+            background-color: $white-color;
+        }
+        .dropdown__menu{
+            position: relative;
+            margin-top: 0;
+            border: none;
+            box-shadow: none;
+            border-radius: 0 0 12px 12px;
+        }
+        .dropdown__drop{
+            padding: 0;
+        }
+        .checkbox-group:hover {
+            background-color: $white-color;
+        }
+        .dropdown__column{
+            @include flexbox(flex, column, stretch, start);
+            gap: 2px;
+        }
+        .dropdown__toggle.rounded-corners {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    
+
+.dropdown__menu {
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+    }
+    &__close-icon{
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+    }
 }
 
 .input-drop{

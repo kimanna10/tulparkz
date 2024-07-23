@@ -429,6 +429,8 @@ body {
     }
     &__block{
         position: relative;
+        min-width: 1000px;
+        min-height: 530px;
     }
 
     &__top-icon {
@@ -566,7 +568,12 @@ body {
         &__statistics-block{
             width: 100%;
         }
+        &__block{
+            min-width: 600px;
+            min-height: 330px;
+        }
     }
+
     .car-img-block{
         &__top{
             padding: 0;
@@ -600,6 +607,9 @@ body {
         &__section{
             flex-direction: column;
         }
+    }
+    .scrollable-container{
+        display: block;
     }
 }
   
@@ -637,6 +647,10 @@ body {
         &__statistics-block{
             width: 100%;
         }
+        &__block{
+            min-width: 600px;
+            min-height: 370px;
+        }
     }
     .car-img-block{
         &__top{
@@ -669,6 +683,9 @@ body {
         &__section{
             flex-direction: column;
         }
+    }
+    .scrollable-container{
+        display: block;
     }
   }
   
@@ -710,6 +727,9 @@ body {
         &__section{
             flex-direction: column;
         }
+    }
+    .scrollable-container{
+        display: block;
     }
   }
   
@@ -780,6 +800,14 @@ body {
             }
 
     }
+    .main-block{
+        &__center {
+            width: calc(100% - 444px);
+        }
+    }
+    .scrollable-container{
+        display: block;
+    }
   }
   
   /* Для устройств с экранами шириной от 1601px до 1920px (например, HD мониторы) */
@@ -790,6 +818,12 @@ body {
         }
         &__content-body{
             flex-direction: column;
+        }
+    }
+    .chart{
+        &__block{
+            min-width: 600px;
+            min-height: 520px;
         }
     }
 

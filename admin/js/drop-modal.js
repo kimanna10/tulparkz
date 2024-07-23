@@ -1,14 +1,16 @@
 
 
 $(document).ready(function() {
-    let $currentStatusItem = null;
+
+    if ($('.meeting-item').length > 0) {
+        let $currentStatusItem = null;
 
     // Функция для обновления позиции дропдауна
     function updateDropdownPosition() {
         if ($currentStatusItem) {
             const offset = $currentStatusItem.offset();
             const statusItemHeight = $currentStatusItem.outerHeight();
-            const dropdownContent = $('#dropdown-content');
+            const dropdownContent = $('.dropdown-meeting');
             const dropdownHeight = dropdownContent.outerHeight();
 
             // Проверка, достаточно ли места для открытия дропдауна снизу
@@ -16,16 +18,16 @@ $(document).ready(function() {
                 // Открыть сверху
                 dropdownContent.css({
                     top: offset.top - dropdownHeight - 10,
-                    left: offset.left,
-                    display: 'block'
+                    left: offset.left
                 });
+                dropdownContent.addClass('active');
             } else {
                 // Открыть снизу
                 dropdownContent.css({
                     top: offset.top + statusItemHeight,
-                    left: offset.left,
-                    display: 'block'
+                    left: offset.left
                 });
+                dropdownContent.addClass('active');
             }
         }
     }
@@ -37,7 +39,7 @@ $(document).ready(function() {
 
         // Установка состояния выбранного пункта
         const currentText = $statusItem.find('.meeting').text();
-        $('#dropdown-content input[name="meeting"]').each(function() {
+        $('.dropdown-meeting input[name="meeting"]').each(function() {
             if ($(this).siblings('label').text() === currentText) {
                 $(this).prop('checked', true);
             } else {
@@ -48,7 +50,7 @@ $(document).ready(function() {
 
     // Закрытие дропдауна
     function closeDropdown() {
-        $('#dropdown-content').hide();
+        $('.dropdown-meeting').removeClass('active');
     }
 
     // Открытие дропдауна при клике на элемент статуса
@@ -60,7 +62,7 @@ $(document).ready(function() {
     // Обработка выбора и сохранения
     $('.save-button').on('click', function(event) {
         event.stopPropagation(); // Предотвращаем всплытие события
-        const selectedRadio = $('#dropdown-content input[name="meeting"]:checked');
+        const selectedRadio = $('.dropdown-meeting input[name="meeting"]:checked');
         if ($currentStatusItem) {
             const selected = $currentStatusItem.find('.meeting');
             switch(selectedRadio.attr('id')) {
@@ -80,18 +82,101 @@ $(document).ready(function() {
 
     // Закрытие дропдауна при клике вне его области
     $(document).on('click', function(event) {
-        if (!$(event.target).closest('.meeting-item, #dropdown-content').length) {
+        if (!$(event.target).closest('.meeting-item, .dropdown-meeting').length) {
             closeDropdown();
         }
     });
 
     // Обновление позиции дропдауна при прокрутке страницы
     $('.table-wrapper').on('scroll', function() {
-        updateDropdownPosition();
+        $('.dropdown-meeting.active').each(function() {
+            updateDropdownPosition();
+        });
     });
-     // Обновление позиции дропдауна при прокрутке страницы
+
+         // Обновление позиции дропдауна при прокрутке страницы
      $('body').on('scroll', function() {
-        updateDropdownPosition();
+        $('.dropdown-meeting.active').each(function() {
+            updateDropdownPosition();
+        });
     });
+    }
+    
+
+    if($('.stock-choose').length > 0){
+        let $currentStatusItem = null;
+
+        // Функция для обновления позиции дропдауна
+        function updateDropdownPosition() {
+            if ($currentStatusItem) {
+                const offset = $currentStatusItem.offset();
+                const statusItemHeight = $currentStatusItem.outerHeight();
+                const dropdownContent = $('#dropdown-stock');
+                const dropdownHeight = dropdownContent.outerHeight();
+
+                    dropdownContent.css({
+                        bottom: $(window).height() - offset.top,
+                        left: offset.left
+                    });
+                    dropdownContent.addClass('active');
+            }
+        }
+    
+        // Открытие дропдауна
+        function openDropdown($statusItem) {
+            $currentStatusItem = $statusItem;
+            updateDropdownPosition();
+    
+        }
+    
+        // Закрытие дропдауна
+        function closeDropdown() {
+            $('#dropdown-stock').removeClass('active');
+        }
+
+        // Открытие дропдауна при клике на элемент статуса
+        $('.stock-choose').on('click', function(event) {
+            event.stopPropagation(); // Предотвращаем всплытие события
+            openDropdown($(this));
+        });
+        $('#stock-close').on('click', function(event) {
+            event.stopPropagation(); 
+            closeDropdown();
+        });
+    
+        // Закрытие дропдауна при клике вне его области
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('.stock-choose, #dropdown-stock').length) {
+                closeDropdown();
+            }
+        });
+
+        $('.stock-block__item .dropdown__toggle').on('click', function() {
+            const dropdownId = $(this).data('dropdown-id');
+            const $menu = $(`#dropdownMenu${dropdownId}`);
+    
+            // Сначала убираем класс со всех элементов
+            $('.dropdown__toggle').removeClass('rounded-corners');
+    
+            // Добавляем класс к текущему элементу, если меню ещё не видно
+            if (!$menu.hasClass('show')) {
+                $(this).addClass('rounded-corners');
+            }
+    
+            // Переключаем видимость текущего меню
+            $menu.toggleClass('show');
+    
+            // Закрываем все остальные меню
+            $('.dropdown__menu').not($menu).removeClass('show');
+        });
+    
+             // Обновление позиции дропдауна при прокрутке страницы
+         $('body').on('scroll', function() {
+            $('.dropdown-stock.active').each(function() {
+                updateDropdownPosition();
+            });
+        });
+    }
+    
 });
 

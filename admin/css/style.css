@@ -1331,6 +1331,28 @@ h6 {
   font-weight: 400;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .link__point-text {
+    width: 30px;
+    height: 30px;
+  }
+  .link__point-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .link__point--bordered {
+    border-width: 2px;
+  }
+  .link__point--bordered:hover {
+    border-width: 2px;
+  }
+  .link__point--bordered:active {
+    border-width: 2px;
+  }
+  .link__point--filled {
+    padding: 4px;
+  }
+}
 .textfield {
   width: 100%;
   padding: 14px 15px;
@@ -1897,6 +1919,12 @@ h6 {
           box-shadow: 0px 2px 21.9px 0px rgba(23, 34, 139, 0.08);
   position: relative;
 }
+.dropdown__drop--stock {
+  background-color: #F3F4FA;
+  padding: 20px 14px;
+  max-width: 350px;
+  position: relative;
+}
 .dropdown__drop-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2009,6 +2037,18 @@ h6 {
   color: #4B5263;
 }
 
+.scrollable-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .point-autocheck {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2117,6 +2157,83 @@ h6 {
   position: absolute;
   top: 14px;
   right: 14px;
+  cursor: pointer;
+}
+
+.stock-block__title {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.stock-block__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 14px;
+  margin: 0 5px;
+}
+.stock-block__item .dropdown__toggle {
+  background-color: #FFFFFF;
+}
+.stock-block__item .dropdown__menu {
+  position: relative;
+  margin-top: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0 0 12px 12px;
+}
+.stock-block__item .dropdown__drop {
+  padding: 0;
+}
+.stock-block__item .checkbox-group:hover {
+  background-color: #FFFFFF;
+}
+.stock-block__item .dropdown__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 2px;
+}
+.stock-block__item .dropdown__toggle.rounded-corners {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.stock-block__item .dropdown__menu {
+  display: none;
+}
+.stock-block__item .dropdown__menu.show {
+  display: block;
+}
+.stock-block__close-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #070C2B;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
 }
 
 .input-drop__search {
@@ -2363,7 +2480,8 @@ h6 {
   width: 100%;
 }
 
-.weekdays, .days {
+.weekdays,
+.days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 4px;
@@ -2610,6 +2728,44 @@ h6 {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
+.dropdown-content.active {
+  display: block;
+}
+
+.dropdown-meeting {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: none;
+  border: 1px solid rgba(114, 168, 230, 0.12);
+  -webkit-box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
+          box-shadow: 0px 15px 34px 0px rgba(155, 163, 242, 0.2);
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-meeting .save-button {
+  margin-top: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.dropdown-meeting.active {
+  display: block;
+}
+
+.dropdown-stock {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  display: none;
+  -webkit-box-shadow: 0px 2px 21.9px 0px rgba(23, 34, 139, 0.08);
+          box-shadow: 0px 2px 21.9px 0px rgba(23, 34, 139, 0.08);
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-stock.active {
+  display: block;
+}
 
 .meeting-item {
   position: relative;
@@ -2682,7 +2838,7 @@ h6 {
 
 .chart__canvas {
   max-width: 100%;
-  height: 300px;
+  height: auto;
 }
 .chart__icon {
   background-color: #070C2B;
@@ -2716,10 +2872,12 @@ h6 {
 .chart__tooltip::after {
   content: "";
   position: absolute;
-  bottom: 100%; /* Позиционирование вверх от подсказки */
+  bottom: 100%;
+  /* Позиционирование вверх от подсказки */
   left: 50%;
   bottom: -10px;
-  margin-left: -5px; /* Половина ширины стрелки */
+  margin-left: -5px;
+  /* Половина ширины стрелки */
   border-width: 5px;
   border-style: solid;
   border-color: rgba(114, 168, 230, 0.12) transparent transparent transparent;
@@ -2732,6 +2890,10 @@ h6 {
 .image-container__fixed {
   position: absolute;
 }
+.image-container__draw {
+  overflow: hidden;
+  min-width: 600px;
+}
 .image-container__draw .block1 {
   top: 45%;
   left: 2%;
@@ -2741,146 +2903,219 @@ h6 {
   right: 2%;
 }
 .image-container__draw .block3 {
-  top: 45%; /* проценты от высоты изображения */
-  left: 18%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  left: 18%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block4 {
-  top: 45%; /* проценты от высоты изображения */
-  right: 14%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  right: 14%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block5 {
-  top: 45%; /* проценты от высоты изображения */
-  left: 34%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  left: 34%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block6 {
-  top: 45%; /* проценты от высоты изображения */
-  right: 25%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  right: 25%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block7 {
-  top: 45%; /* проценты от высоты изображения */
-  left: 50%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  left: 50%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block8 {
-  top: 11%; /* проценты от высоты изображения */
-  left: 50%; /* проценты от ширины изображения */
+  top: 11%;
+  /* проценты от высоты изображения */
+  left: 50%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block9 {
-  bottom: 11%; /* проценты от высоты изображения */
-  left: 50%; /* проценты от ширины изображения */
+  bottom: 11%;
+  /* проценты от высоты изображения */
+  left: 50%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block10 {
-  top: 29%; /* проценты от высоты изображения */
-  left: 34%; /* проценты от ширины изображения */
+  top: 29%;
+  /* проценты от высоты изображения */
+  left: 34%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block11 {
-  bottom: 29%; /* проценты от высоты изображения */
-  left: 34%; /* проценты от ширины изображения */
+  bottom: 29%;
+  /* проценты от высоты изображения */
+  left: 34%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block12 {
-  top: 29%; /* проценты от высоты изображения */
-  right: 25%; /* проценты от ширины изображения */
+  top: 29%;
+  /* проценты от высоты изображения */
+  right: 25%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block13 {
-  bottom: 29%; /* проценты от высоты изображения */
-  right: 25%; /* проценты от ширины изображения */
+  bottom: 29%;
+  /* проценты от высоты изображения */
+  right: 25%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block14 {
-  top: 17%; /* проценты от высоты изображения */
-  left: 9%; /* проценты от ширины изображения */
+  top: 17%;
+  /* проценты от высоты изображения */
+  left: 9%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block15 {
-  bottom: 17%; /* проценты от высоты изображения */
-  left: 9%; /* проценты от ширины изображения */
+  bottom: 17%;
+  /* проценты от высоты изображения */
+  left: 9%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block16 {
-  top: 21%; /* проценты от высоты изображения */
-  right: 7%; /* проценты от ширины изображения */
+  top: 21%;
+  /* проценты от высоты изображения */
+  right: 7%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block17 {
-  bottom: 21%; /* проценты от высоты изображения */
-  right: 7%; /* проценты от ширины изображения */
+  bottom: 21%;
+  /* проценты от высоты изображения */
+  right: 7%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block18 {
-  top: 17%; /* проценты от высоты изображения */
-  left: 41%; /* проценты от ширины изображения */
+  top: 17%;
+  /* проценты от высоты изображения */
+  left: 41%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block19 {
-  bottom: 17%; /* проценты от высоты изображения */
-  left: 41%; /* проценты от ширины изображения */
+  bottom: 17%;
+  /* проценты от высоты изображения */
+  left: 41%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block20 {
-  top: 17%; /* проценты от высоты изображения */
-  right: 34%; /* проценты от ширины изображения */
+  top: 17%;
+  /* проценты от высоты изображения */
+  right: 34%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block21 {
-  bottom: 17%; /* проценты от высоты изображения */
-  right: 34%; /* проценты от ширины изображения */
+  bottom: 17%;
+  /* проценты от высоты изображения */
+  right: 34%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block22 {
-  top: 19%; /* проценты от высоты изображения */
-  left: 26%; /* проценты от ширины изображения */
+  top: 19%;
+  /* проценты от высоты изображения */
+  left: 26%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block23 {
-  bottom: 19%; /* проценты от высоты изображения */
-  left: 26%; /* проценты от ширины изображения */
+  bottom: 19%;
+  /* проценты от высоты изображения */
+  left: 26%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block24 {
-  top: 21%; /* проценты от высоты изображения */
-  right: 18%; /* проценты от ширины изображения */
+  top: 21%;
+  /* проценты от высоты изображения */
+  right: 18%;
+  /* проценты от ширины изображения */
 }
 .image-container__draw .block25 {
-  bottom: 21%; /* проценты от высоты изображения */
-  right: 18%; /* проценты от ширины изображения */
+  bottom: 21%;
+  /* проценты от высоты изображения */
+  right: 18%;
+  /* проценты от ширины изображения */
+}
+.image-container__scheme {
+  overflow: hidden;
+  min-width: 600px;
 }
 .image-container__scheme .block1 {
-  top: 14%; /* проценты от высоты изображения */
-  left: 40%; /* проценты от ширины изображения */
+  top: 14%;
+  /* проценты от высоты изображения */
+  left: 40%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block2 {
-  top: 14%; /* проценты от высоты изображения */
-  left: 58%; /* проценты от ширины изображения */
+  top: 14%;
+  /* проценты от высоты изображения */
+  left: 58%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block3 {
-  top: 35%; /* проценты от высоты изображения */
-  left: 42%; /* проценты от ширины изображения */
+  top: 35%;
+  /* проценты от высоты изображения */
+  left: 42%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block4 {
-  top: 48%; /* проценты от высоты изображения */
-  left: 28%; /* проценты от ширины изображения */
+  top: 48%;
+  /* проценты от высоты изображения */
+  left: 28%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block5 {
-  top: 45%; /* проценты от высоты изображения */
-  left: 36%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  left: 36%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block6 {
-  top: 45%; /* проценты от высоты изображения */
-  left: 58%; /* проценты от ширины изображения */
+  top: 45%;
+  /* проценты от высоты изображения */
+  left: 58%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block7 {
-  top: 47%; /* проценты от высоты изображения */
-  left: 81%; /* проценты от ширины изображения */
+  top: 47%;
+  /* проценты от высоты изображения */
+  left: 81%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block8 {
-  top: 56%; /* проценты от высоты изображения */
-  left: 34%; /* проценты от ширины изображения */
+  top: 56%;
+  /* проценты от высоты изображения */
+  left: 34%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block9 {
-  top: 56%; /* проценты от высоты изображения */
-  left: 42%; /* проценты от ширины изображения */
+  top: 56%;
+  /* проценты от высоты изображения */
+  left: 42%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block10 {
-  top: 76%; /* проценты от высоты изображения */
-  left: 40%; /* проценты от ширины изображения */
+  top: 76%;
+  /* проценты от высоты изображения */
+  left: 40%;
+  /* проценты от ширины изображения */
 }
 .image-container__scheme .block11 {
-  top: 76%; /* проценты от высоты изображения */
-  left: 58%; /* проценты от ширины изображения */
+  top: 76%;
+  /* проценты от высоты изображения */
+  left: 58%;
+  /* проценты от ширины изображения */
 }
 
 .responsive-image {
   width: 100%;
   height: auto;
   padding: 8px 22px 37px;
+  max-width: none;
 }
 .responsive-image__draw {
   padding: 28px 40px 27px;
@@ -4713,6 +4948,8 @@ body {
 }
 .chart__block {
   position: relative;
+  min-width: 1000px;
+  min-height: 530px;
 }
 .chart__top-icon {
   width: 22px;
@@ -4909,6 +5146,10 @@ body {
   .chart__statistics-block {
     width: 100%;
   }
+  .chart__block {
+    min-width: 600px;
+    min-height: 330px;
+  }
   .car-img-block__top {
     padding: 0;
     height: 180px;
@@ -4950,6 +5191,9 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .scrollable-container {
+    display: block;
+  }
 }
 /* Для устройств с экранами шириной от 481px до 768px (например, небольшие планшеты) */
 @media (min-width: 480px) and (max-width: 767px) {
@@ -4986,6 +5230,10 @@ body {
   }
   .chart__statistics-block {
     width: 100%;
+  }
+  .chart__block {
+    min-width: 600px;
+    min-height: 370px;
   }
   .car-img-block__top {
     padding: 0;
@@ -5027,6 +5275,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .scrollable-container {
+    display: block;
   }
 }
 /* Для устройств с экранами шириной от 769px до 1024px (например, большие планшеты и небольшие ноутбуки) */
@@ -5076,6 +5327,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .scrollable-container {
+    display: block;
   }
 }
 /* Для устройств с экранами шириной от 1025px до 1280px (например, стандартные ноутбуки) */
@@ -5158,6 +5412,12 @@ body {
   .car-img-block__bottom .button {
     width: 100%;
   }
+  .main-block__center {
+    width: calc(100% - 444px);
+  }
+  .scrollable-container {
+    display: block;
+  }
 }
 /* Для устройств с экранами шириной от 1601px до 1920px (например, HD мониторы) */
 @media (min-width: 1601px) and (max-width: 1919px) {
@@ -5169,6 +5429,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .chart__block {
+    min-width: 600px;
+    min-height: 520px;
   }
 }
 /* Для устройств с экранами шириной от 1921px до 2560px (например, 2K и 4K мониторы) */

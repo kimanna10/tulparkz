@@ -13,23 +13,25 @@ $(document).ready(function() {
             const dropdownWidth= dropdownContent.outerWidth();
             const dropdownHeight= dropdownContent.outerHeight();
 
+            console.log(dropdownContent);
+
             // Проверка, достаточно ли места для открытия дропдауна 
             if (offset.left + statusItemWidth + dropdownWidth > $(window).width()) {
                 // Открыть слева
                 dropdownContent.css({
-                    top: offset.top,
+                    top: offset.top - 70,
                     left: offset.left - dropdownWidth - 10,
-                    display: 'block',
                     marginRight: '10px'
                 });
+                dropdownContent.addClass('active');
             } else {
                 // Открыть справа
                 dropdownContent.css({
-                    top: offset.top,
-                    left: offset.left + statusItemWidth,
-                    display: 'block',
+                    top: offset.top - 70,
+                    left: offset.left + statusItemWidth + 10,
                     marginLeft: '10px'
                 });
+                dropdownContent.addClass('active');
             }
         }
     }
@@ -42,7 +44,7 @@ $(document).ready(function() {
 
     // Закрытие дропдауна
     function closeDropdown() {
-        $('.dropdown-content').hide();
+        $('.dropdown-content').removeClass('active');
     }
 
     // Открытие дропдауна при клике на элемент статуса
@@ -93,7 +95,11 @@ $(document).ready(function() {
 
      // Обновление позиции дропдауна при прокрутке страницы
      $('body').on('scroll', function() {
-        updateDropdownPosition();
+        $('.dropdown-content.active').each(function() {
+            updateDropdownPosition();
+        });
     });
+
+
 });
 

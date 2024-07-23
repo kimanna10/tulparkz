@@ -1,0 +1,32 @@
+
+@import 'colors';
+@import 'mixin';
+
+
+.main-block{
+    &__section{
+        margin-bottom: 0;
+    }
+}
+.tab-container{
+    margin: 0;
+}
+.tab-buttons{
+    justify-content: space-between;
+    &__top{
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+    }
+    &__buttons{
+        display: flex;
+    }
+    &__icon{
+        width: 22px;
+        height: 22px;
+        background-color: $text-secondary-color;
+    }
+    &__title{
+        color: $text-secondary-color;
+        @include title-4-medium;
+    }
+}

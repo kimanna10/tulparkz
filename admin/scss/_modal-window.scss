@@ -19,6 +19,9 @@ body.modal-open {
     margin: auto;
     @include flexbox(flex, row, center, center);
     padding: 20px 0;
+    &__call{
+        min-width: 285px;
+    }
 }
 .modal-content {
     background-color: $white-color;
@@ -81,6 +84,54 @@ body.modal-open {
     border-radius: 12px;
     @include subhead-regular;
     }
+
+    &__call{
+        @include flexbox(flex, column, center, start);
+        gap: 28px;
+    }
+
+    &__call-top{
+        @include flexbox(flex, column, center, start);
+        gap: 6px;
+    }
+    &__call-img{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+    &__call-name{
+        @include subhead-bold;
+    }
+    &__call-label{
+        color: $text-thertiary-color;
+        @include subhead-regular;
+    }
+    &__call-car-img{
+        width: 24px;
+        height: 24px
+    }
+    &__call-car{
+        @include flexbox(flex, row, center , start);
+        gap: 6px;
+    }
+    &__call-car-title{
+        @include subhead-regular;
+        padding: 6px;
+        background-color: $blue100a-color;
+        border-radius: 6px;
+    }
+    &__call-info{
+        @include flexbox(flex, column, start , start);
+        gap: 18px;
+    }
+    &__call-info-block{
+        @include flexbox(flex, column, start , start);
+        gap: 5px;
+    }
+    &__call-number{
+        @include subhead-regular;
+    }
+
 
 }
 .modal-header {

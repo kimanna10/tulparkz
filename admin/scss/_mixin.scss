@@ -8,6 +8,12 @@
 }
 
 //--TITLE--//
+@mixin title-bold{
+    font-size: $font-size-28;
+    line-height: $line-height-34;
+    font-weight: $font-weight-bold;
+}
+
 @mixin title-1-bold{
     font-size: $font-size-32;
     line-height: $line-height-36;

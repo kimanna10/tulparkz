@@ -87,12 +87,10 @@ $(document).ready(function() {
 
     // Обновление позиции дропдауна при прокрутке страницы
     $('.table-wrapper').on('scroll', function() {
-        console.log('f');
         updateDropdownPosition();
     });
      // Обновление позиции дропдауна при прокрутке страницы
      $('body').on('scroll', function() {
-        console.log('f');
         updateDropdownPosition();
     });
 });

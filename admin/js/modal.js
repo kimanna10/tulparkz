@@ -108,6 +108,11 @@ $(document).ready(function() {
         const $modal = $(targetModal);
         openModal($modal);
     });
+    $('.modal-call').click(function() {
+        const targetModal = $(this).data('target');
+        const $modal = $(targetModal);
+        openModal($modal);
+    });
 
     
 

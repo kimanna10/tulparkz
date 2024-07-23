@@ -9,11 +9,11 @@
 @import 'modal-window';
 
 
-
-html{
+html {
     font-size: 16px;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -24,115 +24,129 @@ body{
 
 
 
-.main{
-    &__top{
+.main {
+    &__top {
         background-color: $white-color;
-        box-shadow: 0px 2px 10px 0px  rgba( #E2E3E7 , .45);
+        box-shadow: 0px 2px 10px 0px rgba(#E2E3E7, .45);
     }
-    &__top-wrapper{
+
+    &__top-wrapper {
         @include flexbox(flex, row, center, end);
         padding: 14px 0;
 
     }
-    &__user-account{
+
+    &__user-account {
         @include flexbox(flex, row, center, start);
         gap: 8px;
     }
-    &__user-img-block{
+
+    &__user-img-block {
         width: 24px;
         height: 24px;
     }
-    &__user-img{
+
+    &__user-img {
         width: 100%;
         height: 100%;
         border-radius: 100%;
         object-fit: cover;
     }
-    &__user-name{
+
+    &__user-name {
         @include subhead-regular;
     }
 
-    &__filter{
+    &__filter {
         padding: 14px 0;
     }
 
-    &__filter-info{
+    &__filter-info {
 
-       @include flexbox(flex,row, center, start);
-       gap: 18px;
+        @include flexbox(flex, row, center, start);
+        gap: 18px;
     }
 
-    &__filter-title{
+    &__filter-title {
         @include title-1-bold;
     }
 
 
-    &__filter-content{
-        @include flexbox(flex,row, start, stretch);
+    &__filter-content {
+        @include flexbox(flex, row, start, stretch);
         gap: 18px;
         margin-top: 12px;
 
     }
-    &__filter-block{
+
+    &__filter-block {
         width: calc((100% - 18px) / 2);
     }
 
 
-    &__result-block{
+    &__result-block {
         @include flexbox(flex, row, center, start);
         gap: 12px;
         background-color: $white-color;
         box-shadow: 0px 4px 30px 0px rgba(#1F1D68, 0.04);
         padding: 20px;
         border-radius: 12px;
-        width: calc((100% - 18px ) / 3);
+        width: calc((100% - 18px) / 3);
     }
-    &__result-quantity{
+
+    &__result-quantity {
         @include title-1-bold;
     }
-    &__result-decs{
+
+    &__result-decs {
         @include headline-regular;
-        color:  rgba( $text-secondary-color , .44);
+        color: rgba($text-secondary-color , .44);
     }
-    &__result-icon{
+
+    &__result-icon {
         border-radius: 11px;
         background-color: $blue100a-color;
         padding: 12px;
     }
 
 
-    &__result-icon-announcement{
+    &__result-icon-announcement {
         background-color: $text-primary-color;
-            width: 32px;
-            height: 32px;
-    }
-    &__result-icon-desktop{
-        background-color: $primary-color;
-            width: 32px;
-            height: 32px;
-    }
-    &__result-icon-check-double{
-        background-color: $green500-color;
-            width: 32px;
-            height: 32px;
+        width: 32px;
+        height: 32px;
     }
 
-    &__result-icon-car{
+    &__result-icon-desktop {
         background-color: $primary-color;
-            width: 32px;
-            height: 32px;
+        width: 32px;
+        height: 32px;
     }
-    &__result-icon-check{
+
+    &__result-icon-check-double {
         background-color: $green500-color;
-            width: 32px;
-            height: 32px;
+        width: 32px;
+        height: 32px;
     }
-    &__result-icon-drive{
+
+    &__result-icon-car {
         background-color: $primary-color;
-            width: 32px;
-            height: 32px;
+        width: 32px;
+        height: 32px;
     }
-    &__filter-form{
+
+    &__result-icon-check {
+        background-color: $green500-color;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__result-icon-drive {
+        background-color: $primary-color;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__filter-form {
         background-color: $white-color;
         box-shadow: 0px 4px 30px 0px rgba(#1F1D68, 0.04);
         padding: 12px 15px;
@@ -141,19 +155,650 @@ body{
         gap: 12px;
         flex-wrap: wrap;
     }
-    &__drop-block{
-        width: calc((100% - 24px ) / 3);
+
+    &__drop-block {
+        width: calc((100% - 24px) / 3);
     }
 
-    &__filter-buttons-block{
-        @include flexbox(flex,row, senter, start);
+    &__filter-buttons-block {
+        @include flexbox(flex, row, senter, start);
         gap: 12px;
     }
-    &__table-page{
-        padding-bottom: 24px;
 
+    &__table-page {
+        padding-bottom: 24px;
+    }
+
+
+    &__content {
+        padding-bottom: 29px;
+    }
+
+    &__content-top {
+        @include flexbox(flex, row, center, start);
+        gap: 12px;
+        color: $text-primary-color;
+
+        &:hover {
+            color: $text-primary-color;
+        }
+
+        margin-top: 12px;
+        margin-bottom: 19px;
+    }
+
+    &__content-top-icon {
+        background-color: $text-primary-color;
+        width: 28px;
+        height: 28px;
+    }
+
+    &__content-top-text {
+        @include title-2-medium;
+    }
+
+    &__content-body {
+        @include flexbox(flex, row, start, start);
+        gap: 24px;
+    }
+
+    &__content-buttons {
+        @include flexbox(flex, row, center, flex-end);
+        gap: 12px;
+
+        .button {
+            width: 250px;
+        }
+    }
+
+
+}
+
+.main-block {
+    width: 100%;
+
+    &__section {
+        @include flexbox(flex, row, stretch, start);
+        gap: 24px;
+        margin-bottom: 13px;
+    }
+
+    &__center {
+        width: 100%;
+        @include flexbox(flex, column, stretch, start);
+        gap: 25px;
     }
 }
 
+.car-img-block {
+    background-color: $white-color;
+    border-radius: 12px;
+    box-shadow: 0px 4px 30px 0px rgba(#1F1D68, .04);
+    height: auto;
+    &__section {
+        width: 460px;
+        height: 100%;
+    }
+
+    &__top {
+        width: 100%;
+        height: 295px;
+        position: relative;
+
+        .link {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+        }
+    }
+
+    &__top-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+
+    &__body {
+        padding: 20px 11px;
+        @include flexbox(flex, row, start, space-between);
+        gap: 20px 12px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        background-color: $blue100a-color;
+        padding: 8px;
+        border-radius: 12px;
+        width: calc((100% - 24px) / 3);
+        min-height: 130px;
+    }
+
+    &__item-img {
+        border-radius: 12px;
+        width: 100%;
+        background-color: $white-color;
+        min-height: 77px;
+    }
+
+    &__item-text {
+        @include caption-1-regular;
+    }
+
+    &__item-info {
+        margin-top: 4px;
+        @include flexbox(flex, row, start, space-between);
+    }
+    &__content{
+        @include flexbox(flex, column, stretch, start);
+    }
+    &__bottom{
+        @include flexbox(flex, row, center, center);
+        padding: 0 11px;
+        gap: 12px;
+        .button{
+            width: auto;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+}
+
+
+.car-info {
+    padding: 16px 8px 47px 8px;
+    background-color: $white-color;
+    box-shadow: 0px 4px 30px 0px rgba(#1F1D68, .04);
+    border-radius: 12px;
+    min-width: 440px;
+    @include flexbox(flex, column, stretch, start);
+    gap: 22px;
+
+    &__title-block {
+        padding-left: 15px;
+        @include flexbox(flex, row, center, start);
+        gap: 34px;
+    }
+
+    &__title {
+        @include title-bold;
+    }
+
+    &__details {
+        @include flexbox(flex, column, stretch, start);
+        gap: 4px;
+    }
+
+    &__details-text {
+        @include headline-regular;
+        width: 55%;
+    }
+
+    &__details-input {
+        width: 45%;
+    }
+
+    &__details-item {
+        background-color: $white50-color;
+        padding: 12px 15px;
+        @include flexbox(flex, row, start, space-between);
+        gap: 10px;
+    }
+
+    &__bottom-block {
+        @include flexbox(flex, column, stretch, start);
+        gap: 24px;
+    }
+
+    &__tags {
+        @include flexbox (flex, row, center, start);
+        gap: 12px 5px;
+        flex-wrap: wrap;
+    }
+
+    &__bottom-item {
+        padding: 0 15px;
+        @include flexbox(flex, column, stretch, start);
+        gap: 12px;
+    }
+
+
+}
+
+.descritption {
+    background-color: $white-color;
+    border-radius: 12px;
+    box-shadow: 0px 4px 30px 0px rgba(#1F1D68, .04);
+    padding: 20px 26px 12px 26px;
+
+    &__top {
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+        margin-bottom: 22px;
+    }
+
+    &__icon {
+        background-color: $text-secondary-color;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__title {
+        color: $text-secondary-color;
+        @include title-4-medium;
+    }
+
+    &__input {
+        display: flex;
+        margin-bottom: 12px;
+        textarea{
+            &::placeholder{
+                color: $text-thertiary-color;
+            }
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        border-radius: 12px;
+        background-color: $blue50-color;
+        padding: 12px 16px;
+        @include headline-regular;
+    }
+
+    &__bottom {
+        @include flexbox(flex, row, center, flex-end);
+        gap: 12px;
+
+        .button {
+            width: 150px;
+        }
+    }
+}
+
+.chart {
+    background-color: $white-color;
+    border-radius: 12px;
+    box-shadow: 0px 4px 30px 0px rgba(#1F1D68, .04);
+    padding: 18px;
+
+    &__top {
+        @include flexbox(flex, row, center, start);
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+    &__block{
+        position: relative;
+    }
+
+    &__top-icon {
+        width: 22px;
+        height: 22px;
+        background-color: $text-secondary-color;
+    }
+
+    &__title {
+        color: $text-secondary-color;
+        @include title-4-bold;
+
+    }
+    &__statistics{
+        @include flexbox(flex, row, center, space-between);
+        gap: 30px;
+        padding-top: 24px;
+    }
+
+    &__statistics-block {
+        background-color: $blue50-color;
+        border-radius: 24px;
+        box-shadow: 0px 4px 30px 0px rgba(#1F1D68, .04);
+        padding: 22px 14px;
+        width: calc(100% / 3);
+        position: relative;
+    }
+    &__statistics-item{
+        @include flexbox(flex, row, start, start);
+        gap: 12px;
+    }
+    &__statistics-icon{
+        background-color: $primary-color;
+        width: 32px;
+        height: 32px;
+    }
+    &__statistics-info{
+        @include flexbox(flex, column, start, start);
+        gap: 6px;
+    }
+    &__statistics-number{
+        font-size: 2rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        color: $primary-color;
+    }
+    &__statistics-text{
+        @include headline-regular;
+        color: rgba( $text-secondary-color , .44);
+    }
+    &__statistics-percent{
+        position: absolute;
+        top: 14px;
+        right: 14px;
+    }
+
+}
+.statistics-percent{
+
+    &__block{
+        border-radius: 18px;
+        padding: 2px 5px;
+        @include flexbox(flex, row, center, start);
+        gap: 4px;
+        @include caption-1-regular;
+        &--down{
+            background-color: $red500a-color;
+            color: #831818;
+        }
+        &--up{
+            background-color: rgba($green500-color , .1);
+            color: #0F761A;
+        }
+    }
+    
+    &__icon{
+        width: 16px;
+        height: 16px;
+        &--down{
+            background-color: #831818;
+            rotate: 180deg;
+        }
+        &--up{
+            background-color: #0F761A;
+        }
+    }
+
+}
+
+
+
+/* Для устройств с экранами шириной от 320px до 480px (например, мобильные телефоны) */
+@media (min-width: 320px) and (max-width: 479px) {
+    .main{
+        &__content-block{
+            width: 100%;
+        }
+        &__content-body{
+            flex-direction: column;
+        }
+        &__content-buttons{
+            flex-direction: column;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+        .car-info {
+            min-width: 100%;
+            padding: 16px 8px;
+            &__title-block {
+                flex-direction: column;
+                align-items: self-start;
+                gap: 5px;
+            }
+        }
+    .descritption{
+        padding: 18px 12px;
+        &__textarea{
+            height: 400px;
+        }
+        &__bottom{
+            flex-direction: column;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+    .chart{
+        padding: 18px 12px;
+        &__statistics{
+            flex-direction: column;
+            gap: 15px;
+        }
+        &__statistics-block{
+            width: 100%;
+        }
+    }
+    .car-img-block{
+        &__top{
+            padding: 0;
+            height: 180px;
+            width: 100%;
+
+        }
+        &__section {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__body{
+            width: 100%;
+        }
+        &__item{
+            width: calc((100% - 12px) / 2);
+            min-height: 120px;
+        }
+        &__bottom{
+            flex-direction: column;
+            padding-bottom: 20px;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+
+    .main-block{
+        &__section{
+            flex-direction: column;
+        }
+    }
+}
+  
+  /* Для устройств с экранами шириной от 481px до 768px (например, небольшие планшеты) */
+  @media (min-width: 480px) and (max-width: 767px) {
+    .main{
+        &__content-block{
+            width: 100%;
+        }
+        &__content-body{
+            flex-direction: column;
+        }
+        &__content-buttons{
+            flex-direction: column;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+    .descritption{
+        &__textarea{
+            height: 400px;
+        }
+        &__bottom{
+            .button{
+                width: 100%;
+            }
+        }
+    }
+    .chart{
+        &__statistics{
+            flex-direction: column;
+            gap: 15px;
+        }
+        &__statistics-block{
+            width: 100%;
+        }
+    }
+    .car-img-block{
+        &__top{
+            padding: 0;
+            height: 180px;
+            width: 300px;
+            margin-top: 20px;
+        }
+        &__section {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__body{
+            width: 100%;
+        }
+        &__bottom{
+            flex-direction: row;
+            padding-bottom: 20px;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+    .car-info{
+        min-width: 100%;
+    }
+    .main-block{
+        &__section{
+            flex-direction: column;
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 769px до 1024px (например, большие планшеты и небольшие ноутбуки) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .main{
+        &__content-block{
+            width: 100%;
+        }
+        &__content-body{
+            flex-direction: column;
+        }
+    }
+    .car-img-block{
+        &__top{
+            padding: 0;
+            height: 380px;
+            width: 600px;
+        }
+        &__section {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__body{
+            width: 100%;
+        }
+        &__bottom{
+            flex-direction: row;
+            padding-bottom: 20px;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+
+    .main-block{
+        &__section{
+            flex-direction: column;
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1025px до 1280px (например, стандартные ноутбуки) */
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .main{
+        &__content-block{
+            width: 100%;
+        }
+        &__content-body{
+            flex-direction: column;
+        }
+    }
+    .car-img-block{
+        &__content{
+            width: 100%;
+        }
+        &__top{
+            padding-left: 11px;
+            width: 100%
+        }
+        &__section {
+            @include flexbox(flex, row, center, start);
+            width: 100%;
+        }
+        &__body{
+            width: 100%;
+        }
+        &__bottom{
+            flex-direction: column;
+            padding-bottom: 20px;
+            .button{
+                width: 100%;
+            }
+        }
+    }
+
+    .main-block{
+        &__section{
+            flex-direction: column;
+        }
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1281px до 1600px (например, большие ноутбуки и настольные мониторы) */
+  @media (min-width: 1281px) and (max-width: 1600px) {
+    .main{
+        &__content-block{
+            width: 100%;
+        }
+        &__content-body{
+            flex-direction: column;
+        }
+    }
+    .car-img-block{
+        &__section {
+            width: 420px;
+        }
+        &__item{
+            min-height: 120px;
+        }
+
+            &__bottom{
+                flex-direction: column;
+                .button{
+                    width: 100%;
+                }
+            }
+
+    }
+  }
+  
+  /* Для устройств с экранами шириной от 1601px до 1920px (например, HD мониторы) */
+  @media (min-width: 1601px) and (max-width: 1919px) {
+    .main{
+        &__content-block{
+            width: 100%;
+        }
+        &__content-body{
+            flex-direction: column;
+        }
+    }
+
+    
+  }
+  
+  /* Для устройств с экранами шириной от 1921px до 2560px (например, 2K и 4K мониторы) */
+  @media (min-width: 1920px) and (max-width: 2560px) {
+  }
+  
 
 @import 'adapt';

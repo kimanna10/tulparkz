@@ -72,6 +72,21 @@ $car: '/admin/assets/icons/car.svg';
 $drive: '/admin/assets/icons/speed.svg';
 
 $file-edit: '/admin/assets/icons/file-edit.svg';
+$arrow-left: '/admin/assets/icons/arrow-left.svg';
+
+$reload: '/admin/assets/icons/reload.svg';
+$octagon-warning: '/admin/assets/icons/octagon-warning.svg';
+$terminal: '/admin/assets/icons/terminal.svg';
+$tag: '/admin/assets/icons/tag.svg';
+$shield-check: '/admin/assets/icons/shield-check.svg';
+
+$chart: '/admin/assets/icons/chart.svg';
+$carret-triangle: '/admin/assets/icons/carret-triangle.svg';
+$moneybag: '/admin/assets/icons/moneybag.svg';
+$question: '/admin/assets/icons/question.svg';
+$check: '/admin/assets/icons/check.svg';
+
+$color-fill: '/admin/assets/icons/color-fill.svg';
 
 
 @mixin icon($name, $path) {
@@ -163,3 +178,17 @@ $file-edit: '/admin/assets/icons/file-edit.svg';
 @include icon(car, $car);
 @include icon(drive, $drive);
 @include icon(file-edit, $file-edit);
+@include icon(arrow-left, $arrow-left);
+
+@include icon(reload, $reload);
+@include icon(octagon-warning, $octagon-warning);
+@include icon(terminal, $terminal);
+@include icon(tag, $tag);
+@include icon(shield-check, $shield-check);
+@include icon(chart, $chart);
+
+@include icon(carret-triangle, $carret-triangle);
+@include icon(moneybag, $moneybag);
+@include icon(question, $question);
+@include icon(check, $check);
+@include icon(color-fill, $color-fill);

@@ -97,6 +97,13 @@
                     </button>
 
 
+                    <h3>Modal "CALL"</h3>
+                    <button href="#" class="link link__button link__button--green modal-call" data-target="#modal-call">
+                        <div class="link__icon link__icon--green icon-user"></div>
+                    </button>
+
+
+
                 </div>
 
                 <!-- BUTTONS -->
@@ -319,6 +326,31 @@
                     <button href="#" class="link link__button link__button--blue" disabled>
                         <div class="link__icon  link__icon--yellow icon-edit-pencil"></div>
                     </button>
+                </div>
+                   <!-- LINKS POINT-->
+                   <div class="components-block">
+
+
+                    <h3>link point check</h3>
+                    <button href="#" class="link link__point link__point--filled point-check">
+                        <div class="link__point-icon icon-check"></div>
+                    </button>
+
+                    <h3>link point check</h3>
+                    <button href="#" class="link link__point link__point--bordered">
+                        <div class="link__point-icon icon-question"></div>
+                    </button>
+
+                    <h3>link point check</h3>
+                    <button href="#" class="link link__point link__point--bordered">
+                        <div class="link__point-text link__point-text--flaws">B</div>
+                    </button>
+
+                    <h3>link point check</h3>
+                    <button href="#" class="link link__point link__point--filled">
+                        <div class="link__point-text link__point-text--value">123</div>
+                    </button>
+
                 </div>
 
                 <!-- STATUS -->
@@ -656,6 +688,34 @@
         </div>
     </div>
 
+    <div id="modal-call" class="modal">
+        <div class="modal-section  modal-section__call">
+            <div class="modal-content modal-content__call">
+                <div class="modal-content__call-top">
+                    <div class="modal-content__call-img-block">
+                        <img src="assets/img/employee/employee1.png" class="modal-content__call-img" alt="">
+                    </div>
+                    <div class="modal-content__call-name">Гульмира Иванова</div>
+                </div>
+                <div class="modal-content__call-info">
+                    <div class="modal-content__call-info-block">
+                        <div class="modal-content__call-label">Машина:</div>
+                        <div class="modal-content__call-car">
+                            <div class="modal-content__call-car-mark">
+                                <img src="assets/img/car-brand/toyota.png" class="modal-content__call-car-img" alt="">
+                            </div>
+                            <div class="modal-content__call-car-title">Toyota Camry 2016</div>
+                        </div>
+                    </div>
+                    <div class="modal-content__call-info-block">
+                        <div class="modal-content__call-label">Номер телефона:</div>
+                        <div class="modal-content__call-number">+7 (800) 888 - 88 - 88</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="tooltip" id="tooltip1">
         <div class="tooltip-block__wrapper">
             <div class="tooltip-block__item">
@@ -732,6 +792,97 @@
         </div>
     </div>
 
+        <!-- Dropdown Content -->
+        <div id="tooltip-drop" class="dropdown-content">
+            <div class="dropdown__drop dropdown__drop--point">
+                <div class="dropdown__point-content">
+                    <div class="dropdown__point-block">
+                        <div class="dropdown__point-item point-item">
+                            <div class="point-item__icon point-item__icon--success icon-circle-check1"></div>
+                            <div class="point-item__text-block">
+                                <div class="point-item__title">Отличное состояние</div>
+                                <div class="point-item__subtitle">Заводской окрас детали</div>
+                            </div>
+                        </div>
+                        <div class="dropdown__point-item point-item">
+                            <div class="point-item__icon point-item__icon--default icon-color-fill"></div>
+                            <div class="point-item__text-block">
+                                <div class="point-item__title">Толщина ЛКП</div>
+                                <div class="point-item__subtitle">123</div>
+                            </div>
+                        </div>
+                        <div class="dropdown__point-item point-item">
+                            <div class="point-item__icon point-item__icon--warning icon-circle-warning"></div>
+                            <div class="point-item__text-block">
+                                <div class="point-item__title">Присутствуют дефекты</div>
+                                <div class="point-item__subtitle">Деталь перекрашена Требуется замена</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="button button__primary button--mini edit-button">Редактировать</button>
+                </div>
+            </div>
+        </div>
+
+            <!-- Dropdown Content -->
+            <div id="tooltip-drop" class="dropdown-content">
+                <div class="dropdown__drop dropdown__drop--point">
+                    <div class="dropdown__point-content">
+                        <div class="dropdown__point-block">
+                            <div class="dropdown__point-item point-item">
+                                <div class="point-item__icon point-item__icon--success icon-circle-check1"></div>
+                                <div class="point-item__text-block">
+                                    <div class="point-item__title">Отличное состояние</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button button__primary button--mini edit-button">Редактировать</button>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Dropdown Content -->
+        <div id="tooltip-drop" class="dropdown-content">
+            <div class="dropdown__drop dropdown__drop--point">
+                <div class="dropdown__point-content">
+                    <div class="dropdown__point-block">
+                        <div class="dropdown__point-item point-item">
+                            <div class="point-item__icon point-item__icon--success icon-circle-check1"></div>
+                            <div class="point-item__text-block">
+                                <div class="point-item__title">Отличное состояние</div>
+                                <div class="point-item__subtitle">Заводской окрас детали</div>
+                            </div>
+                        </div>
+                        <div class="dropdown__point-item point-item">
+                            <div class="point-item__icon point-item__icon--default icon-color-fill"></div>
+                            <div class="point-item__text-block">
+                                <div class="point-item__title">Толщина ЛКП</div>
+                                <div class="point-item__subtitle">123</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="button button__primary button--mini edit-button">Редактировать</button>
+                </div>
+            </div>
+        </div>
+
+            <!-- Dropdown Content -->
+            <div id="tooltip-drop" class="dropdown-content">
+                <div class="dropdown__drop dropdown__drop--point">
+                    <div class="dropdown__point-content">
+                        <div class="dropdown__point-block">
+                            <div class="dropdown__point-item point-item">
+                                <div class="point-item__icon point-item__icon--warning icon-circle-warning"></div>
+                                <div class="point-item__text-block">
+                                    <div class="point-item__title">Присутствуют дефекты</div>
+                                    <div class="point-item__subtitle">Деталь перекрашена Требуется замена</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button button__primary button--mini edit-button">Редактировать</button>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -746,7 +897,7 @@
     <script src="js/input-price.js"></script>
     <script src="js/tooltip.js"></script>
     <script src="js/drop-modal.js"></script>
-
+    <script src="js/tooltip-modal.js"></script>
 </body>
 
 </html>

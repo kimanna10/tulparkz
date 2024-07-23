@@ -239,9 +239,9 @@
 
 }
 .pagination li span {
-    height: 30px;
+    height: 22px;
     @include flexbox(flex, row, center, center);
-    width: 30px;
+    width: 22px;
 }
 .pagination{
     &__icon{

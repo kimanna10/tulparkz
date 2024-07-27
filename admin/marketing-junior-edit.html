@@ -243,7 +243,7 @@
                                         </div>
                                         <div class="car-img-block" id="carImgBlock">
                                             <div class="car-img-block__section">
-                                                <div class="car-img-block__top">
+                                                <div class="car-img-block__top" id="gallery">
                                                     <img src="assets/img/car-view/car-1:4.png" class="car-img-block__top-img" alt="">
                                                 </div>
                                                 <div class="car-img-block__content">
@@ -490,6 +490,56 @@
     </div>
 
 
+    <!-- The Modal -->
+<div id="galleryModal" class="modal">
+    <div class="modal-section">
+        <div class="modal-wrap">
+            <!-- Main image -->
+            <div class="modal-content-gallery">
+                <img id="mainImage" src="assets/img/car-img/car1.png" alt="Main Image" class="main-image">
+            </div>
+            
+    
+            <!-- Scrollable thumbnails -->
+        
+                <div class="thumbnail-wrapper">
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car1.png" alt="Thumbnail 1" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car2.png" alt="Thumbnail 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car3.png" alt="Thumbnail 3" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car4.png" alt="Thumbnail 4" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car5.png" alt="Thumbnail 5" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car6.png" alt="Thumbnail 6" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car7.png" alt="Thumbnail 7" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car8.png" alt="Thumbnail 8" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/car-img/car9.png" alt="Thumbnail 9" class="thumbnail">
+                    </div>
+                </div>
+    
+            <button href="#" class="link link__delete close">
+                <div class="link__icon-delete icon-close"></div>
+            </button>
+        </div>
+    </div>
+   
+</div>
+
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -501,6 +551,7 @@
     <script src="js/add-photo.js"></script>
     <script src="js/drop-modal.js"></script>
 
+    <script src="js/thumbnail.js"></script>
 </body>
 
 </html>

@@ -5028,8 +5028,8 @@ body {
 }
 .chart__block {
   position: relative;
-  min-width: 1000px;
-  min-height: 530px;
+  min-width: 600px;
+  min-height: 450px;
 }
 .chart__top-icon {
   width: 22px;

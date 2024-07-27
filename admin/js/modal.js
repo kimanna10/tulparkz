@@ -114,6 +114,11 @@ $(document).ready(function() {
         openModal($modal);
     });
 
+
+    $('#gallery').click(function() {
+        const $modal = $('#galleryModal');
+        $modal.css('display' , 'flex');
+    });
     
 
     $(window).click(function(event) {

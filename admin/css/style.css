@@ -875,6 +875,30 @@ h6 {
   height: 24px;
 }
 
+.icon-file {
+  background-size: cover;
+  -webkit-mask: url("/admin/assets/icons/file.svg") no-repeat center;
+          mask: url("/admin/assets/icons/file.svg") no-repeat center;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-file-add {
+  background-size: cover;
+  -webkit-mask: url("/admin/assets/icons/file-add.svg") no-repeat center;
+          mask: url("/admin/assets/icons/file-add.svg") no-repeat center;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
 .icon-arrow-left {
   background-size: cover;
   -webkit-mask: url("/admin/assets/icons/arrow-left.svg") no-repeat center;
@@ -1011,6 +1035,18 @@ h6 {
   background-size: cover;
   -webkit-mask: url("/admin/assets/icons/color-fill.svg") no-repeat center;
           mask: url("/admin/assets/icons/color-fill.svg") no-repeat center;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-notif {
+  background-size: cover;
+  -webkit-mask: url("/admin/assets/icons/bell.svg") no-repeat center;
+          mask: url("/admin/assets/icons/bell.svg") no-repeat center;
   -webkit-mask-size: cover;
           mask-size: cover;
   display: inline-block;
@@ -1875,6 +1911,9 @@ h6 {
   width: 100%;
   z-index: 1;
 }
+.dropdown__menu--lang {
+  min-width: 100px;
+}
 .dropdown__icon-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1924,6 +1963,21 @@ h6 {
   padding: 20px 14px;
   max-width: 350px;
   position: relative;
+}
+.dropdown__drop--publish {
+  padding: 0;
+}
+.dropdown__drop--publish .radio-item {
+  padding: 14px 16px;
+  border-bottom: 1px solid #D1D4DB;
+  border-radius: 0;
+}
+.dropdown__drop--publish .radio-item:last-child {
+  border-bottom: none;
+  border-radius: 0;
+}
+.dropdown__drop--lang {
+  padding: 0;
 }
 .dropdown__drop-list {
   display: -webkit-box;
@@ -4280,6 +4334,32 @@ body {
       -ms-flex-pack: end;
           justify-content: end;
   padding: 14px 0;
+}
+.main__top-notif {
+  position: relative;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 36px;
+}
+.main__top-nofit-num {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding: 0 8px;
+  background-color: #F5222D;
+  border-radius: 100px;
+  position: absolute;
+  color: #FFFFFF;
+  top: 3px;
+  right: -8px;
+}
+.main__top-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #070C2B;
 }
 .main__user-account {
   display: -webkit-box;

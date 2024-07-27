@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   dropdownToggles.forEach(function (dropdownToggle) {
     const dropdownMenu = dropdownToggle.nextElementSibling;
-
     dropdownToggle.addEventListener('click', function (event) {
       event.preventDefault();
       dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
@@ -25,40 +24,40 @@ document.addEventListener('DOMContentLoaded', function () {
           inputStatus.checked = true;
 
           const selected = dropdownToggle.querySelector('.dropdown__drop-text');
-         
+
           dropdownMenu.style.display = 'none';
 
           const caretIcon = dropdownToggle.querySelector('.dropdown__caret-icon');
           if (caretIcon) {
             caretIcon.classList.remove('rotate-180');
           }
-          switch(inputStatus.id) {
-              case 'progress':
-                selected.innerHTML = '<div class="choose-tag choose-tag--progress"><div class="choose-tag__text">В работе</div><div class="choose-tag__icon choose-tag__icon--progress icon-close"></div></div>';
-                  break;
-              case 'done':
-                selected.innerHTML = '<div class="choose-tag choose-tag--done"><div class="choose-tag__text">Завершенное</div><div class="choose-tag__icon choose-tag__icon--done icon-close"></div></div>';
+          switch (inputStatus.id) {
+            case 'progress':
+              selected.innerHTML = '<div class="choose-tag choose-tag--progress"><div class="choose-tag__text">В работе</div><div class="choose-tag__icon choose-tag__icon--progress icon-close"></div></div>';
+              break;
+            case 'done':
+              selected.innerHTML = '<div class="choose-tag choose-tag--done"><div class="choose-tag__text">Завершенное</div><div class="choose-tag__icon choose-tag__icon--done icon-close"></div></div>';
 
-                  break;
-              case 'archive':
-                selected.innerHTML = '<div class="choose-tag choose-tag--archive"><div class="choose-tag__text">В архиве</div><div class="choose-tag__icon choose-tag__icon--archive icon-close"></div></div>';
+              break;
+            case 'archive':
+              selected.innerHTML = '<div class="choose-tag choose-tag--archive"><div class="choose-tag__text">В архиве</div><div class="choose-tag__icon choose-tag__icon--archive icon-close"></div></div>';
 
-                  break;
-              case 'new':
-                selected.innerHTML = '<div class="choose-tag choose-tag--new"><div class="choose-tag__text">Новое</div><div class="choose-tag__icon choose-tag__icon--new icon-close"></div></div>';
-                  break;
+              break;
+            case 'new':
+              selected.innerHTML = '<div class="choose-tag choose-tag--new"><div class="choose-tag__text">Новое</div><div class="choose-tag__icon choose-tag__icon--new icon-close"></div></div>';
+              break;
 
-                  case 'accepted':
-                selected.innerHTML = '<div class="choose-tag choose-tag--done"><div class="choose-tag__text">Одобрено</div><div class="choose-tag__icon choose-tag__icon--done icon-close"></div></div>';
+            case 'accepted':
+              selected.innerHTML = '<div class="choose-tag choose-tag--done"><div class="choose-tag__text">Одобрено</div><div class="choose-tag__icon choose-tag__icon--done icon-close"></div></div>';
 
-                  break;
-              case 'denied':
-                selected.innerHTML = '<div class="choose-tag choose-tag--archive"><div class="choose-tag__text">Отказано</div><div class="choose-tag__icon choose-tag__icon--archive icon-close"></div></div>';
+              break;
+            case 'denied':
+              selected.innerHTML = '<div class="choose-tag choose-tag--archive"><div class="choose-tag__text">Отказано</div><div class="choose-tag__icon choose-tag__icon--archive icon-close"></div></div>';
 
-                  break;
-              case 'sent':
-                selected.innerHTML = '<div class="choose-tag choose-tag--progress"><div class="choose-tag__text">Отправлено</div><div class="choose-tag__icon choose-tag__icon--progress icon-close"></div></div>';
-                  break;
+              break;
+            case 'sent':
+              selected.innerHTML = '<div class="choose-tag choose-tag--progress"><div class="choose-tag__text">Отправлено</div><div class="choose-tag__icon choose-tag__icon--progress icon-close"></div></div>';
+              break;
 
 
 
@@ -78,20 +77,58 @@ document.addEventListener('DOMContentLoaded', function () {
             const radioButtons = document.querySelectorAll('input[name="radios"]');
             radioButtons.forEach(radio => radio.checked = false);
             dropdownMenu.style.display = 'none';
-        
+
             const caretIcon = dropdownToggle.querySelector('.dropdown__caret-icon');
             if (caretIcon) {
-                caretIcon.classList.remove('rotate-180');
+              caretIcon.classList.remove('rotate-180');
             }
-        }
+          }
 
         }
 
-     
+
 
 
       });
     });
+
+    const dropdownLang = dropdownMenu.querySelectorAll('.choose-element');
+    if (dropdownLang) {
+      dropdownLang.forEach(function (item) {
+        item.addEventListener('click', function () {
+          const inputSt = item.querySelector('input[type="radio"]');
+  
+          if (inputSt && inputSt.checked) {
+            const inputId = inputSt.id;
+            const selectedLang = document.querySelector('label[for="' + inputId + '"]').textContent;
+            
+            const langElement = dropdownToggle.querySelector('.choose');
+            langElement.textContent = selectedLang.trim();
+
+            function toggleAdditionalBlock(inputId) {
+              const addblock = document.querySelector('#date-time-block');
+              switch (inputSt.id) {
+                case 'queue':
+                  addblock.style.display = 'flex';
+                  break;
+                case 'publish':
+                  addblock.style.display = 'none';
+                  break;
+              }
+          }
+            inputSt.addEventListener('change', toggleAdditionalBlock(inputId));
+
+            const dropdownMenu = item.closest('.dropdown').querySelector('.dropdown__menu');
+            dropdownMenu.style.display = 'none';
+            const caretIcon = dropdownToggle.querySelector('.dropdown__caret-icon');
+            if (caretIcon) {
+              caretIcon.classList.remove('rotate-180');
+            }
+          }
+        });
+      });
+    }
+
 
 
 
@@ -107,15 +144,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (saveBtn) {
-      saveBtn.addEventListener('click', function() {
+      saveBtn.addEventListener('click', function () {
         dropdownMenu.style.display = 'none';
 
         const caretIcon = dropdownToggle.querySelector('.dropdown__caret-icon');
         if (caretIcon) {
           caretIcon.classList.remove('rotate-180');
         }
-    });
-  }
+      });
+    }
 
 
 

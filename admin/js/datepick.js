@@ -315,15 +315,20 @@ function selectDate(year, month, day) {
         }
     });
 
-    // Обработчик кнопки "Сбросить дату"
-    resetDate.addEventListener("click", function () {
-        localStorage.clear();
-        selectedStartDate = null;
-        selectedEndDate = null;
-        datePick.textContent = 'Выберите дату';
-        renderCalendar(currentYear, currentMonth);
-    });
 
+    if(resetDate){
+ // Обработчик кнопки "Сбросить дату"
+ resetDate.addEventListener("click", function () {
+    localStorage.clear();
+    selectedStartDate = null;
+    selectedEndDate = null;
+    datePick.textContent = 'Выберите дату';
+    renderCalendar(currentYear, currentMonth);
+});
+
+    }
+
+   
 
     // Инициализация календаря
     renderCalendar(currentYear, currentMonth);

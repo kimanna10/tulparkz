@@ -36,6 +36,28 @@ body {
 
     }
 
+    &__top-notif{
+        position: relative;
+        padding: 12px;
+        display: flex;
+        margin-right: 36px;
+    }
+    &__top-nofit-num{
+        @include caption-1-regular;
+        line-height: 1.25rem;
+        padding: 0 8px;
+        background-color: #F5222D;
+        border-radius: 100px;
+        position: absolute;
+        color: $white-color;
+        top: 3px;
+        right: -8px;
+    }
+    &__top-icon{
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color
+    }
     &__user-account {
         @include flexbox(flex, row, center, start);
         gap: 8px;

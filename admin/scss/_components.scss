@@ -831,6 +831,9 @@
         position: absolute;
         width: 100%;
         z-index: 1;
+        &--lang{
+            min-width: 100px;
+        }
 
 
     }
@@ -875,6 +878,24 @@
             padding: 20px 14px;
             max-width: 350px;
             position: relative;
+        }
+
+        &--publish{
+            padding: 0;
+            
+            .radio-item{
+                padding: 14px 16px;
+                border-bottom: 1px solid $grey-color;
+                border-radius: 0;
+                &:last-child{
+                    border-bottom: none;
+                    border-radius: 0;
+                }
+            }
+        }
+
+        &--lang {
+            padding: 0;
         }
 
     }

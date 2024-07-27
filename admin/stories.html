@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULPAR AUTO | Добавить историю</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stories.css">
+
+
+
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="main__wrapper">
+            <div class="main__page">
+                <div class="main__top">
+                    <div class="container">
+                        <div class="main__top-wrapper">
+                            <div class="main__top-notif">
+                                <div class="main__top-icon icon-notif"></div>
+                                <div class="main__top-nofit-num">11</div>
+                            </div>
+                            <div class="main__user-account">
+                                <div class="main__user-img-block">
+                                    <img src="assets/img/employee/employee1.png" class="main__user-img" alt="">
+                                </div>
+                                <div class="main__top-user-name">Ахмадиева Камила</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__content">
+                    <div class="container">
+                        <a class="main__content-top" href="">
+                            <div class="main__content-top-icon icon-arrow-left"></div>
+                            <div class="main__content-top-text">Stories</div>
+                        </a>
+                        <div class="main__content-body">
+                            <div class="main__content-block">
+                                <div class="main__story-buttons">
+                                    <button type="submit" class="button button__primary" id="add-stories">
+                                        <div class="button__icon button__icon--primary icon-plus"></div>
+                                        Создать Stories
+                                    </button>
+                                    <button type="submit" class="button button__secondary" id="add-exist">
+                                        <div class="button__icon button__icon--secondary icon-note-edit"></div>
+                                        Добавить в существующие
+                                    </button>
+                                </div>
+                                <div class="main__story-lang">
+                                    <div class="main__story-lang-label">Опубликованные:</div>
+                                        <li class="dropdown">
+                                            <a class="dropdown__toggle" id="dropdownToggle">
+                                                <div class="dropdown__drop-text choose">Выберите язык</div>
+                                                <div class="dropdown__icon-block">
+                                                    <div class="dropdown__caret-icon icon-caret-down"></div>
+                                                </div>
+                                            </a>
+                                            <ul class="dropdown__menu dropdown__menu--lang" >
+                                                <div class="dropdown__drop dropdown__drop--lang">
+                                                    <div class="dropdown__drop-list">
+                                                        <div class="dropdown__column">
+                                                            <div class="radio-item choose-element">
+                                                                <label for="radio5" class="radio-item__label">RU</label>
+                                                                <input type="radio" id="radio5" name="lang" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            <div class="radio-item choose-element">
+                                                                <label for="radio6" class="radio-item__label ">KZ</label>
+                                                                <input type="radio" id="radio6" name="lang" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                            <div class="radio-item choose-element">
+                                                                <label for="radio7" class="radio-item__label">ENG</label>
+                                                                <input type="radio" id="radio7" name="lang" class="radio-item__input">
+                                                                <span class="radio-item__custom"></span>
+                                                            </div>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                </div>
+                                            </ul>
+                                        </li>
+                                </div>
+                                <div class="main__story-wrapper">
+                                    <div class="main__story-content">
+                                        <div class="main__story-block">
+                                            <div class="main__story-cover">
+                                                <div class="main__story-cover-wrapper">
+                                                    <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-list">
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-line-block" >
+                                                <div class="main__story-line"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="main__story-block">
+                                            <div class="main__story-cover">
+                                                <div class="main__story-cover-wrapper">
+                                                    <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-list">
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-line-block" >
+                                                <div class="main__story-line"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="main__story-block">
+                                            <div class="main__story-cover">
+                                                <div class="main__story-cover-wrapper">
+                                                    <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-list">
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-line-block" >
+                                                <div class="main__story-line"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="main__story-block">
+                                            <div class="main__story-cover">
+                                                <div class="main__story-cover-wrapper">
+                                                    <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-list">
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-line-block" >
+                                                <div class="main__story-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="main__story-block">
+                                            <div class="main__story-cover">
+                                                <div class="main__story-cover-wrapper">
+                                                    <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-list">
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                                <div class="main__story-item">
+                                                    <img src="assets/img/story.png" class="main__story-item-img" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="main__story-line-block" >
+                                                <div class="main__story-line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="modal-add-slide" class="modal add-slide">
+        <div class="modal-section">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Добавить слайды в Stories. Шаг 1</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body__title">В какую карточку добавить слайд:</div>
+                    <div class="modal-body__story-list">
+                        <div class="modal-body__story-item radio-item">
+                            <input type="radio" id="story1" name="story" class="radio-item__input">
+                            <span class="radio-item__custom"></span>
+                            <div class="modal-body__story-block">
+                                <div class="main__story-cover">
+                                    <div class="main__story-cover-wrapper">
+                                        <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body__text">Избранные маршруты</div>
+                        </div>
+    
+                        <div class="modal-body__story-item radio-item">
+                            <input type="radio" id="story2" name="story" class="radio-item__input">
+                            <span class="radio-item__custom"></span>
+                            <div class="modal-body__story-block">
+                                <div class="main__story-cover">
+                                    <div class="main__story-cover-wrapper">
+                                        <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body__text">Как купить в кредит?</div>
+                        </div>
+    
+                        <div class="modal-body__story-item radio-item">
+                            <input type="radio" id="story3" name="story" class="radio-item__input">
+                            <span class="radio-item__custom"></span>
+                            <div class="modal-body__story-block">
+                                <div class="main__story-cover">
+                                    <div class="main__story-cover-wrapper">
+                                        <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body__text">Авто из Дубая</div>
+                        </div>
+    
+                        <div class="modal-body__story-item radio-item">
+                            <input type="radio" id="story4" name="story" class="radio-item__input">
+                            <span class="radio-item__custom"></span>
+                            <div class="modal-body__story-block">
+                                <div class="main__story-cover">
+                                    <div class="main__story-cover-wrapper">
+                                        <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body__text">Как выбрать авто?</div>
+                        </div>
+    
+                        <div class="modal-body__story-item radio-item">
+                            <input type="radio" id="story5" name="story" class="radio-item__input">
+                            <span class="radio-item__custom"></span>
+                            <div class="modal-body__story-block">
+                                <div class="main__story-cover">
+                                    <div class="main__story-cover-wrapper">
+                                        <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body__text">Как выбрать авто?</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="button button__secondary button--mini">Предпросмотр</button>
+                    <button type="submit" class="button button__primary button--mini" id="addButton">Добавить</button>
+                </div>
+    
+                <div class="modal-close-icon icon-close" ></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="modal-create-stories" class="modal create">
+        <div class="modal-section">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Создать Stories. Шаг 1:</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body__preview">
+                        <div class="modal-body__preview-item">
+                            <div class="upload-card cover" data-lang="RU">
+                                <label for="upload-ru" class="modal-body__title">Обложка карточки (RU):</label>
+                                <input type="file" id="upload-ru" class="upload-card__input " accept="image/*">
+                                <div class="upload-card__placeholder">
+                                    <div class="upload-card__icon icon-file-add"></div>
+                                    <div class="upload-card__block">
+                                        <div class="upload-card__text">Перетащите сюда файл (jpg, png) с разрешением 285x285</div>
+                                        <div class="link link__text upload-img">Добавить с компьютера</div>
+                                    </div>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="upload-info__wrapper">
+                                        <div class="upload-info__img-wrap">
+                                            <img class="upload-info__image" src="" alt="Uploaded Image">
+                                        </div>
+        
+                                        <div class="upload-info__info-block">
+                                            <div class="upload-info__name">
+                                                <div class="upload-info__icon icon-file"></div>
+                                                <div class="upload-info__file-name"></div>
+                                            </div>
+                                            <div class="upload-info__progress-bar">
+                                                <div class="upload-info__progress"></div>
+                                                <div class="upload-info__progress-block">
+                                                    <div class="upload-info__progress-percent">0%</div>
+                                                    <div class="upload-info__progress-text">загружено</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-body__preview-item">
+                            <div class="upload-card cover" data-lang="KZ">
+                                <label for="upload-kz" class="modal-body__title">Обложка карточки (KZ):</label>
+                                <input type="file" id="upload-kz" class="upload-card__input" accept="image/*">
+                                <div class="upload-card__placeholder">
+                                    <div class="upload-card__icon icon-file-add"></div>
+                                    <div class="upload-card__block">
+                                        <div class="upload-card__text">Перетащите сюда файл (jpg, png) с разрешением 285x285</div>
+                                        <div class="link link__text upload-img">Добавить с компьютера</div>
+                                    </div>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="upload-info__wrapper">
+                                        <div class="upload-info__img-wrap">
+                                            <img class="upload-info__image" src="" alt="Uploaded Image">
+                                        </div>
+                                        <div class="upload-info__info-block">
+                                            <div class="upload-info__name">
+                                                <div class="upload-info__icon icon-file"></div>
+                                                <div class="upload-info__file-name"></div>
+                                            </div>
+                                            <div class="upload-info__progress-bar">
+                                                <div class="upload-info__progress"></div>
+                                                <div class="upload-info__progress-block">
+                                                    <div class="upload-info__progress-percent">0%</div>
+                                                    <div class="upload-info__progress-text">загружено</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="modal-body__preview-item">
+                            <div class="upload-card cover" data-lang="ENG">
+                                <label for="upload-eng" class="modal-body__title">Обложка карточки (ENG):</label>
+                                <input type="file" id="upload-eng" class="upload-card__input" accept="image/*">
+                                <div class="upload-card__placeholder">
+                                    <div class="upload-card__icon icon-file-add"></div>
+                                    <div class="upload-card__block">
+                                        <div class="upload-card__text">Перетащите сюда файл (jpg, png) с разрешением 285x285</div>
+                                        <div class="link link__text upload-img">Добавить с компьютера</div>
+                                    </div>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="upload-info__wrapper">
+                                        <div class="upload-info__img-wrap">
+                                            <img class="upload-info__image" src="" alt="Uploaded Image">
+                                        </div>
+                                        <div class="upload-info__info-block">
+                                            <div class="upload-info__name">
+                                                <div class="upload-info__icon icon-file"></div>
+                                                <div class="upload-info__file-name"></div>
+                                            </div>
+                                            <div class="upload-info__progress-bar">
+                                                <div class="upload-info__progress"></div>
+                                                <div class="upload-info__progress-block">
+                                                    <div class="upload-info__progress-percent">0%</div>
+                                                    <div class="upload-info__progress-text">загружено</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="button button__secondary button--mini previewButton" id="previewButton">Предпросмотр</button>
+                    <button type="submit" class="button button__primary button--mini" id="step2Btn">Далее</button>
+                </div>
+                <div class="modal-close-icon icon-close"></div>
+            </div>
+        </div>
+       
+    </div>
+
+    <div id="modal-create-2" class="modal create-slide">
+        <div class="modal-section">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Создать Stories. Шаг 2. Добавление слайдов</div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="modal-body__top">
+                        <div class="modal-body__top-title">TulparAutoCheck</div>
+                        <div class="main__story-cover">
+                            <div class="main__story-cover-wrapper">
+                                <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body__preview">
+                        <div class="modal-body__preview-item">
+                            <div class="upload-card story" data-lang="RU">
+                                <label for="upload-ru" class="modal-body__title">Картинка для слайда в Stories (RU):</label>
+                                <input type="file" id="upload-ru" class="upload-card__input" accept="image/*">
+                                <div class="upload-card__placeholder">
+                                    <div class="upload-card__icon icon-file-add"></div>
+                                    <div class="upload-card__block">
+                                        <div class="upload-card__text">Перетащите сюда файл (jpg, png) с разрешением 1080х1920</div>
+                                        <div class="link link__text upload-img">Добавить с компьютера</div>
+                                    </div>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="upload-info__wrapper">
+                                        <div class="upload-info__img-wrap">
+                                            <img class="upload-info__image" src="" alt="Uploaded Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-body__preview-item">
+                            <div class="upload-card story" data-lang="KZ">
+                                <label for="upload-kz" class="modal-body__title">Картинка для слайда в Stories (KZ):</label>
+                                <input type="file" id="upload-kz" class="upload-card__input" accept="image/*">
+                                <div class="upload-card__placeholder">
+                                    <div class="upload-card__icon icon-file-add"></div>
+                                    <div class="upload-card__block">
+                                        <div class="upload-card__text">Перетащите сюда файл (jpg, png) с разрешением 1080х1920</div>
+                                        <div class="link link__text upload-img">Добавить с компьютера</div>
+                                    </div>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="upload-info__wrapper">
+                                        <div class="upload-info__img-wrap">
+                                            <img class="upload-info__image" src="" alt="Uploaded Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="modal-body__preview-item">
+                            <div class="upload-card story" data-lang="ENG">
+                                <label for="upload-eng" class="modal-body__title">Картинка для слайда в Stories (ENG):</label>
+                                <input type="file" id="upload-eng" class="upload-card__input" accept="image/*">
+                                <div class="upload-card__placeholder">
+                                    <div class="upload-card__icon icon-file-add"></div>
+                                    <div class="upload-card__block">
+                                        <div class="upload-card__text">Перетащите сюда файл (jpg,png) с разрешением 1080х1920</div>
+                                        <div class="link link__text upload-img">Добавить с компьютера</div>
+                                    </div>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="upload-info__wrapper">
+                                        <div class="upload-info__img-wrap">
+                                            <img class="upload-info__image" src="" alt="Uploaded Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+    
+                    <div class="modal-body__input">
+                        <div class="input-block">
+                            <label for="phone-email" class="textfield__label">Добавьте ссылку на WebView</label>
+                            <input type="text" class="textfield textfield__grey" id="phone-email" placeholder="Вставьте ссылку" autocomplete="off">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="button button__secondary button--mini previewButton">Предпросмотр</button>
+                    <button type="submit" class="button button__primary button--mini" id="step3Btn">Далее</button>
+                </div>
+                <div class="modal-close-icon icon-close"></div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div id="modal-preview" class="modal preview" >
+        <div class="modal-section">
+            <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Предпросмотр:</div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body__preview"  id="previewContainer">
+                    <div class="modal-body__preview-item">
+                        <div class="modal-body__title">RU</div>
+                        <div class="main__story-cover">
+                           <div class="main__story-cover-wrapper">
+                               <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                           </div>
+                       </div>
+                      </div>
+                      <div class="modal-body__preview-item">
+                       <div class="modal-body__title">KZ</div>
+                       <div class="main__story-cover">
+                          <div class="main__story-cover-wrapper">
+                              <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                          </div>
+                      </div>
+                     </div>
+                     <div class="modal-body__preview-item">
+                       <div class="modal-body__title">ENG</div>
+                       <div class="main__story-cover">
+                          <div class="main__story-cover-wrapper">
+                              <img src="assets/img/story-cover.png" class="main__story-cover-img" alt="">
+                          </div>
+                      </div>
+                     </div>
+                </div>
+            </div>
+            <div class="modal-close-icon icon-close"></div>
+        </div></div>
+       
+    </div>
+
+    <div id="modal-create-3" class="modal publish">
+        <div class="modal-section">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Создать Stories. Шаг 3. Время публикации</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body__publish">
+                        
+                        <div class="modal-body__publish-drop">
+                            <li class="dropdown">
+                                <a class="dropdown__toggle" id="dropdownToggle">
+                                    <div class="dropdown__drop-text choose">Когда опубликовать?</div>
+                                    <div class="dropdown__icon-block">
+                                        <div class="dropdown__caret-icon icon-caret-down"></div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown__menu dropdown__menu--publish" >
+                                    <div class="dropdown__drop dropdown__drop--publish">
+                                        <div class="dropdown__drop-list">
+                                            <div class="dropdown__column">
+                                                <div class="radio-item choose-element">
+                                                    <label for="publish" class="radio-item__label">Опубликовать сразу</label>
+                                                    <input type="radio" id="publish" name="publish" class="radio-item__input">
+                                                </div>
+                                                <div class="radio-item choose-element">
+                                                    <label for="queue" class="radio-item__label ">Добавить в очередь</label>
+                                                    <input type="radio" id="queue" name="publish" class="radio-item__input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="modal-body__publish-block" id="date-time-block" style="display: none;">
+                            <div class="modal-body__publish-drop">
+                                <li class="dropdown">
+                                    <a class="dropdown__toggle" id="dropdownToggle">
+                                        <div class="dropdown__drop-text date-pick">Выберите дату</div>
+                                        <div class="dropdown__icon-block">
+                                            <div class="dropdown__caret-icon icon-caret-down"></div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown__menu">
+                                        <div class="dropdown__drop">
+                                            <div class="custom-calendar" id="custom-calendar">
+                                                <div class="calendar-header">
+                                                    <button class="calendar-button" id="prevMonthBtn">
+                                                        <div class="calendar-arrow icon-caret-left"></div>
+                                                    </button>
+                                                    <span class="calendar-month" id="currentMonth"></span>
+                                                    <button class="calendar-button" id="nextMonthBtn">
+                                                        <div class="calendar-arrow icon-caret-right"></div>
+                                                    </button>
+                                                </div>
+                                                <div class="calendar-body">
+                                                    <div class="weekdays"></div>
+                                                    <div class="days"></div>
+                                                </div>
+                                                <button type="submit" id="saveBtn"
+                                                    class="button button__primary button--mini">Сохранить</button>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="modal-body__publish-drop">
+                                <li class="dropdown">
+                                    <a class="dropdown__toggle" id="dropdownToggle">
+                                        <div class="dropdown__drop-text date-pick">Выберите дату</div>
+                                        <div class="dropdown__icon-block">
+                                            <div class="dropdown__caret-icon icon-caret-down"></div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown__menu">
+                                        <div class="dropdown__drop">
+                                            <div class="custom-calendar" id="custom-calendar">
+                                                <div class="calendar-header">
+                                                    <button class="calendar-button" id="prevMonthBtn">
+                                                        <div class="calendar-arrow icon-caret-left"></div>
+                                                    </button>
+                                                    <span class="calendar-month" id="currentMonth"></span>
+                                                    <button class="calendar-button" id="nextMonthBtn">
+                                                        <div class="calendar-arrow icon-caret-right"></div>
+                                                    </button>
+                                                </div>
+                                                <div class="calendar-body">
+                                                    <div class="weekdays"></div>
+                                                    <div class="days"></div>
+                                                </div>
+                                                <button type="submit" id="saveBtn"
+                                                    class="button button__primary button--mini">Сохранить</button>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="button button__primary button--mini" id="publishBtn">Публикация</button>
+                </div>
+                <div class="modal-close-icon icon-close" ></div>
+            </div>
+        </div>
+      
+    </div>
+
+
+
+    <div id="modalSuccess" class="modal success">
+        <div class="modal-content modal-content__success">
+            <img src="assets/img/success.png" class="modal-content__icon" alt="">
+            <div class="modal-success"></div>
+        </div>
+    </div>
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/radio.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/datepick.js"></script>
+
+    
+    <script src="js/add-stories.js"></script>
+    <script src="js/upload-cover.js"></script>
+
+</body>
+
+</html>

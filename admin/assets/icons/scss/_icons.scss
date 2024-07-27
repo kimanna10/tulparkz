@@ -72,6 +72,9 @@ $car: '/admin/assets/icons/car.svg';
 $drive: '/admin/assets/icons/speed.svg';
 
 $file-edit: '/admin/assets/icons/file-edit.svg';
+
+$file: '/admin/assets/icons/file.svg';
+$file-add: '/admin/assets/icons/file-add.svg';
 $arrow-left: '/admin/assets/icons/arrow-left.svg';
 
 $reload: '/admin/assets/icons/reload.svg';
@@ -87,6 +90,7 @@ $question: '/admin/assets/icons/question.svg';
 $check: '/admin/assets/icons/check.svg';
 
 $color-fill: '/admin/assets/icons/color-fill.svg';
+$notif: '/admin/assets/icons/bell.svg';
 
 
 @mixin icon($name, $path) {
@@ -178,6 +182,8 @@ $color-fill: '/admin/assets/icons/color-fill.svg';
 @include icon(car, $car);
 @include icon(drive, $drive);
 @include icon(file-edit, $file-edit);
+@include icon(file, $file);
+@include icon(file-add, $file-add);
 @include icon(arrow-left, $arrow-left);
 
 @include icon(reload, $reload);
@@ -192,3 +198,5 @@ $color-fill: '/admin/assets/icons/color-fill.svg';
 @include icon(question, $question);
 @include icon(check, $check);
 @include icon(color-fill, $color-fill);
+
+@include icon(notif, $notif);

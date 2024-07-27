@@ -69,6 +69,11 @@
     line-height: $line-height-20;
     font-weight: $font-weight-medium;
 }
+@mixin headline-bold{
+    font-size: $font-size-16;
+    line-height: $line-height-20;
+    font-weight: $font-weight-bold;
+}
 
 //--TEXT--//
 @mixin text-regular{
@@ -112,6 +117,12 @@
 }
 @mixin caption-2-regular{
     font-size: $font-size-11;
+    line-height: $line-height-14;
+    font-weight: $font-weight-regular;
+}
+
+@mixin caption-3-regular{
+    font-size: $font-size-10;
     line-height: $line-height-14;
     font-weight: $font-weight-regular;
 }

@@ -570,7 +570,7 @@
        
     </div>
 
-    <div id="modal-create-3" class="modal publish">
+    <div id="modal-create-3" class="modal publish" style="display: flex;">
         <div class="modal-section">
             <div class="modal-content">
                 <div class="modal-header">
@@ -640,29 +640,41 @@
                             <div class="modal-body__publish-drop">
                                 <li class="dropdown">
                                     <a class="dropdown__toggle" id="dropdownToggle">
-                                        <div class="dropdown__drop-text date-pick">Выберите дату</div>
+                                        <div class="dropdown__drop-text time-pick">Выберите время</div>
                                         <div class="dropdown__icon-block">
                                             <div class="dropdown__caret-icon icon-caret-down"></div>
                                         </div>
                                     </a>
-                                    <ul class="dropdown__menu">
+                                    <ul class="dropdown__menu date-menu">
                                         <div class="dropdown__drop">
-                                            <div class="custom-calendar" id="custom-calendar">
-                                                <div class="calendar-header">
-                                                    <button class="calendar-button" id="prevMonthBtn">
-                                                        <div class="calendar-arrow icon-caret-left"></div>
-                                                    </button>
-                                                    <span class="calendar-month" id="currentMonth"></span>
-                                                    <button class="calendar-button" id="nextMonthBtn">
-                                                        <div class="calendar-arrow icon-caret-right"></div>
-                                                    </button>
+                                            <div class="custom-time" id="custom-time">
+                                                <div class="custom-time__time">
+                                                    <div class="custom-time__time-item prev">
+                                                        <div class="custom-time__hour">12</div>
+                                                        <div class="custom-time__symbol">:</div>
+                                                        <div class="custom-time__minute">30</div>
+                                                    </div>
+                                                    <div class="custom-time__time-item current">
+                                                        <div class="custom-time__hour">13</div>
+                                                        <div class="custom-time__symbol">:</div>
+                                                        <div class="custom-time__minute">00</div>
+                                                    </div>
+                                                    <div class="custom-time__time-item next">
+                                                        <div class="custom-time__hour">13</div>
+                                                        <div class="custom-time__symbol">:</div>
+                                                        <div class="custom-time__minute">30</div>
+                                                    </div>
+                                                    <div class="custom-time__current-block">
+                                                        <div class="custom-time__hour">13</div>
+                                                        <div class="custom-time__symbol">:</div>
+                                                        <div class="custom-time__minute">00</div>
+                                                    </div>
                                                 </div>
-                                                <div class="calendar-body">
-                                                    <div class="weekdays"></div>
-                                                    <div class="days"></div>
+                                                <div class="custom-time__buttons">
+                                                    <button class="custom-time__up icon-caret-up"></button>
+                                                    <button class="custom-time__down icon-caret-down"></button>
+                                                    <button class="custom-time__save" id="saveTime">Выбрать</button>
                                                 </div>
-                                                <button type="submit" id="saveBtn"
-                                                    class="button button__primary button--mini">Сохранить</button>
                                             </div>
                                         </div>
                                     </ul>
@@ -703,6 +715,7 @@
     
     <script src="js/add-stories.js"></script>
     <script src="js/upload-cover.js"></script>
+    <script src="js/timepick.js"></script>
 
 </body>
 

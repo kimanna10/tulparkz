@@ -1947,6 +1947,76 @@
 
 }
 
+.custom-time{
+    @include flexbox(flex, row, center, space-between);
+    gap: 10px;
+    &__buttons{
+        @include flexbox(flex, column, center, center);
+        gap: 39px;
+    }
+    &__up,
+    &__down{
+        width: 24px;
+        height: 24px;
+        background-color: $text-primary-color;
+        display: flex;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__save{
+        @include subhead-medium;
+        background-color: transparent;
+        &:focus {
+            outline: none;
+        }
+
+    }
+    &__time{
+        @include subhead-bold;
+        @include flexbox(flex, column, center, center);
+        .prev, .next{
+            color: $text-thertiary-color;
+        }
+        position: relative;
+    }
+    &__time-item{
+        @include flexbox(flex, row, center, center);
+        gap: 24px;
+        padding: 16px 35px;
+    }
+    &__hour,
+    &__symbol,
+    &__minute{
+        @include subhead-bold;
+        padding: 7px 10px;
+    }
+    &__current-block{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border-top: .5px solid #8B8B8B;
+        border-bottom: .5px solid #8B8B8B;
+        width: 100%;
+        @include flexbox(flex, row, center, center);
+        gap: 24px;
+        padding: 16px 35px;
+        .custom-time__hour,
+        .custom-time__symbol,
+        .custom-time__minute{
+            color: transparent;
+        }
+    }
+}
+
+.date-menu{
+    width: auto;
+    .dropdown__drop {
+        padding: 0 15px;
+    }
+}
 
 
 

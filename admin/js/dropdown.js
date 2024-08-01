@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const dropdownToggles = document.querySelectorAll('.dropdown__toggle');
   const saveBtn = document.getElementById('saveBtn');
+  const saveTime = document.getElementById('saveTime');
 
 
   dropdownToggles.forEach(function (dropdownToggle) {
@@ -145,6 +146,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (saveBtn) {
       saveBtn.addEventListener('click', function () {
+        dropdownMenu.style.display = 'none';
+
+        const caretIcon = dropdownToggle.querySelector('.dropdown__caret-icon');
+        if (caretIcon) {
+          caretIcon.classList.remove('rotate-180');
+        }
+      });
+    }
+    if (saveTime) {
+      saveTime.addEventListener('click', function () {
         dropdownMenu.style.display = 'none';
 
         const caretIcon = dropdownToggle.querySelector('.dropdown__caret-icon');
